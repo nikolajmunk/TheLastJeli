@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         rl.point1 = actor1.transform;
         rl.point2 = actor2.transform;
 
-        yield return new WaitForSeconds(2);
+        //yield return new WaitForSeconds(2);
         actor1.transform.position = actor2Position;
         actor2.transform.position = actor1Position;
         Destroy(effect);

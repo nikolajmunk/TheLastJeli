@@ -110,7 +110,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   moving: 0
   origin: {fileID: 0}
-  maxBounces: 6
+  maxBounces: 999
   lifetime: 5
   bounceLayers:
     serializedVersion: 2
@@ -130,7 +130,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!96 &1556497043340770517
 TrailRenderer:
   serializedVersion: 2

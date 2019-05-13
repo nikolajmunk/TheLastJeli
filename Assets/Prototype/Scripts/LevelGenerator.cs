@@ -6,10 +6,11 @@ public class LevelGenerator : MonoBehaviour
 {
     public List<GameObject> modules;
     public GameObject mostRecentModule;
+    public float minDistanceBetweenCameraAndNewestEntryPoint;
 
-    Transform GetExitPoint(GameObject module)
+    Transform GetPoint(GameObject module, string name)
     {
-        return module.transform.Find("ExitPoint");
+        return module.transform.Find(name);
     }
 
     void SpawnChunk(Vector3 spawnPosition)
@@ -17,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
         int randomNumber = Random.Range(0, modules.Count);
         GameObject module = modules[randomNumber];
 
-        GameObject chunk = Instantiate(module, spawnPosition, Quaternion.identity);
+        GameObject chunk = Instantiate(module, spawnPosition, module.transform.rotation);
         Transform entryPoint = chunk.transform.Find("EntryPoint");
         chunk.transform.position -= (entryPoint.position-spawnPosition);
 
@@ -33,9 +34,16 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        float distanceBetweenCameraAndNewestEntryPoint = GetPoint(mostRecentModule, "EntryPoint").position.x - Camera.main.transform.position.x;
+        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint)
         {
-            Vector3 spawnPoint = GetExitPoint(mostRecentModule).position;
+            Vector3 spawnPoint = GetPoint(mostRecentModule, "ExitPoint").position;
+            SpawnChunk(spawnPoint);
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Vector3 spawnPoint = GetPoint(mostRecentModule, "ExitPoint").position;
             SpawnChunk(spawnPoint);
         }
     }

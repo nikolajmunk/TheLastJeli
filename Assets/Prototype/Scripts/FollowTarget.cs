@@ -20,7 +20,8 @@ public class FollowTarget : MonoBehaviour
     void Update()
     {
         GetCentroid();
-        transform.position = GetCentroid() + offset;
+        //transform.position = GetCentroid() + offset;
+        transform.position = GameManager.instance.playerPositions[0].position + offset;
     }
 
     private Vector3 GetCentroid()

@@ -6,6 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public GameObject teleportEffect;
+    public GameObject frontPlayer;
+    GameObject[] players;
+    public int numberOfPlayers;
+    public List<Transform> playerPositions;
+
+    static int SortByXPosition(Transform t1, Transform t2)
+    {
+        return t1.position.x.CompareTo(t2.position.x);
+    }
 
     public IEnumerator Teleport(GameObject actor1, GameObject actor2)
     {
@@ -30,11 +39,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            playerPositions.Add(player.transform);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        playerPositions.Sort(SortByXPosition);
+        playerPositions.Reverse();
     }
 }

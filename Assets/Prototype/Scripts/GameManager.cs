@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         actor2.transform.position = actor1Position;
         Destroy(effect);
 
+        yield return null;
     }
 
     // Start is called before the first frame update

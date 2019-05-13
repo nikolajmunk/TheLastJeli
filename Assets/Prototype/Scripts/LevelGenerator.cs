@@ -19,7 +19,7 @@ public class LevelGenerator : MonoBehaviour
 
         GameObject chunk = Instantiate(module, spawnPosition, Quaternion.identity);
         Transform entryPoint = chunk.transform.Find("EntryPoint");
-        chunk.transform.position -= entryPoint.position;
+        chunk.transform.position -= (entryPoint.position-spawnPosition);
 
         mostRecentModule = chunk;
     }

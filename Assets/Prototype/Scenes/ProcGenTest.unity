@@ -390,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 7720845169031629637, guid: baff51a5d9ebe554c80c0e1e0da5a9e6,
         type: 3}
       propertyPath: useKeyboardMovement
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baff51a5d9ebe554c80c0e1e0da5a9e6, type: 3}
@@ -424,9 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modules:
-  - {fileID: 2084567092792311458, guid: 95764602b8fbfa84b899a5e38cf40df6, type: 3}
-  - {fileID: 2084567092792311458, guid: e6a91dcc6ec92ea419387692888b599b, type: 3}
-  - {fileID: 2084567092792311458, guid: 03d6fe022f5707e4fa404c302e0f6541, type: 3}
+  - {fileID: 6391768528008157640, guid: d7a2346ee6efd624c9769e4240bad41f, type: 3}
   mostRecentModule: {fileID: 1014664136}
 --- !u!4 &1943767596
 Transform:

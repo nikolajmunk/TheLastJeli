@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
         return module.transform.Find(name);
     }
 
-    void SpawnChunk(Vector3 spawnPosition)
+    void SpawnChunk(Vector3 spawnPosition) //Add argument here: module gameobject. This allows us to abstract stuff out so we can spawn essentially whichever module we want without being dependent on randomization.
     {
         int randomNumber = Random.Range(0, modules.Count);
         GameObject module = modules[randomNumber];
@@ -36,12 +36,6 @@ public class LevelGenerator : MonoBehaviour
     {
         float distanceBetweenCameraAndNewestEntryPoint = GetPoint(mostRecentModule, "EntryPoint").position.x - Camera.main.transform.position.x;
         if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint)
-        {
-            Vector3 spawnPoint = GetPoint(mostRecentModule, "ExitPoint").position;
-            SpawnChunk(spawnPoint);
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
         {
             Vector3 spawnPoint = GetPoint(mostRecentModule, "ExitPoint").position;
             SpawnChunk(spawnPoint);

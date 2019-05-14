@@ -15,7 +15,7 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class PlatformerController : MonoBehaviour
 {
-	[HideInInspector] public Vector2 input;
+	/*[HideInInspector]*/ public Vector2 input;
 	[HideInInspector] public bool inputJump;
 	[HideInInspector] public bool IsGrounded { get { return grounded; } }
 

@@ -14,12 +14,16 @@ public class GameManager : MonoBehaviour
     public List<Transform> playerPositions;
     public GameObject winUI;
     public TextMeshProUGUI winText;
+    public bool debug;
 
     public void GameOver(float delay)
     {
-        winUI.SetActive(true);
-        winText.text = players[0].name + " wins!";
-        StartCoroutine(Restart(delay));
+        if (!debug)
+        {
+            winUI.SetActive(true);
+            winText.text = players[0].name + " wins!";
+            StartCoroutine(Restart(delay));
+        }
     }
     public void KillPlayer(GameObject player)
     {

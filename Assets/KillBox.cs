@@ -28,7 +28,9 @@ public class KillBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        StartCoroutine(Restart(2));
+        if (other.gameObject.tag == "Player")
+        {
+            GameManager.instance.KillPlayer(other.gameObject);
+        }
     }
 }

@@ -7,9 +7,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public GameObject teleportEffect;
     public GameObject frontPlayer;
-    GameObject[] players;
+    public List<GameObject> players;
     public int numberOfPlayers;
     public List<Transform> playerPositions;
+
+    public void KillPlayer(GameObject player)
+    {
+        numberOfPlayers -= 1;
+        players.Remove(player);
+        playerPositions.Remove(player.transform);
+        Destroy(player);
+    }
 
     static int SortByXPosition(Transform t1, Transform t2)
     {
@@ -35,15 +43,16 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
-        players = GameObject.FindGameObjectsWithTag("Player");
+        players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
+        numberOfPlayers = players.Count;
         foreach (GameObject player in players)
         {
             playerPositions.Add(player.transform);
         }
+        frontPlayer = playerPositions[0].gameObject;
     }
 
     // Update is called once per frame
@@ -51,5 +60,6 @@ public class GameManager : MonoBehaviour
     {
         playerPositions.Sort(SortByXPosition);
         playerPositions.Reverse();
+        frontPlayer = playerPositions[0].gameObject;
     }
 }

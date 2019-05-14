@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +12,26 @@ public class GameManager : MonoBehaviour
     public List<GameObject> players;
     public int numberOfPlayers;
     public List<Transform> playerPositions;
+    public GameObject winUI;
+    public TextMeshProUGUI winText;
 
+    public void GameOver(float delay)
+    {
+        winUI.SetActive(true);
+        winText.text = players[0].name + " wins!";
+        StartCoroutine(Restart(delay));
+    }
     public void KillPlayer(GameObject player)
     {
         numberOfPlayers -= 1;
         players.Remove(player);
         playerPositions.Remove(player.transform);
         Destroy(player);
+    }
+    public IEnumerator Restart(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     static int SortByXPosition(Transform t1, Transform t2)
@@ -61,5 +76,10 @@ public class GameManager : MonoBehaviour
         playerPositions.Sort(SortByXPosition);
         playerPositions.Reverse();
         frontPlayer = playerPositions[0].gameObject;
+
+        if (numberOfPlayers == 1)
+        {
+            GameOver(5);
+        }
     }
 }

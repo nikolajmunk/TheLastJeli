@@ -7,13 +7,7 @@ public class KillBox : MonoBehaviour
 {
     public Vector3 offset;
 
-    public IEnumerator Restart(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        string sceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
+    
     // Start is called before the first frame update
     void Start()
     {

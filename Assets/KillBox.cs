@@ -23,7 +23,7 @@ public class KillBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Camera.main.transform.position.x - offset.x, 0, 0);
+        transform.position = new Vector3(Camera.main.transform.position.x - offset.x, Camera.main.transform.position.y - offset.y, 0);
     }
 
     private void OnTriggerEnter(Collider other)

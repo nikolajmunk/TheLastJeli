@@ -16,7 +16,7 @@ public class FollowTarget : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         float yCentroid = GetCentroid().y;
         //transform.position = GetCentroid() + offset;

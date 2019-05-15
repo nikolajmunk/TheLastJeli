@@ -59,7 +59,7 @@ public class BulletBehavior : MonoBehaviour
         if (bounceLayers == (bounceLayers | (1 << collision.gameObject.layer)))
         {
             Vector3 reflectDir = Vector3.Reflect(lastFrameVelocity, collision.contacts[0].normal);
-            //transform.rotation = Quaternion.LookRotation(reflectDir);
+            transform.rotation = Quaternion.LookRotation(reflectDir);
             rb.velocity = reflectDir;
 
             Debug.Log("Hit terrain");

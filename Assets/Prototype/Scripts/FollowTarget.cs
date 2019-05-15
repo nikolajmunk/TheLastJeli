@@ -8,6 +8,7 @@ public class FollowTarget : MonoBehaviour
     public Vector3 offset;
     public List<GameObject> players;
     int numberOfPlayers;
+    public float maxMovementDelta;
 
     private void Start()
     {
@@ -17,9 +18,11 @@ public class FollowTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //GetCentroid();
+        float yCentroid = GetCentroid().y;
         //transform.position = GetCentroid() + offset;
-        transform.position = GameManager.instance.playerPositions[0].position + offset;
+        //transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, Vector3.MoveTowards(transform.position, GameManager.instance.playerPositions[0].position + offset, maxMovementDelta).y, GameManager.instance.playerPositions[0].position.z + offset.z);
+        transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+
     }
 
     private Vector3 GetCentroid()

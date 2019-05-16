@@ -7,6 +7,7 @@ public class ShootBehavior : MonoBehaviour
     public Transform shootOrigin;
     public float shootSpeed;
     public GameObject bulletPrefab;
+    public GameObject muzzlePrefab;
     AudioHandler audioHandler;
 
     public float shootInput;
@@ -16,6 +17,7 @@ public class ShootBehavior : MonoBehaviour
     public void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, shootOrigin.position, shootOrigin.rotation);
+        GameObject muzzle = Instantiate(muzzlePrefab, shootOrigin.position, shootOrigin.rotation);
         BulletBehavior bb = bullet.GetComponent<BulletBehavior>();
         bb.direction = shootOrigin.right;
         bb.moving = true;

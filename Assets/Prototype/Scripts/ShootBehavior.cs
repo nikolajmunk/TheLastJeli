@@ -7,6 +7,7 @@ public class ShootBehavior : MonoBehaviour
     public Transform shootOrigin;
     public float shootSpeed;
     public GameObject bulletPrefab;
+    AudioHandler audioHandler;
 
     public float shootInput;
     bool isShootInUse;
@@ -21,12 +22,13 @@ public class ShootBehavior : MonoBehaviour
         bb.origin = transform.root.gameObject;
         bb.GetComponent<Rigidbody>().AddForce(bb.transform.forward * shootSpeed);
         //Debug.DrawRay(shootOrigin.position, shootOrigin.right * 1000f, Color.red);
+        audioHandler.PlayOneShotByName("Shoot");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioHandler = GetComponent<AudioHandler>();
     }
 
     // Update is called once per frame

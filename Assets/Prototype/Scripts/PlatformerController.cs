@@ -56,13 +56,18 @@ public class PlatformerController : MonoBehaviour
     float lastInputJump = float.NegativeInfinity;
     int facing = 1;
 
+    AudioHandler audioHandler;
+
 	void Start ()
 	{
 		canMove = true;
 		rb2d = GetComponent<Rigidbody> ();
 		anim = GetComponentInChildren<Animator> ();
 		sr = GetComponent<SpriteRenderer> ();
+        audioHandler = GetComponent<AudioHandler>();
 	}
+
+
 
 	/// <summary>
 	/// Controls the basic update of the controller. This uses fixed update, since the movement is physics driven and has to be synched with the physics step.
@@ -77,8 +82,8 @@ public class PlatformerController : MonoBehaviour
 			vel.x = input.x * speed;
 
 			if (CheckJumpInput () && PermissionToJump ()) {
-				vel = ApplyJump (vel);
-			}
+                vel = ApplyJump(vel);
+            }
 		}
 
 		vel.y += -gravity * Time.deltaTime;
@@ -89,7 +94,8 @@ public class PlatformerController : MonoBehaviour
 
 	Vector2 ApplyJump (Vector2 vel)
 	{
-		vel.y = jumpVelocity;
+        audioHandler.PlayOneShotByName("Jump");
+        vel.y = jumpVelocity;
 		lastJumpTime = Time.time;
 		grounded = false;
 		return vel;

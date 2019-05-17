@@ -19,7 +19,7 @@ public class ShootBehavior : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, shootOrigin.position, shootOrigin.rotation);
         GameObject muzzleFlash = Instantiate(muzzlePrefab, shootOrigin.position, shootOrigin.rotation);
         ParticleSystem parts = muzzleFlash.GetComponent<ParticleSystem>();
-        float totalDuration = parts.duration + parts.startLifetime;
+        float totalDuration = parts.main.duration + parts.main.startLifetime.constantMax;
         Destroy(muzzleFlash, totalDuration);
 
 

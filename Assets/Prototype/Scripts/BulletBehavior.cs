@@ -48,7 +48,7 @@ public class BulletBehavior : MonoBehaviour
                 //target.transform.position = originPosition;
                 //origin.transform.position = targetPosition;
 
-                StartCoroutine(GameManager.instance.Teleport(origin, target));
+                GameManager.instance.StartTeleport(origin, target);
 
                 Destroy(gameObject);
             }

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class AudioHandler : MonoBehaviour
 {
+    [System.Serializable]
+    public class AudioMapping
+    {
+        public string name;
+        public AudioClip audioClip;
+    }
+
     [Tooltip("The audio source that should play audio. Will default to the audio source on the object if no other audio source is specified.")]
     public AudioSource audioSource;
     public List<AudioMapping> audioMapping;

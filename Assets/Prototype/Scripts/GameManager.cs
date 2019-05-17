@@ -43,31 +43,23 @@ public class GameManager : MonoBehaviour
         return t1.position.x.CompareTo(t2.position.x);
     }
 
-    public void StartTeleport(GameObject actor1, GameObject actor2)
+    public void SwapActors(Transform actor1, Transform actor2)
     {
-        StartCoroutine(Teleport(actor1, actor2));
+        Vector3 actor1Position = actor1.position;
+        Vector3 actor2Position = actor2.position;
+
+        actor1.position = actor2Position;
+        actor2.position = actor1Position;
     }
 
-    public IEnumerator Teleport(GameObject actor1, GameObject actor2)
+    public void StartTeleportation(GameObject actor1, GameObject actor2)
     {
-        // Currently all teleport behavior is handled in here. It's very possible that this will get moved to another script that can be placed on a prefab that will then take care of it.
-
-        Vector3 actor1Position = actor1.transform.position;
-        Vector3 actor2Position = actor2.transform.position;
-
-        // Insert teleport visual behavior here!
-        GameObject effect = Instantiate(teleportEffect, actor1Position, Quaternion.identity);
-        RenderLine rl = effect.GetComponent<RenderLine>();
-        rl.point1 = actor1.transform;
-        rl.point2 = actor2.transform;
-
-        yield return new WaitForSeconds(0);
-
-        actor1.transform.position = actor2Position;
-        actor2.transform.position = actor1Position;
-        Destroy(effect);
-
-        //yield return null;
+        GameObject effect = Instantiate(teleportEffect, actor1.transform.position, Quaternion.identity);
+        Teleportation teleportation = effect.GetComponent<Teleportation>();
+        teleportation.actor1 = actor1.transform;
+        teleportation.actor2 = actor2.transform;
+        StartCoroutine(teleportation.Teleport());
+        Debug.Log("Did it");
     }
 
     void Awake()

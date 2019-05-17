@@ -17,7 +17,12 @@ public class ShootBehavior : MonoBehaviour
     public void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, shootOrigin.position, shootOrigin.rotation);
-        GameObject muzzle = Instantiate(muzzlePrefab, shootOrigin.position, shootOrigin.rotation);
+        GameObject muzzleFlash = Instantiate(muzzlePrefab, shootOrigin.position, shootOrigin.rotation);
+        ParticleSystem parts = muzzleFlash.GetComponent<ParticleSystem>();
+        float totalDuration = parts.duration + parts.startLifetime;
+        Destroy(muzzleFlash, totalDuration);
+
+
         BulletBehavior bb = bullet.GetComponent<BulletBehavior>();
         bb.direction = shootOrigin.right;
         bb.moving = true;

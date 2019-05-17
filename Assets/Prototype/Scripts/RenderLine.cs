@@ -6,6 +6,7 @@ public class RenderLine : MonoBehaviour
 {
     public Transform point1;
     public Transform point2;
+    public Vector3 offset;
     LineRenderer lr;
     Vector3[] positions = new Vector3[2];
 
@@ -19,8 +20,8 @@ public class RenderLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        positions[0] = point1.position;
-        positions[1] = point2.position;
+        positions[0] = point1.position + offset;
+        positions[1] = point2.position + offset;
         lr.SetPositions(positions);
     }
 }

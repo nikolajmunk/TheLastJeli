@@ -836,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1308031902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a69bf956af9254b8782a7da92964cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportEffect: {fileID: 9112601106819737147, guid: b187eeefd8301e64fa643df6ff4e81ee,
+  teleportEffect: {fileID: 5851145849396893945, guid: f372c10d05f14c54c8bfdace709ad09c,
     type: 3}
   frontPlayer: {fileID: 0}
   players: []
@@ -1252,7 +1252,7 @@ PrefabInstance:
     - target: {fileID: 6353435439578893581, guid: 509eafa5b4306164198112915c35564b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6353435439578893581, guid: 509eafa5b4306164198112915c35564b,
         type: 3}
@@ -1307,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 7720845169031629637, guid: 509eafa5b4306164198112915c35564b,
         type: 3}
       propertyPath: useMouseAim
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720845169031629637, guid: 509eafa5b4306164198112915c35564b,
         type: 3}

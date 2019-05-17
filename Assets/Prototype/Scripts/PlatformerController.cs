@@ -140,7 +140,7 @@ public class PlatformerController : MonoBehaviour
 			
 		} else if (rb2d.velocity.x < 0 && facing == 1) {
 			facing = -1;
-			transform.rotation = Quaternion.Euler(0, 180, 0); 
+			transform.rotation = Quaternion.Euler(0, 180, 0);
 
 
 		}

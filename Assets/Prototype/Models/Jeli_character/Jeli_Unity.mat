@@ -10,7 +10,7 @@ Material:
   m_Name: Jeli_Unity
   m_Shader: {fileID: 4800000, guid: 947c20c73ac6e4eb4ad25ed5910582fa, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _NORMALMAP _PARALLAXMAP
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -91,9 +91,9 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.714
     - _GlossyReflections: 1
-    - _MaxAlpha: 1
+    - _MaxAlpha: 0.7
     - _Metallic: 0
-    - _MinAlpha: 0.7
+    - _MinAlpha: 0.5
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02

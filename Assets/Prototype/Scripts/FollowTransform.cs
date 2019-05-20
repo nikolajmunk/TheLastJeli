@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowTransform : MonoBehaviour
 {
     public Transform target;
+    public Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,6 @@ public class FollowTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.position;
+        transform.position = target.position+offset;
     }
 }

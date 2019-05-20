@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player3
       objectReference: {fileID: 0}
+    - target: {fileID: 7175872390834929087, guid: 8ba4bb1ae624f0e4ba22dfb1d40c12e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8455222871857035808, guid: 8ba4bb1ae624f0e4ba22dfb1d40c12e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,7 +241,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modules:
-  - {fileID: 3144677582497266432, guid: d58560df82fe54a998f3c3f6d00affc0, type: 3}
+  - {fileID: 710035029220955112, guid: f8a6dd1a5b9fe0e488cd072172d4cff7, type: 3}
+  - {fileID: 3190069528573781421, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f, type: 3}
+  - {fileID: 3190069528573781421, guid: f56e1b84be7ab402494b3b4f47d66209, type: 3}
+  - {fileID: 3190069528573781421, guid: 77eb74286adb749c9abd158dba962d4a, type: 3}
+  - {fileID: 3190069528573781421, guid: 08d236a070cf14622be97c1cc49c6692, type: 3}
   mostRecentModule: {fileID: 129704022}
   minDistanceBetweenCameraAndNewestEntryPoint: 20
 --- !u!114 &391773212
@@ -285,6 +294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player4
+      objectReference: {fileID: 0}
+    - target: {fileID: 499477457818749885, guid: fcaeba6c9372bae479159e3bd6a8d52d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1165778734195559458, guid: fcaeba6c9372bae479159e3bd6a8d52d,
         type: 3}
@@ -784,6 +798,11 @@ PrefabInstance:
       propertyPath: useKeyboardMovement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1661619966285594362, guid: bc1f60a9aab194716beb3647eba51e03,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1f60a9aab194716beb3647eba51e03, type: 3}
 --- !u!1 &1479895625
@@ -1028,6 +1047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120740143082971673, guid: 52aa96c8597881f45a4594efe0a4c285,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1823543007137195398, guid: 52aa96c8597881f45a4594efe0a4c285,
         type: 3}

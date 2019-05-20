@@ -25,7 +25,7 @@ public class ExampleUseof_MeshCut : MonoBehaviour {
 				if(!pieces[1].GetComponent<Rigidbody>())
 					pieces[1].AddComponent<Rigidbody>();
 
-				Debug.Log("Fuck you");
+				
 				Destroy(pieces[1], 1);
 			}
 

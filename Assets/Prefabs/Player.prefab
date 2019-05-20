@@ -101,7 +101,6 @@ MonoBehaviour:
     type: 3}
   muzzlePrefab: {fileID: 1345281079581672736, guid: a7c160e88736ec44e86a1dee8c9eba05,
     type: 3}
-  shootInput: 0
 --- !u!82 &7240781829595345961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1456,7 +1455,6 @@ GameObject:
   - component: {fileID: 7843237111357614780}
   - component: {fileID: 4300972049587610126}
   - component: {fileID: 4632622503768299545}
-  - component: {fileID: 1107542889475427557}
   - component: {fileID: 3325668314686747492}
   - component: {fileID: 6803755383846162497}
   m_Layer: 9
@@ -1524,8 +1522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c976115e0928374aa2a6a62d331d9f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {x: 0, y: 0}
-  inputJump: 0
   canMove: 1
   speed: 12
   jumpVelocity: 20
@@ -1555,23 +1551,6 @@ MonoBehaviour:
   hitPoints: 8
   hurtTimer: 0.1
   deadPrefab: {fileID: 0}
---- !u!114 &1107542889475427557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068070613354843442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c5335148dcbf44fb294315a91bf95c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpButton: RB
-  shootBinding: TriggersR
-  gun: {fileID: 160252027802275440}
-  useMouseAim: 0
-  useKeyboardMovement: 0
 --- !u!82 &3325668314686747492
 AudioSource:
   m_ObjectHideFlags: 0

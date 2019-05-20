@@ -9,10 +9,24 @@ public class ShootBehavior : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject muzzlePrefab;
     AudioHandler audioHandler;
+    Player player;
+    PlayerActions actions;
 
-    public float shootInput;
-    bool isShootInUse;
+    void Start()
+    {
+        player = transform.root.GetComponent<Player>();
+        actions = player.Actions;
+        audioHandler = GetComponent<AudioHandler>();
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (actions.Shoot && actions.Shoot.LastValue == 0) // If button is pressed and it wasn't in the last frame...
+        {
+            Shoot();
+        }
+    }
 
     public void Shoot()
     {
@@ -32,27 +46,4 @@ public class ShootBehavior : MonoBehaviour
         audioHandler.PlayOneShotByName("Shoot");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        audioHandler = GetComponent<AudioHandler>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (shootInput != 0)
-        {
-            if (isShootInUse == false)
-            {
-                Shoot();
-                isShootInUse = true;
-            }
-        }
-        if (shootInput == 0)
-        {
-            isShootInUse = false;
-        }
-    }
-    
 }

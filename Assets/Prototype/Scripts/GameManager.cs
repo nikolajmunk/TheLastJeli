@@ -9,12 +9,44 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public GameObject teleportEffect;
     public GameObject frontPlayer;
-    public List<GameObject> players;
+    public List<Player> players;
     public int numberOfPlayers;
     public List<Transform> playerPositions;
     public GameObject winUI;
     public TextMeshProUGUI winText;
     public bool debug;
+    public PlayerManager playerManager;
+
+    private void OnEnable()
+    {
+        playerManager.OnPlayerAdded += OnPlayerAdded;
+        playerManager.OnPlayerRemoved += OnPlayerRemoved;
+    }
+
+    void Awake()
+    {
+        instance = this;
+        if (playerManager == null)
+        {
+            playerManager = GetComponent<PlayerManager>();
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        playerPositions.Sort(SortByXPosition);
+        playerPositions.Reverse();
+        if (playerPositions.Count != 0)
+        {
+            frontPlayer = playerPositions[0].gameObject;
+        }
+
+        if (numberOfPlayers == 1)
+        {
+            GameOver(5);
+        }
+    }
 
     public void GameOver(float delay)
     {
@@ -25,12 +57,26 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Restart(delay));
         }
     }
-    public void KillPlayer(GameObject player)
+
+    void OnPlayerAdded(Player player)
     {
-        numberOfPlayers -= 1;
-        players.Remove(player);
+        players = playerManager.players;
+        numberOfPlayers = players.Count;
+        playerPositions.Add(player.transform);
+    }
+
+    void OnPlayerRemoved(Player player)
+    {
+        players = playerManager.players;
+        numberOfPlayers = players.Count;
         playerPositions.Remove(player.transform);
-        Destroy(player);
+    }
+
+    public void KillPlayer(Player player)
+    {
+        players.Remove(player);
+        playerManager.RemovePlayer(player);
+        Destroy(player.gameObject);
     }
     public IEnumerator Restart(float delay)
     {
@@ -60,30 +106,5 @@ public class GameManager : MonoBehaviour
         teleportation.actor2 = actor2.transform;
         StartCoroutine(teleportation.Teleport());
         Debug.Log("Did it");
-    }
-
-    void Awake()
-    {
-        instance = this;
-        players = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
-        numberOfPlayers = players.Count;
-        foreach (GameObject player in players)
-        {
-            playerPositions.Add(player.transform);
-        }
-        frontPlayer = playerPositions[0].gameObject;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        playerPositions.Sort(SortByXPosition);
-        playerPositions.Reverse();
-        frontPlayer = playerPositions[0].gameObject;
-
-        if (numberOfPlayers == 1)
-        {
-            GameOver(5);
-        }
     }
 }

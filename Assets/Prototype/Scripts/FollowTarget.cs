@@ -12,16 +12,20 @@ public class FollowTarget : MonoBehaviour
 
     private void Start()
     {
-        offset = transform.position - GameManager.instance.frontPlayer.transform.position;
+        //offset = transform.position - GameManager.instance.frontPlayer.transform.position;
+        offset = transform.position - Vector3.zero;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        float yCentroid = GetCentroid().y;
-        //transform.position = GetCentroid() + offset;
-        //transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, Vector3.MoveTowards(transform.position, GameManager.instance.playerPositions[0].position + offset, maxMovementDelta).y, GameManager.instance.playerPositions[0].position.z + offset.z);
-        transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+        if (GameManager.instance.numberOfPlayers != 0)
+        {
+            float yCentroid = GetCentroid().y;
+            //transform.position = GetCentroid() + offset;
+            //transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, Vector3.MoveTowards(transform.position, GameManager.instance.playerPositions[0].position + offset, maxMovementDelta).y, GameManager.instance.playerPositions[0].position.z + offset.z);
+            transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+        }
 
     }
 

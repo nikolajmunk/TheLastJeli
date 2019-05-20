@@ -15,8 +15,6 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class PlatformerController : MonoBehaviour
 {
-	/*[HideInInspector]*/ public Vector2 input;
-	[HideInInspector] public bool inputJump;
 	[HideInInspector] public bool IsGrounded { get { return grounded; } }
 
 	[Tooltip ("Can this object move.")]
@@ -56,10 +54,15 @@ public class PlatformerController : MonoBehaviour
     float lastInputJump = float.NegativeInfinity;
     int facing = 1;
 
+
+    Player player;
+    PlayerActions actions;
     AudioHandler audioHandler;
 
 	void Start ()
 	{
+        player = GetComponent<Player>();
+        actions = player.Actions;
 		canMove = true;
 		rb2d = GetComponent<Rigidbody> ();
 		anim = GetComponentInChildren<Animator> ();
@@ -79,7 +82,7 @@ public class PlatformerController : MonoBehaviour
 		Vector2 vel = rb2d.velocity;
 
 		if (canMove) {
-			vel.x = input.x * speed;
+			vel.x = actions.Move.Value.x * speed;
 
 			if (CheckJumpInput () && PermissionToJump ()) {
                 vel = ApplyJump(vel);
@@ -167,7 +170,7 @@ public class PlatformerController : MonoBehaviour
 	/// <returns><c>true</c>, if jump input detected, <c>false</c> otherwise.</returns>
 	bool CheckJumpInput ()
 	{
-		if (inputJump) {
+		if (actions.Jump) {
 			lastInputJump = Time.time;
 			return true;
 		}

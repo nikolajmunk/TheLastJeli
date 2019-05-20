@@ -14,6 +14,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     public string playerName;
+    public PlayerActions Actions;
     public enum PlayerStatus
 	{
 		Hurt,

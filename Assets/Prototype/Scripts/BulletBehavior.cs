@@ -17,6 +17,8 @@ public class BulletBehavior : MonoBehaviour
     [Tooltip("Layers to bounce off.")]
     [SerializeField] LayerMask bounceLayers = 0;
 
+    AudioSource audios;
+
     public void Move()
     {
         //transform.position += transform.forward * speed * Time.deltaTime;
@@ -25,6 +27,8 @@ public class BulletBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audios = GetComponent<AudioSource>();
+
         rb = GetComponent<Rigidbody>();
         //RaycastHit hit;
         //if (Physics.Raycast(transform.position, direction, out hit))
@@ -65,6 +69,8 @@ public class BulletBehavior : MonoBehaviour
             Debug.Log("Hit terrain");
 
             bounces += 1;
+
+            audios.Play();
         }
     }
 

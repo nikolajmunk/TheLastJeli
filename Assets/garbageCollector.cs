@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class garbageCollector : MonoBehaviour
 {
-    private void OnTriggerExit(Collider other) {
-        //Destroy(other.gameObject);
-        Rigidbody rb = other.gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
-        other.gameObject.GetComponent<MeshCollider>().convex = true;
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.attachedRigidbody == null)
+        {
+            Rigidbody rb = other.gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
+            other.gameObject.GetComponent<MeshCollider>().convex = true;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+            StartCoroutine(DestroyModule(other.gameObject));
+        }
+    }
 
-        //other.gameObject.GetComponent<MeshCollider>().enabled = false;
-        //other.gameObject.AddComponent(typeof(BoxCollider));
+    private IEnumerator DestroyModule(GameObject _module)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(_module);
     }
 }

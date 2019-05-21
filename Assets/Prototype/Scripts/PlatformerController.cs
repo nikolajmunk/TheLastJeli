@@ -15,7 +15,7 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class PlatformerController : MonoBehaviour
 {
-	[HideInInspector] public bool IsGrounded { get { return grounded; } }
+	public bool IsGrounded { get { return grounded; } }
 
 	[Tooltip ("Can this object move.")]
 	public bool canMove = true;

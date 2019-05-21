@@ -30,11 +30,9 @@ public class ShootBehavior : MonoBehaviour
 
     public void Shoot()
     {
+        muzzlePrefab.SetActive(false);
         GameObject bullet = Instantiate(bulletPrefab, shootOrigin.position, shootOrigin.rotation);
-        GameObject muzzleFlash = Instantiate(muzzlePrefab, shootOrigin.position, shootOrigin.rotation);
-        ParticleSystem parts = muzzleFlash.GetComponent<ParticleSystem>();
-        float totalDuration = parts.main.duration + parts.main.startLifetime.constantMax;
-        Destroy(muzzleFlash, totalDuration);
+        muzzlePrefab.SetActive(true);
 
 
         BulletBehavior bb = bullet.GetComponent<BulletBehavior>();

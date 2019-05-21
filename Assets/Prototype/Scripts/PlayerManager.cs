@@ -5,6 +5,9 @@ using InControl;
 
 public class PlayerManager : MonoBehaviour
 {
+    [Tooltip("When debugging, you can add multiple players to one controller.")]
+    public bool debug;
+
     public GameObject[] playerPrefabs;
     public delegate void PlayerListHandler(Player player);
     public event PlayerListHandler OnPlayerAdded;
@@ -40,7 +43,7 @@ public class PlayerManager : MonoBehaviour
         {
             var inputDevice = InputManager.ActiveDevice; // ActiveDevice is the device that just pressed a button.
 
-            if (ThereIsNoPlayerUsingJoystick(inputDevice)) // Each player has a Device, and this method loops through all current players and checks if inputDevice appears in any of the players.
+            if (debug || ThereIsNoPlayerUsingJoystick(inputDevice)) // Each player has a Device, and this method loops through all current players and checks if inputDevice appears in any of the players.
             {
                 CreatePlayer(inputDevice); //...Then if there isn't, create a player from prefab and add inputDevice as the player's device.
             }
@@ -48,7 +51,7 @@ public class PlayerManager : MonoBehaviour
 
         if (JoinButtonWasPressedOnListener(keyboardListener))
         {
-            if (ThereIsNoPlayerUsingKeyboard())
+            if (debug || ThereIsNoPlayerUsingKeyboard())
             {
                 CreatePlayer(null);
             }
@@ -104,7 +107,6 @@ public class PlayerManager : MonoBehaviour
         return FindPlayerUsingKeyboard() == null;
     }
 
-
     void OnDeviceDetached(InputDevice inputDevice)
     {
         var player = FindPlayerUsingJoystick(inputDevice);
@@ -118,9 +120,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (players.Count < maxPlayers)
         {
-             
-
-            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], new Vector3 (Camera.main.transform.position.x, Camera.main.transform.position.y, 0), Quaternion.identity);
+            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], new Vector3 (Camera.main.transform.position.x, Camera.main.transform.position.y, 0), Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
             var player = gameObject.GetComponent<Player>();
 
             if (inputDevice == null)

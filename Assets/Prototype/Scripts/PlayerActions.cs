@@ -61,7 +61,7 @@ public class PlayerActions : PlayerActionSet
         actions.Shoot.AddDefaultBinding(bindings.shoot);
 
         actions.Submit.AddDefaultBinding(bindings.submit);
-
+        Debug.Log("Created with keyboard bindings.");
         return actions;
     }
 
@@ -84,6 +84,7 @@ public class PlayerActions : PlayerActionSet
         actions.Shoot.AddDefaultBinding(Mouse.LeftButton);
 
         actions.Submit.AddDefaultBinding(Key.Return);
+        Debug.Log("Created with joystick bindings.");
 
         return actions;
     }

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public List<Player> activePlayers; // Maybe this shouldn't copy the players list from PlayerManager. After all, we want a list of active players, and if we're always just cloning it, what's the point?
     public int numberOfActivePlayers; // This should be number of active players, not number of registered players. Leave that part to PlayerManager.
     public List<Transform> playerPositions;
-    public GameObject winUI;
+    public GameObject winUI; // This should not be in the game manager. Or at least we should specify that the lobby should not show win text.
     public TextMeshProUGUI winText;
     public bool debug;
     public PlayerManager playerManager;

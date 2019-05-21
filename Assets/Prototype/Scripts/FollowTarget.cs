@@ -19,7 +19,7 @@ public class FollowTarget : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (GameManager.instance.numberOfPlayers != 0)
+        if (GameManager.instance.numberOfActivePlayers != 0)
         {
             float yCentroid = GetCentroid().y;
             //transform.position = GetCentroid() + offset;
@@ -36,7 +36,7 @@ public class FollowTarget : MonoBehaviour
         {
             centroid += player.position;
         }
-        centroid /= GameManager.instance.numberOfPlayers;
+        centroid /= GameManager.instance.numberOfActivePlayers;
         return centroid;
     }
 }

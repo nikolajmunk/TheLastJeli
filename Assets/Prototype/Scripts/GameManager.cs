@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public GameObject teleportEffect;
     public GameObject frontPlayer;
-    public List<Player> players; // Maybe this shouldn't copy the players list from PlayerManager. After all, we want a list of active players, and if we're always just cloning it, what's the point?
-    public int numberOfPlayers; // This should be number of active players, not number of registered players. Leave that part to PlayerManager.
+    public List<Player> activePlayers; // Maybe this shouldn't copy the players list from PlayerManager. After all, we want a list of active players, and if we're always just cloning it, what's the point?
+    public int numberOfActivePlayers; // This should be number of active players, not number of registered players. Leave that part to PlayerManager.
     public List<Transform> playerPositions;
     public GameObject winUI;
     public TextMeshProUGUI winText;
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             frontPlayer = playerPositions[0].gameObject;
         }
 
-        if (numberOfPlayers == 1)
+        if (numberOfActivePlayers == 1)
         {
             GameOver(5);
         }
@@ -53,30 +53,30 @@ public class GameManager : MonoBehaviour
         if (!debug)
         {
             winUI.SetActive(true);
-            winText.text = players[0].name + " wins!";
+            winText.text = activePlayers[0].name + " wins!";
             StartCoroutine(Restart(delay));
         }
     }
 
     void OnPlayerAdded(Player player)
     {
-        players = playerManager.players;
-        numberOfPlayers = players.Count;
+        activePlayers.Add(player);
+        numberOfActivePlayers = activePlayers.Count;
         playerPositions.Add(player.transform);
     }
 
     void OnPlayerRemoved(Player player)
     {
-        players = playerManager.players;
-        numberOfPlayers = players.Count;
+        activePlayers.Remove(player);
+        numberOfActivePlayers = activePlayers.Count;
         playerPositions.Remove(player.transform);
     }
 
     public void KillPlayer(Player player)
     {
-        players.Remove(player);
-        playerManager.RemovePlayer(player); // Don't do this; we only want to remove the player from the list of active players, not the master list. The master list is for remembering players between scenes. Go fuck yourself.
-        Destroy(player.gameObject);
+        OnPlayerRemoved(player);
+        //playerManager.RemovePlayer(player); // Don't do this; we only want to remove the player from the list of active players, not the master list. The master list is for remembering players between scenes. Go fuck yourself.
+        player.gameObject.SetActive(false);
     }
     public IEnumerator Restart(float delay)
     {

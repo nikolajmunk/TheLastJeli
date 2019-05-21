@@ -7,6 +7,14 @@ public class PlayerManager : MonoBehaviour
 {
     [Tooltip("When debugging, you can add multiple players to one controller.")]
     public bool debug;
+    [Tooltip("Should players be able to join?")]
+    public bool acceptNewPlayers;
+    List<Vector3> playerPositions = new List<Vector3>() {
+            new Vector3( -3, 0.5f, 0 ),
+            new Vector3( -1, 0.5f, 0 ),
+            new Vector3( 1, 0.5f, 0 ),
+            new Vector3( 3, 0.5f, 0 ),
+        };
 
     public GameObject[] playerPrefabs;
     public delegate void PlayerListHandler(Player player);
@@ -118,9 +126,12 @@ public class PlayerManager : MonoBehaviour
 
     Player CreatePlayer(InputDevice inputDevice)
     {
-        if (players.Count < maxPlayers)
+        if (players.Count < maxPlayers && acceptNewPlayers)
         {
-            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], new Vector3 (Camera.main.transform.position.x, Camera.main.transform.position.y, 0), Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
+            var playerPosition = playerPositions[0]; // Pop off a player spawn position in the lobby. To fix later.
+            playerPositions.RemoveAt(0);
+
+            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition, Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
             var player = gameObject.GetComponent<Player>();
 
             if (inputDevice == null)
@@ -153,6 +164,7 @@ public class PlayerManager : MonoBehaviour
 
     public void RemovePlayer(Player player)
     {
+        playerPositions.Insert(0, player.transform.position);
         players.Remove(player);
         player.Actions = null;
         if (OnPlayerRemoved != null)

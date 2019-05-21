@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3410766468448273073}
   - component: {fileID: 3410766468448273072}
-  - component: {fileID: 3410766468448273079}
   - component: {fileID: 3410766468448273075}
   - component: {fileID: 3410766468448273074}
   - component: {fileID: 3410766468448273036}
@@ -50,33 +49,13 @@ MonoBehaviour:
   teleportEffect: {fileID: 5851145849396893945, guid: f372c10d05f14c54c8bfdace709ad09c,
     type: 3}
   frontPlayer: {fileID: 0}
-  players: []
-  numberOfPlayers: 0
+  activePlayers: []
+  numberOfActivePlayers: 0
   playerPositions: []
   winUI: {fileID: 0}
   winText: {fileID: 0}
   debug: 1
   playerManager: {fileID: 3410766468448273074}
---- !u!114 &3410766468448273079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3410766468448273078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ab295f41598f847abadcf2ad2faaaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modules:
-  - {fileID: 3144677582497266432, guid: d58560df82fe54a998f3c3f6d00affc0, type: 3}
-  - {fileID: 981804635303840026, guid: d7a2346ee6efd624c9769e4240bad41f, type: 3}
-  - {fileID: 690283908284106009, guid: 7a278c73b3a170d4790b96ae8b74ffba, type: 3}
-  - {fileID: 4709880835721178014, guid: 385ddcc48108bf44da4a3439c1625bd6, type: 3}
-  - {fileID: 4408270904373836695, guid: d463dd91caa75664aae83d4e2ba1efd8, type: 3}
-  mostRecentModule: {fileID: 0}
-  minDistanceBetweenCameraAndNewestEntryPoint: 20
 --- !u!114 &3410766468448273075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db72802eb20683a4f898a48a945a303d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
+  acceptNewPlayers: 0
   playerPrefabs:
   - {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03, type: 3}
   - {fileID: 1120740143082971673, guid: 52aa96c8597881f45a4594efe0a4c285, type: 3}

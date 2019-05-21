@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666494574454250110}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bunch_of_rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_Name
       value: rock_final 1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_final 1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.012491256
@@ -203,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_final 1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -281,6 +293,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_Name
       value: rock_final 1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
       propertyPath: m_LocalPosition.x

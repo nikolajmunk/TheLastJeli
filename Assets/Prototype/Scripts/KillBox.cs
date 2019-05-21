@@ -10,7 +10,7 @@ public class KillBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        offset = Camera.main.transform.position - transform.position;
     }
 
     // Update is called once per frame

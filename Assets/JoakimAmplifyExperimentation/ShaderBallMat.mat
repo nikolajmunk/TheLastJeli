@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderBallMat
-  m_Shader: {fileID: 4800000, guid: 947c20c73ac6e4eb4ad25ed5910582fa, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5c4babf38d00a43d8ad12f89df396756, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -50,21 +50,32 @@ Material:
     m_Floats:
     - _BlendToWhite: 0
     - _ColourScale: 3
+    - _Cutoff: 0.5
+    - _Dissolve: 0
     - _DistortionScale: 0.031
+    - _Emission: 0.33
+    - _EmissionOffset: 0.05
     - _ExtrusionAmount: 20
     - _ExtrusionPoint: 0.25
     - _Float1: 0.64535975
+    - _Float4: -1.38
     - _MaxAlpha: 0.7
     - _Metallic: 0.2
     - _MinAlpha: 0.5
+    - _NoiseScale: 2.37
     - _RippleScale: 1
     - _RippleSpeed: 0.07
     - _Smoothness: 1
     - _TimeMultiplier: 0.2
+    - _TransitionDistance: 3.46
+    - _TransitionFalloff: 100
     - _WobbleSpeed: 0.99
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0, g: 0, b: 0, a: 0}
     - _Colour: {r: 0.4, g: 4, b: 1, a: 1}
+    - _EmissionColour: {r: 0.21176471, g: 0, b: 1.5529412, a: 0}
     - _ModelColour: {r: 0.6659298, g: 0, b: 1, a: 0}
     - _PannerSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _PlanePos: {r: 0, g: -1.33, b: 0, a: 0}
+    - _Vector0: {r: 0, g: 0, b: 0, a: 0}

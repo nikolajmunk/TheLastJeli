@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 710035029224280040}
   - component: {fileID: 710035029223148840}
   - component: {fileID: 4147513263113016607}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rock_final 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: af19adf2aa2d14542be3f5df2f5723ba, type: 3}
 --- !u!1 &1319834073782697243
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4957623632948960452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EntryPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7491148740901798209}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExitPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

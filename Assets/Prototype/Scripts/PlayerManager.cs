@@ -5,6 +5,8 @@ using InControl;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager instance;
+
     [Tooltip("When debugging, you can add multiple players to one controller.")]
     public bool debug;
     [Tooltip("Should players be able to join?")]
@@ -22,15 +24,24 @@ public class PlayerManager : MonoBehaviour
     public event PlayerListHandler OnPlayerRemoved;
 
     const int maxPlayers = 4;
-
     public List<Player> players = new List<Player>(maxPlayers);
 
-    PlayerActions keyboardListener;
-    PlayerActions joystickListener;
+    public PlayerActions keyboardListener;
+    public PlayerActions joystickListener;
     PlayerBindings bindings;
 
     void OnEnable()
     {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         InputManager.OnDeviceDetached += OnDeviceDetached;
         bindings = GetComponent<PlayerBindings>();
         keyboardListener = PlayerActions.CreateWithKeyboardBindings(bindings);
@@ -151,6 +162,7 @@ public class PlayerManager : MonoBehaviour
             }
 
             players.Add(player); // The list of players in the game. We'll have to make sure that list list of players is the one on the GameManager.
+            DontDestroyOnLoad(player.gameObject);
             if (OnPlayerAdded != null)
             {
                 OnPlayerAdded(player);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     public List<GameObject> modules;
+    public GameObject startingModule;
     public GameObject mostRecentModule;
     public float minDistanceBetweenCameraAndNewestEntryPoint;
 
@@ -39,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mostRecentModule = startingModule;
     }
 
     // Update is called once per frame

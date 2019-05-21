@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
+    public static GameManager instance;
     public GameObject teleportEffect;
     public GameObject frontPlayer;
     public List<Player> activePlayers; // Maybe this shouldn't copy the players list from PlayerManager. After all, we want a list of active players, and if we're always just cloning it, what's the point?
@@ -19,13 +19,21 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         playerManager.OnPlayerAdded += OnPlayerAdded;
         playerManager.OnPlayerRemoved += OnPlayerRemoved;
     }
 
     void Awake()
     {
-        instance = this;
         if (playerManager == null)
         {
             playerManager = GetComponent<PlayerManager>();

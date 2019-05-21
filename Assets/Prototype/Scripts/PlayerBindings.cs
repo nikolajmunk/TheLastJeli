@@ -21,4 +21,6 @@ public class PlayerBindings : MonoBehaviour
     public InputControlType shoot;
 
     public InputControlType submit;
+
+    public InputControlType command;
 }

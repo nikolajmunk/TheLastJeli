@@ -92,7 +92,7 @@ public class PlayerActions : PlayerActionSet
 
         actions.Submit.AddDefaultBinding(bindings.keyboardBindings.submit);
         actions.Command.AddDefaultBinding(bindings.keyboardBindings.command);
-        Debug.Log("Created with joystick bindings.");
+        Debug.Log("Created with keyboard bindings.");
 
         return actions;
     }

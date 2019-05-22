@@ -1207,6 +1207,26 @@ PrefabInstance:
       propertyPath: mostRecentModule
       value: 
       objectReference: {fileID: 129704022}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimLeft
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimRight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimDown
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimUp
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff, type: 3}
 --- !u!1001 &960849059

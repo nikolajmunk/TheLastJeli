@@ -85,7 +85,7 @@ public class PlatformerController : MonoBehaviour
 			vel.x = actions.Move.Value.x * speed;
             if (actions.Dash.WasPressed && actions.Dash.LastValue == 0)
             {
-                Dash();
+                Dash(vel);
             }
 
 			if (CheckJumpInput () && PermissionToJump ()) {
@@ -108,10 +108,9 @@ public class PlatformerController : MonoBehaviour
 		return vel;
 	}
 
-    void Dash()
+    void Dash(Vector2 vel)
     {
-        Debug.Log("hehe");
-        rb2d.AddForce(actions.Move.Value, ForceMode.Impulse);
+        rb2d.AddForce(vel * new Vector3(0, 3, 0), ForceMode.Impulse);
     }
 
 	/// <summary>

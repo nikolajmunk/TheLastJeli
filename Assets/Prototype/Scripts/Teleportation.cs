@@ -12,6 +12,11 @@ public class Teleportation : MonoBehaviour
 
     public Animator anim;
 
+    public void SetCanBeTeleported(int canBeTeleported)
+    {
+        actor2.GetComponent<Teleportable>().canBeTeleported = (canBeTeleported == 1 ? true : false);
+    }
+
     public void SwitchPlaces()
     {
         GameManager.instance.SwapActors(actor1, actor2);
@@ -38,6 +43,7 @@ public class Teleportation : MonoBehaviour
 
         AssignFollowTarget(particles1, actor1);
         AssignFollowTarget(particles2, actor2);
+
     }
 
     private void AssignFollowTarget(GameObject[] objects, Transform target)
@@ -51,6 +57,6 @@ public class Teleportation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

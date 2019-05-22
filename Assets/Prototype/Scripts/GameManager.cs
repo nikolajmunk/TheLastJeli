@@ -56,6 +56,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool CanBeTeleported(GameObject actor)
+    {
+        Teleportable teleportable = actor.GetComponent<Teleportable>();
+        if (teleportable != null)
+        {
+            return teleportable.canBeTeleported;
+        }
+        return false;
+    }
+
     public void GameOver(float delay)
     {
         if (!debug)

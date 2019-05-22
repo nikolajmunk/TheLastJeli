@@ -1244,6 +1244,7 @@ GameObject:
   - component: {fileID: 4632622503768299545}
   - component: {fileID: 3325668314686747492}
   - component: {fileID: 6803755383846162497}
+  - component: {fileID: -9056465369436239549}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -1450,6 +1451,19 @@ MonoBehaviour:
   audioMapping:
   - name: Jump
     audioClip: {fileID: 8300000, guid: 75b0f206410aa0646a9ad4ad93997701, type: 3}
+--- !u!114 &-9056465369436239549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3068070613354843442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7fd77b6f74e7e408ffd6fd11bb5c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeTeleported: 1
 --- !u!1001 &508046500080039521
 PrefabInstance:
   m_ObjectHideFlags: 0

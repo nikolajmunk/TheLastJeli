@@ -42,7 +42,7 @@ public class BulletBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (GameManager.instance.CanBeTeleported(collision.gameObject))
         {
             if (collision.gameObject != origin)
             {

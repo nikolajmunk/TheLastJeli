@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
         Teleportation teleportation = effect.GetComponent<Teleportation>();
         teleportation.actor1 = actor1.transform;
         teleportation.actor2 = actor2.transform;
+        teleportation.Initialize();
         StartCoroutine(teleportation.Teleport());
         Debug.Log("Did it");
     }

@@ -103,6 +103,15 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 0.073645726
+        value: 0.3413959
+        inSlope: -6.4659686
+        outSlope: -6.4659686
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 0.10406338
         value: 0.23068619
         inSlope: 0.08516245
@@ -219,7 +228,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -24112,6 +24121,8 @@ MonoBehaviour:
   - {fileID: 807327142858523788}
   particles2:
   - {fileID: 3645549412891391709}
+  actor1Teleportable: {fileID: 0}
+  actor2Teleportable: {fileID: 0}
   anim: {fileID: 933980218102430830}
 --- !u!95 &933980218102430830
 Animator:

@@ -11,6 +11,8 @@ public class BulletBehavior : MonoBehaviour
     public Vector3 direction;
     public bool moving;
     public GameObject origin;
+    public GameObject ricochetEffect;
+    public GameObject destroyEffect;
     int bounces = 0;
     public int maxBounces = 0;
     public float lifetime = 5;
@@ -40,7 +42,7 @@ public class BulletBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (GameManager.instance.CanBeTeleported(collision.gameObject))
         {
             if (collision.gameObject != origin)
             {
@@ -56,7 +58,6 @@ public class BulletBehavior : MonoBehaviour
 
                 Destroy(gameObject);
             }
-
             
         }
 
@@ -66,11 +67,25 @@ public class BulletBehavior : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(reflectDir);
             rb.velocity = reflectDir;
 
-            Debug.Log("Hit terrain");
+            //Debug.Log("Hit terrain");
 
             bounces += 1;
-
+            if (ricochetEffect != null)
+            {
+                GameObject effect = Instantiate(ricochetEffect, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+                Destroy(effect, 1);
+            }
             audios.Play();
+        }
+
+        if (collision.gameObject.GetComponent<BulletBehavior>())
+        {
+            if (destroyEffect != null)
+            {
+                GameObject effect = Instantiate(destroyEffect, transform.position, Quaternion.identity);
+                Destroy(effect, 1);
+            }
+            Destroy(gameObject);
         }
     }
 

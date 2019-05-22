@@ -20,6 +20,11 @@ public class SceneBehavior : MonoBehaviour
         {
             player.transform.position = spawnPoint.position;
         }
+
+        if (GameManager.instance.activePlayers.Count != 0)
+        {
+            PlayerManager.instance.acceptNewPlayers = false;
+        }
     }
 
     // Update is called once per frame

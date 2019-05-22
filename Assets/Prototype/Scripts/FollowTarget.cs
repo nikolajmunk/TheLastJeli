@@ -10,6 +10,8 @@ public class FollowTarget : MonoBehaviour
     int numberOfPlayers;
     public float maxMovementDelta;
 
+    Vector3 newPositions;
+
     private void Start()
     {
         //offset = transform.position - GameManager.instance.frontPlayer.transform.position;
@@ -24,9 +26,16 @@ public class FollowTarget : MonoBehaviour
             float yCentroid = GetCentroid().y;
             //transform.position = GetCentroid() + offset;
             //transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, Vector3.MoveTowards(transform.position, GameManager.instance.playerPositions[0].position + offset, maxMovementDelta).y, GameManager.instance.playerPositions[0].position.z + offset.z);
-            transform.position = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+            newPositions = new Vector3(GameManager.instance.playerPositions[0].position.x + offset.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+            if (newPositions.x > transform.position.x)
+            {
+                transform.position = newPositions;
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, yCentroid + offset.y, GameManager.instance.playerPositions[0].position.z + offset.z);
+            }
         }
-
     }
 
     private Vector3 GetCentroid()

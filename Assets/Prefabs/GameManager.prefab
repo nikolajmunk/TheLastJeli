@@ -68,17 +68,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9ed700f0d4bbd45b4207ce0af571f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLeft: 3
-  moveRight: 4
-  moveDown: 2
-  moveUp: 1
-  jump: 18
-  aimLeft: 8
-  aimRight: 9
-  aimDown: 7
-  aimUp: 6
-  shoot: 16
-  submit: 19
+  joystickBindings:
+    moveLeft: 3
+    moveRight: 4
+    moveDown: 2
+    moveUp: 1
+    dash: 17
+    jump: 18
+    aimLeft: 8
+    aimRight: 9
+    aimDown: 7
+    aimUp: 6
+    shoot: 16
+    submit: 19
+    command: 300
+  keyboardBindings:
+    moveLeft: 36
+    moveRight: 39
+    moveDown: 54
+    moveUp: 58
+    dash: 5
+    jump: 76
+    shoot: 1
+    submit: 40
+    command: 72
 --- !u!114 &3410766468448273074
 MonoBehaviour:
   m_ObjectHideFlags: 0

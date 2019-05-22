@@ -9,7 +9,7 @@ public class SceneBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.activePlayers = PlayerManager.instance.players;
+        GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
 
         if (spawnPoint == null)
         {

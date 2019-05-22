@@ -83,6 +83,10 @@ public class PlatformerController : MonoBehaviour
 
 		if (canMove) {
 			vel.x = actions.Move.Value.x * speed;
+            if (actions.Dash.WasPressed && actions.Dash.LastValue == 0)
+            {
+                Dash();
+            }
 
 			if (CheckJumpInput () && PermissionToJump ()) {
                 vel = ApplyJump(vel);
@@ -103,6 +107,12 @@ public class PlatformerController : MonoBehaviour
 		grounded = false;
 		return vel;
 	}
+
+    void Dash()
+    {
+        Debug.Log("hehe");
+        rb2d.AddForce(actions.Move.Value, ForceMode.Impulse);
+    }
 
 	/// <summary>
 	/// Updates grounded and lastGroundingTime. 

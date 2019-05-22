@@ -11,6 +11,7 @@ public class PlayerActions : PlayerActionSet
     public PlayerAction Up;
     public PlayerTwoAxisAction Move;
     public PlayerAction Jump;
+    public PlayerAction Dash;
 
     public PlayerAction AimLeft;
     public PlayerAction AimRight;
@@ -31,6 +32,7 @@ public class PlayerActions : PlayerActionSet
         Up = CreatePlayerAction("Move Up");
         Move = CreateTwoAxisPlayerAction(Left, Right, Down, Up);
         Jump = CreatePlayerAction("Jump");
+        Dash = CreatePlayerAction("Dash");
 
         AimLeft = CreatePlayerAction("Aim Left");
         AimRight = CreatePlayerAction("Aim Right");
@@ -48,23 +50,24 @@ public class PlayerActions : PlayerActionSet
     {
         var actions = new PlayerActions();
 
-        actions.Left.AddDefaultBinding(bindings.moveLeft);
-        actions.Right.AddDefaultBinding(bindings.moveRight);
-        actions.Down.AddDefaultBinding(bindings.moveDown);
-        actions.Up.AddDefaultBinding(bindings.moveUp);
+        actions.Left.AddDefaultBinding(bindings.joystickBindings.moveLeft);
+        actions.Right.AddDefaultBinding(bindings.joystickBindings.moveRight);
+        actions.Down.AddDefaultBinding(bindings.joystickBindings.moveDown);
+        actions.Up.AddDefaultBinding(bindings.joystickBindings.moveUp);
 
-        actions.Jump.AddDefaultBinding(bindings.jump);
+        actions.Jump.AddDefaultBinding(bindings.joystickBindings.jump);
+        actions.Dash.AddDefaultBinding(bindings.joystickBindings.dash);
 
-        actions.AimLeft.AddDefaultBinding(bindings.aimLeft);
-        actions.AimRight.AddDefaultBinding(bindings.aimRight);
-        actions.AimDown.AddDefaultBinding(bindings.aimDown);
-        actions.AimUp.AddDefaultBinding(bindings.aimUp);
+        actions.AimLeft.AddDefaultBinding(bindings.joystickBindings.aimLeft);
+        actions.AimRight.AddDefaultBinding(bindings.joystickBindings.aimRight);
+        actions.AimDown.AddDefaultBinding(bindings.joystickBindings.aimDown);
+        actions.AimUp.AddDefaultBinding(bindings.joystickBindings.aimUp);
 
-        actions.Shoot.AddDefaultBinding(bindings.shoot);
+        actions.Shoot.AddDefaultBinding(bindings.joystickBindings.shoot);
 
-        actions.Submit.AddDefaultBinding(bindings.submit);
-        actions.Command.AddDefaultBinding(bindings.command);
-        Debug.Log("Created with keyboard bindings.");
+        actions.Submit.AddDefaultBinding(bindings.joystickBindings.submit);
+        actions.Command.AddDefaultBinding(bindings.joystickBindings.command);
+        Debug.Log("Created with joystick bindings.");
         return actions;
     }
 
@@ -72,22 +75,23 @@ public class PlayerActions : PlayerActionSet
     {
         var actions = new PlayerActions();
 
-        actions.Left.AddDefaultBinding(Key.A);
-        actions.Right.AddDefaultBinding(Key.D);
-        actions.Down.AddDefaultBinding(Key.S);
-        actions.Up.AddDefaultBinding(Key.W);
+        actions.Left.AddDefaultBinding(bindings.keyboardBindings.moveLeft);
+        actions.Right.AddDefaultBinding(bindings.keyboardBindings.moveRight);
+        actions.Down.AddDefaultBinding(bindings.keyboardBindings.moveDown);
+        actions.Up.AddDefaultBinding(bindings.keyboardBindings.moveUp);
 
-        actions.Jump.AddDefaultBinding(Key.Space);
+        actions.Jump.AddDefaultBinding(bindings.keyboardBindings.jump);
+        actions.Dash.AddDefaultBinding(bindings.keyboardBindings.dash);
 
-        actions.AimLeft.AddDefaultBinding(Mouse.NegativeX);
-        actions.AimRight.AddDefaultBinding(Mouse.PositiveX);
-        actions.AimDown.AddDefaultBinding(Mouse.NegativeY);
-        actions.AimUp.AddDefaultBinding(Mouse.PositiveY);
+        //actions.AimLeft.AddDefaultBinding(bindings.keyboardBindings.aimLeft);
+        //actions.AimRight.AddDefaultBinding(bindings.keyboardBindings.aimRight);
+        //actions.AimDown.AddDefaultBinding(bindings.keyboardBindings.aimDown);
+        //actions.AimUp.AddDefaultBinding(bindings.keyboardBindings.aimUp);
 
-        actions.Shoot.AddDefaultBinding(Mouse.LeftButton);
+        actions.Shoot.AddDefaultBinding(bindings.keyboardBindings.shoot);
 
-        actions.Submit.AddDefaultBinding(Key.E);
-        actions.Command.AddDefaultBinding(Key.Return);
+        actions.Submit.AddDefaultBinding(bindings.keyboardBindings.submit);
+        actions.Command.AddDefaultBinding(bindings.keyboardBindings.command);
         Debug.Log("Created with joystick bindings.");
 
         return actions;

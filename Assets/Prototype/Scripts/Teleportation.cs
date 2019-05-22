@@ -34,7 +34,7 @@ public class Teleportation : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnabled()
     {
         anim = GetComponent<Animator>();
 
@@ -50,6 +50,7 @@ public class Teleportation : MonoBehaviour
     {
         foreach (GameObject obj in objects)
         {
+            Debug.Log("assigned.");
             obj.GetComponent<FollowTransform>().target = target;
         }
     }

@@ -37,13 +37,6 @@ public class Teleportation : MonoBehaviour
     void OnEnabled()
     {
         anim = GetComponent<Animator>();
-
-        lr.GetComponent<RenderLine>().point1 = actor1;
-        lr.GetComponent<RenderLine>().point2 = actor2;
-
-        AssignFollowTarget(particles1, actor1);
-        AssignFollowTarget(particles2, actor2);
-
     }
 
     private void AssignFollowTarget(GameObject[] objects, Transform target)
@@ -53,6 +46,14 @@ public class Teleportation : MonoBehaviour
             Debug.Log("assigned.");
             obj.GetComponent<FollowTransform>().target = target;
         }
+    }
+    
+    public void Initialize() {
+        lr.GetComponent<RenderLine>().point1 = actor1;
+        lr.GetComponent<RenderLine>().point2 = actor2;
+        AssignFollowTarget(particles1, actor1);
+        AssignFollowTarget(particles2, actor2);
+
     }
 
     // Update is called once per frame

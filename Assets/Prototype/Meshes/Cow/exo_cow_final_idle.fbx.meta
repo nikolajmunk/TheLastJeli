@@ -1,14 +1,70 @@
 fileFormatVersion: 2
 guid: f2fbf279ee0a245ffa7821719fe89a2c
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: -1543284287478949569
-    second: Cow|idle
-  - first:
-      74: -7679606587905222139
-    second: Cow|none
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cow
+    100002: CowMesh
+    100004: //RootNode
+    100006: head
+    100008: head.001
+    100010: head.001_end
+    100012: head.002
+    100014: head.002_end
+    100016: head_end
+    100018: hips
+    100020: leg back left
+    100022: leg back left low
+    100024: leg back left low_end
+    100026: leg back left mid
+    100028: leg back right
+    100030: leg back right low
+    100032: leg back right low_end
+    100034: leg back right mid
+    100036: leg left
+    100038: leg lelf low
+    100040: leg lelf low_end
+    100042: leg right
+    100044: leg right low
+    100046: leg right low_end
+    100048: neck
+    100050: tail
+    100052: tail.001
+    100054: tail.001_end
+    400000: Cow
+    400002: CowMesh
+    400004: //RootNode
+    400006: head
+    400008: head.001
+    400010: head.001_end
+    400012: head.002
+    400014: head.002_end
+    400016: head_end
+    400018: hips
+    400020: leg back left
+    400022: leg back left low
+    400024: leg back left low_end
+    400026: leg back left mid
+    400028: leg back right
+    400030: leg back right low
+    400032: leg back right low_end
+    400034: leg back right mid
+    400036: leg left
+    400038: leg lelf low
+    400040: leg lelf low_end
+    400042: leg right
+    400044: leg right low
+    400046: leg right low_end
+    400048: neck
+    400050: tail
+    400052: tail.001
+    400054: tail.001_end
+    2100000: cow_skin
+    4300000: CowMesh
+    7400000: Cow|idle
+    7400002: Cow|none
+    9500000: //RootNode
+    13700000: CowMesh
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +96,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Cow|idle
       takeName: Cow|idle
-      internalID: -1543284287478949569
       firstFrame: 0
       lastFrame: 268
       wrapMode: 0
@@ -69,7 +124,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Cow|none
       takeName: Cow|none
-      internalID: -7679606587905222139
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -109,19 +163,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -130,11 +183,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -144,7 +196,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

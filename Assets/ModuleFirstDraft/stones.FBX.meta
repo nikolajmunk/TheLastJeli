@@ -1,8 +1,53 @@
 fileFormatVersion: 2
 guid: 35c32b5cfb76142b58e1b34bb79445fc
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Group001
+    100002: stone1
+    100004: stone2
+    100006: stone3
+    100008: stone4
+    100010: stone5
+    100012: stone6
+    100014: stone7
+    100016: stone8
+    100018: //RootNode
+    400000: Group001
+    400002: stone1
+    400004: stone2
+    400006: stone3
+    400008: stone4
+    400010: stone5
+    400012: stone6
+    400014: stone7
+    400016: stone8
+    400018: //RootNode
+    2100000: 'Material #28'
+    2300000: stone1
+    2300002: stone2
+    2300004: stone3
+    2300006: stone4
+    2300008: stone5
+    2300010: stone6
+    2300012: stone7
+    2300014: stone8
+    3300000: stone1
+    3300002: stone2
+    3300004: stone3
+    3300006: stone4
+    3300008: stone5
+    3300010: stone6
+    3300012: stone7
+    3300014: stone8
+    4300000: stone1
+    4300002: stone3
+    4300004: stone4
+    4300006: stone2
+    4300008: stone6
+    4300010: stone7
+    4300012: stone8
+    4300014: stone5
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +90,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +110,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +123,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -1,8 +1,28 @@
 fileFormatVersion: 2
 guid: ef5b1cca8bd5d436fb696fcb0058bf33
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Group2
+    100004: Group23197
+    100006: Group24792
+    400000: //RootNode
+    400002: Group2
+    400004: Group23197
+    400006: Group24792
+    2100000: Group2Mat
+    2100002: Group23197Mat
+    2100004: Group24792Mat
+    2300000: Group2
+    2300002: Group23197
+    2300004: Group24792
+    3300000: Group2
+    3300002: Group23197
+    3300004: Group24792
+    4300000: Group2
+    4300002: Group23197
+    4300004: Group24792
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +65,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +85,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +98,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

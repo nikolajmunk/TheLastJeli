@@ -445,6 +445,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   players: []
   maxMovementDelta: 0.5
+  maxYOffsetToUpmost: 0
 --- !u!81 &185929302
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1045,6 +1046,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 149326112178422567, guid: 3a973e893117cf24bb068c4df62745b1,
         type: 3}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,7 +1428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda2c49b18a605499dc2ed0a57c6ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
+  StartingModule: {fileID: 0}
+  spawnPoints: []
 --- !u!1 &1073163183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2343,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   players: []
   maxMovementDelta: 2
+  maxYOffsetToUpmost: 0
 --- !u!81 &2146433821
 AudioListener:
   m_ObjectHideFlags: 0

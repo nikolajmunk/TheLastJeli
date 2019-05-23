@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class SceneBehavior : MonoBehaviour
 {
-    public Transform spawnPoint;
+    public GameObject StartingModule;
+    public List<Transform> spawnPoints;
+    private List<int> SpawnInts = new List<int> { 0, 1, 2, 3 };
+
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
+        StartingModule = GetComponent<LevelGenerator>().startingModule;
 
-        if (spawnPoint == null)
+        if (StartingModule != null)
         {
-            spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint").transform;
+            foreach (Transform child in StartingModule.transform)
+            {
+                if (child.gameObject.tag == "SpawnPoint")
+                {
+                    spawnPoints.Add(child);
+                }
+            }
         }
 
         foreach (Player player in PlayerManager.instance.players)
         {
-            player.transform.position = spawnPoint.position;
+            int temp = SpawnInts[Random.Range(0, SpawnInts.Count)];
+            player.transform.position = spawnPoints[temp].position;
+            SpawnInts.Remove(temp);
         }
 
         if (GameManager.instance.activePlayers.Count != 0)
@@ -30,6 +42,6 @@ public class SceneBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

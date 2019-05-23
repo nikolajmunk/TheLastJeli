@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6486717600686843928}
   m_Layer: 10
-  m_Name: ExitPoint
+  m_Name: EntryPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8736313882054145437}
   m_Layer: 10
-  m_Name: EntryPoint
+  m_Name: ExitPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2828147373682763818}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CowModule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

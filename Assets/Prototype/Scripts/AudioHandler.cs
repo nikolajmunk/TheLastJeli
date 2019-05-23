@@ -15,9 +15,25 @@ public class AudioHandler : MonoBehaviour
     public AudioSource audioSource;
     public List<AudioMapping> audioMapping;
 
-    public void PlayOneShotByName(string clipName)
+    public void PlayOneShotByName(string clipName, bool pickRandomClipWithName = false)
     {
-        audioSource.PlayOneShot(GetAudioClipByName(clipName));
+        if (pickRandomClipWithName)
+        {
+            audioSource.PlayOneShot(GetRandomAudioClipByName(clipName));
+        }
+        else
+        {
+            audioSource.PlayOneShot(GetAudioClipByName(clipName));
+        }
+    }
+
+    public void PlayOneShotWithRandomPitch(string clipName, float minPitch = 1, float maxPitch = 1, bool pickRandomClipWithName = false)
+    {
+        float previousPitch = audioSource.pitch;
+
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        PlayOneShotByName(clipName, pickRandomClipWithName);
+
     }
 
     public AudioClip GetAudioClipByName(string name)
@@ -28,6 +44,24 @@ public class AudioHandler : MonoBehaviour
             {
                 return mapping.audioClip;
             }
+        }
+        return null;
+    }
+
+    public AudioClip GetRandomAudioClipByName(string name)
+    {
+        List<AudioClip> clipsToPlay = new List<AudioClip>();
+        foreach (AudioMapping mapping in audioMapping)
+        {
+            if (mapping.name == name)
+            {
+                clipsToPlay.Add(mapping.audioClip);
+            }
+        }
+        int numberOfClips = clipsToPlay.Count;
+        if (numberOfClips > 0)
+        {
+            return clipsToPlay[Random.Range(0, numberOfClips)];
         }
         return null;
     }

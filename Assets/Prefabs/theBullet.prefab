@@ -4726,8 +4726,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1275561127
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4768,7 +4768,6 @@ GameObject:
   - component: {fileID: 6743415454395924487}
   - component: {fileID: 1556497043340770517}
   - component: {fileID: -3975230974284880627}
-  - component: {fileID: 5353844219441167418}
   m_Layer: 0
   m_Name: theBullet
   m_TagString: Untagged
@@ -5098,17 +5097,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!210 &5353844219441167418
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055159017398423076}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1 &4266171924123022632
 GameObject:
   m_ObjectHideFlags: 0

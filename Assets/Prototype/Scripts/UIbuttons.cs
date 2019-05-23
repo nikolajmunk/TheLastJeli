@@ -38,6 +38,6 @@ public class UIbuttons : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("ActualScene");
+        SceneManager.LoadScene("Lobby");
     }
 }

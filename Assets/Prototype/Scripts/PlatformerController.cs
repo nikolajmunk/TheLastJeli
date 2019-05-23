@@ -82,48 +82,22 @@ public class PlatformerController : MonoBehaviour
 		Vector2 vel = rb2d.velocity;
 
 		if (canMove) {
-<<<<<<< HEAD
 			vel.x = actions.Move.Value.x * speed;
-=======
->>>>>>> 1301bd727bb7bb346367bb18e2bc4f319146e3b2
 
-            //if (actions.Dash)
-            //{
-            //    if (dashTime <= maxDashTime)
-            //    {
-            //        speedModifier = 3f;
-            //        dashTime += Time.deltaTime;
-            //        dashing = true;
-            //    }
-            //    else
-            //    {
-            //        speedModifier = 1;
-            //        dashing = false;
-            //    }
-            //}
-            //else
-            //{
-            //    speedModifier = 1;
-            //    dashTime = 0;
-            //    dashing = false;
-            //}
-
-            vel.x = actions.Move.Value.normalized.x * speed;
-
-            if (CheckJumpInput () && PermissionToJump ()) {
+			if (CheckJumpInput () && PermissionToJump ()) {
                 vel = ApplyJump(vel);
             }
 		}
 
-        vel.y += -gravity * Time.deltaTime;
+		vel.y += -gravity * Time.deltaTime;
 		rb2d.velocity = vel;
 
 		UpdateAnimations ();
 	}
 
-    Vector2 ApplyJump (Vector2 vel)
+	Vector2 ApplyJump (Vector2 vel)
 	{
-        audioHandler.PlayOneShotWithRandomPitch("Jump", .8f, 2f);
+        audioHandler.PlayOneShotByName("Jump");
         vel.y = jumpVelocity;
 		lastJumpTime = Time.time;
 		grounded = false;
@@ -143,10 +117,6 @@ public class PlatformerController : MonoBehaviour
 				RaycastHit hit;
 				Physics.Raycast (groundCheckStart, Vector3.down,out hit, groundCheckDepth, groundLayers);
 				if (hit.collider != null) {
-                    if (!grounded)
-                    {
-                        Land();
-                    }
 					grounded = true;
 					return;
 				}
@@ -183,11 +153,6 @@ public class PlatformerController : MonoBehaviour
 			anim.SetFloat("velocity", rb2d.velocity.y);
 	}
 
-    void Land()
-    {
-        Debug.Log("I landed!");
-    }
-
 	/// <summary>
 	/// Return true if the character can jump right now.
 	/// </summary>
@@ -221,8 +186,7 @@ public class PlatformerController : MonoBehaviour
 	/// <param name="force">Force to push the character back</param>
 	public void Pushback (Vector3 force)
 	{
-		//rb2d.velocity = force;
-		rb2d.AddForce(force, ForceMode.Impulse);
+		rb2d.velocity = force;
 		lastJumpTime = Time.time;
 		grounded = false;
 		lostGroundingTime = Time.time;

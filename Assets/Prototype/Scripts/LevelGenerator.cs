@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public bool generateLevel = true;
+
     public List<GameObject> modules;
     public GameObject startingModule;
+    public GameObject endModule;
     public GameObject mostRecentModule;
     public float minDistanceBetweenCameraAndNewestEntryPoint;
 
@@ -48,7 +51,7 @@ public class LevelGenerator : MonoBehaviour
     {
         // If the camera gets too close to the end of the level, spawn a new module.
         float distanceBetweenCameraAndNewestEntryPoint = GetPoint(mostRecentModule, "EntryPoint").position.x - Camera.main.transform.position.x;
-        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint)
+        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint && generateLevel)
         {
             SpawnRandomModule(modules);
         }

@@ -17,8 +17,9 @@ public class GameManager : MonoBehaviour
     public bool debug;
     public PlayerManager playerManager;
     private LevelGenerator levelGenerator;
-    public GameObject spaceShipModule;
-    private UIbuttons buttonScript;
+    public GameObject endModule;
+    public UIbuttons buttonScript;
+    public Vector3 killBoxPosition = Vector3.zero;
 
     private bool isEndGame = false;
     private bool isEveryoneDead = false;
@@ -43,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        levelGenerator = GameObject.Find("LevelManager").GetComponent<LevelGenerator>();
+        killBoxPosition = levelGenerator.startingModule.transform.position;
+
         if (playerManager == null)
         {
             playerManager = GetComponent<PlayerManager>();
@@ -60,7 +64,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Only one player left
-        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby")
+        if (!debug && numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby")
         {
             EndGame();
         }
@@ -93,8 +97,12 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        levelGenerator = GameObject.Find("LevelManager").GetComponent<LevelGenerator>();
-        levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        levelGenerator.generateLevel = false;
+        endModule = levelGenerator.endModule;
+        if (endModule != null)
+        {
+            levelGenerator.SpawnChunk(endModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        }
         isEndGame = true;
     }
 
@@ -133,12 +141,12 @@ public class GameManager : MonoBehaviour
         player.GetComponent<AudioHandler>().PlayOneShotByName("Death");
 
         //Make player invisible & wait to disable entire gameobject
-        player.gameObject.GetComponent<MeshRenderer>().enabled = false;
-        KillTime(player.gameObject);
+        //player.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        KillTime(player.gameObject, 1);
     }
-    public IEnumerator KillTime(GameObject dyingPlayer)
+    public IEnumerator KillTime(GameObject dyingPlayer, float seconds)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(seconds);
         dyingPlayer.SetActive(false);
     }
 

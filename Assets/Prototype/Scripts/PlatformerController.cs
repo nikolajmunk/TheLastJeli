@@ -139,6 +139,10 @@ public class PlatformerController : MonoBehaviour
 				RaycastHit hit;
 				Physics.Raycast (groundCheckStart, Vector3.down,out hit, groundCheckDepth, groundLayers);
 				if (hit.collider != null) {
+                    if (!grounded)
+                    {
+                        Land();
+                    }
 					grounded = true;
 					return;
 				}
@@ -174,6 +178,11 @@ public class PlatformerController : MonoBehaviour
 
 			anim.SetFloat("velocity", rb2d.velocity.y);
 	}
+
+    void Land()
+    {
+        Debug.Log("I landed!");
+    }
 
 	/// <summary>
 	/// Return true if the character can jump right now.

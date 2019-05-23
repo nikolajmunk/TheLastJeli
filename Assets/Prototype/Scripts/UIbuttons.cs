@@ -5,22 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class UIbuttons : MonoBehaviour
 {
-    GameObject restartB;
-    GameObject endB;
-    GameObject startB;
+    public GameObject restartB;
+    public GameObject endB;
+    public GameObject startB;
+
+    Scene currentScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        /*
         restartB = GameObject.Find("Restart button");
         endB = GameObject.Find("Quit button");
         startB = GameObject.Find("Start button");
 
-        restartB.SetActive(false);
-        endB.SetActive(false);
-        startB.SetActive(false);
-        */
+        currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "ActualScene")
+        {
+            restartB.SetActive(false);
+            endB.SetActive(false);
+            startB.SetActive(false);
+        }
+
+        
     }
 
 

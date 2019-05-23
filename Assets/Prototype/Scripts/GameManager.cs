@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public PlayerManager playerManager;
     private LevelGenerator levelGenerator;
     public GameObject spaceShipModule;
+    private UIbuttons buttonScript;
 
     private bool isEndGame = false;
     private bool isEveryoneDead = false;
@@ -101,6 +102,7 @@ public class GameManager : MonoBehaviour
     {
         if (!debug)
         {
+            buttonScript.restartB.SetActive(true);
             winUI.SetActive(true);
             winText.text = activePlayers[0].name + " wins!";
             StartCoroutine(Restart(delay));

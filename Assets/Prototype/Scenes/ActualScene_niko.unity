@@ -271,6 +271,11 @@ PrefabInstance:
       propertyPath: useKeyboardMovement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2356177046357999683, guid: 8ba4bb1ae624f0e4ba22dfb1d40c12e7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24409962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba4bb1ae624f0e4ba22dfb1d40c12e7, type: 3}
 --- !u!1 &68406647
@@ -826,6 +831,11 @@ PrefabInstance:
       propertyPath: useKeyboardMovement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5028695011223189057, guid: fcaeba6c9372bae479159e3bd6a8d52d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24409962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcaeba6c9372bae479159e3bd6a8d52d, type: 3}
 --- !u!1 &582524114
@@ -1024,6 +1034,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: acceptNewPlayers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: playerPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 149326112178422567, guid: 3a973e893117cf24bb068c4df62745b1,
+        type: 3}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1084,6 +1105,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0125
+      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273079, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: modules.Array.data[0]
@@ -1119,11 +1145,6 @@ PrefabInstance:
       propertyPath: mostRecentModule
       value: 
       objectReference: {fileID: 129704022}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: acceptNewPlayers
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: debug
@@ -1650,6 +1671,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1661619966285594362, guid: bc1f60a9aab194716beb3647eba51e03,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3924516934422069627, guid: bc1f60a9aab194716beb3647eba51e03,
         type: 3}
       propertyPath: useMouseAim
@@ -1660,10 +1686,10 @@ PrefabInstance:
       propertyPath: useKeyboardMovement
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1661619966285594362, guid: bc1f60a9aab194716beb3647eba51e03,
+    - target: {fileID: 5808690991803727184, guid: bc1f60a9aab194716beb3647eba51e03,
         type: 3}
-      propertyPath: m_Pitch
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24409962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc1f60a9aab194716beb3647eba51e03, type: 3}
@@ -2169,6 +2195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: useKeyboardMovement
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524412993881612261, guid: 52aa96c8597881f45a4594efe0a4c285,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.24409962
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52aa96c8597881f45a4594efe0a4c285, type: 3}

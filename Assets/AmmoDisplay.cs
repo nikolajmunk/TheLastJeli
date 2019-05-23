@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AmmoDisplay : MonoBehaviour
 {
     public GameObject ammoSprite;
     public GameObject arrowSprite;
     public GameObject ammoContainer;
+    public Color spriteColor;
     int maxAmmo;
     int ammo;
     ShootBehavior gun;
@@ -21,9 +23,11 @@ public class AmmoDisplay : MonoBehaviour
         for (int i = 0; i < maxAmmo; i++)
         {
             GameObject shot = Instantiate(ammoSprite,ammoContainer.transform);
+            shot.GetComponent<Image>().color = spriteColor;
             shots.Add(shot);
         }
         GameObject arrow = Instantiate(arrowSprite, ammoContainer.transform);
+        arrow.GetComponent<Image>().color = spriteColor;
 
         shots.Reverse();
     }

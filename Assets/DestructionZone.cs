@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class garbageCollector : MonoBehaviour
+public class DestructionZone : MonoBehaviour
 {
     private void OnTriggerExit(Collider other)
     {

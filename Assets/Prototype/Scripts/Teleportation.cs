@@ -69,7 +69,8 @@ public class Teleportation : MonoBehaviour
         }
     }
 
-    public void Initialize() {
+    public void Initialize()
+    {
         lr.GetComponent<RenderLine>().point1 = actor1;
         lr.GetComponent<RenderLine>().point2 = actor2;
 
@@ -84,6 +85,21 @@ public class Teleportation : MonoBehaviour
         AssignParticleValues(particles1, actor1Teleportable);
         AssignParticleValues(particles2, actor1Teleportable);
 
+    }
+
+    void CowMooAudio()
+    {
+        if (actor1.GetComponent<Teleportable>().isCow || actor2.GetComponent<Teleportable>().isCow)
+        {
+            if (actor1.GetComponent<Teleportable>().isCow)
+            {
+                actor1.GetComponent<AudioSource>().Play();
+            }
+            else if (actor2.GetComponent<Teleportable>().isCow)
+            {
+                actor2.GetComponent<AudioSource>().Play();
+            }
+        }
     }
 
     // Update is called once per frame

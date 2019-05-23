@@ -1533,6 +1533,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: acceptNewPlayers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1593,20 +1603,16 @@ PrefabInstance:
       propertyPath: mostRecentModule
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: acceptNewPlayers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: debug
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: command
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: spaceShipModule
+      value: 
+      objectReference: {fileID: 5718879128444781954, guid: 664c5b0468cb34ed3a8464ac077299f3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff, type: 3}

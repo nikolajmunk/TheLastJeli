@@ -16,6 +16,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI winText;
     public bool debug;
     public PlayerManager playerManager;
+    private LevelGenerator levelGenerator;
+    public GameObject spaceShipModule;
+
+    private bool isEndGame = false;
+    private bool isEveryoneDead = false;
+    private bool isGameOver = false;
+
+    public bool playerInSpaceship = false;
 
     private void OnEnable()
     {
@@ -50,9 +58,25 @@ public class GameManager : MonoBehaviour
             frontPlayer = playerPositions[0].gameObject;
         }
 
-        if (numberOfActivePlayers == 1)
+        // Only one player left
+        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby")
+        {
+            EndGame();
+        }
+
+        // If one player reaches the spaceship, she wins
+        if (playerInSpaceship == true && isGameOver == false)
         {
             GameOver(5);
+        }
+
+        // If all players die
+        if (numberOfActivePlayers == 0 && isEndGame == true && isEveryoneDead == false)
+        {
+            // Do stuff here for when everyone is out of the game
+
+
+            isEveryoneDead = true;
         }
     }
 
@@ -66,6 +90,13 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public void EndGame()
+    {
+        levelGenerator = GameObject.Find("LevelManager").GetComponent<LevelGenerator>();
+        levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        isEndGame = true;
+    }
+
     public void GameOver(float delay)
     {
         if (!debug)
@@ -73,6 +104,7 @@ public class GameManager : MonoBehaviour
             winUI.SetActive(true);
             winText.text = activePlayers[0].name + " wins!";
             StartCoroutine(Restart(delay));
+            isGameOver = true;
         }
     }
 

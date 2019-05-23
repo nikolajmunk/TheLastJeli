@@ -82,36 +82,49 @@ public class PlatformerController : MonoBehaviour
 		Vector2 vel = rb2d.velocity;
 
 		if (canMove) {
-			vel.x = actions.Move.Value.x * speed;
-            if (actions.Dash.WasPressed && actions.Dash.LastValue == 0)
-            {
-                Dash(vel);
-            }
 
-			if (CheckJumpInput () && PermissionToJump ()) {
+            //if (actions.Dash)
+            //{
+            //    if (dashTime <= maxDashTime)
+            //    {
+            //        speedModifier = 3f;
+            //        dashTime += Time.deltaTime;
+            //        dashing = true;
+            //    }
+            //    else
+            //    {
+            //        speedModifier = 1;
+            //        dashing = false;
+            //    }
+            //}
+            //else
+            //{
+            //    speedModifier = 1;
+            //    dashTime = 0;
+            //    dashing = false;
+            //}
+
+            vel.x = actions.Move.Value.normalized.x * speed;
+
+            if (CheckJumpInput () && PermissionToJump ()) {
                 vel = ApplyJump(vel);
             }
 		}
 
-		vel.y += -gravity * Time.deltaTime;
+        vel.y += -gravity * Time.deltaTime;
 		rb2d.velocity = vel;
 
 		UpdateAnimations ();
 	}
 
-	Vector2 ApplyJump (Vector2 vel)
+    Vector2 ApplyJump (Vector2 vel)
 	{
-        audioHandler.PlayOneShotByName("Jump");
+        audioHandler.PlayOneShotWithRandomPitch("Jump", .8f, 2f);
         vel.y = jumpVelocity;
 		lastJumpTime = Time.time;
 		grounded = false;
 		return vel;
 	}
-
-    void Dash(Vector2 vel)
-    {
-        rb2d.AddForce(vel * new Vector3(0, 3, 0), ForceMode.Impulse);
-    }
 
 	/// <summary>
 	/// Updates grounded and lastGroundingTime. 
@@ -195,7 +208,8 @@ public class PlatformerController : MonoBehaviour
 	/// <param name="force">Force to push the character back</param>
 	public void Pushback (Vector3 force)
 	{
-		rb2d.velocity = force;
+		//rb2d.velocity = force;
+		rb2d.AddForce(force, ForceMode.Impulse);
 		lastJumpTime = Time.time;
 		grounded = false;
 		lostGroundingTime = Time.time;

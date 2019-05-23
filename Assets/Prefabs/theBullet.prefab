@@ -4769,6 +4769,7 @@ GameObject:
   - component: {fileID: 1556497043340770517}
   - component: {fileID: -3975230974284880627}
   - component: {fileID: 5353844219441167418}
+  - component: {fileID: 2550239036806178595}
   m_Layer: 0
   m_Name: theBullet
   m_TagString: Untagged
@@ -5012,7 +5013,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63925795b2803744eb424acebb159717, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5109,6 +5110,22 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2550239036806178595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055159017398423076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd6dce10ffd2c4c98d3d04331f5e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioMapping:
+  - name: Ricochet
+    audioClip: {fileID: 8300000, guid: 63925795b2803744eb424acebb159717, type: 3}
 --- !u!1 &4266171924123022632
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,23 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class KillBox : MonoBehaviour
 {
-    public float offsetY;
+    public Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        offset = Camera.main.transform.position - transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float xPosition = 0;
-        if (GameManager.instance.playerPositions.Count != 0)
-        {
-            xPosition = GameManager.instance.playerPositions[0].position.x;
-        }
-        transform.position = new Vector3(xPosition, GameManager.instance.killBoxPosition.y - offsetY, 0);
+        transform.position = new Vector3(Camera.main.transform.position.x - offset.x, Camera.main.transform.position.y - offset.y, 0);
     }
 
     private void OnTriggerEnter(Collider other)

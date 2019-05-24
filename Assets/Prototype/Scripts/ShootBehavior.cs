@@ -56,7 +56,7 @@ public class ShootBehavior : MonoBehaviour
         bb.origin = transform.root.gameObject;
         bb.GetComponent<Rigidbody>().AddForce(bb.transform.forward * shootSpeed);
         //Debug.DrawRay(shootOrigin.position, shootOrigin.right * 1000f, Color.red);
-        audioHandler.PlayOneShotWithRandomPitch("Shoot", .5f, 1.5f);
+        audioHandler.PlayOneShotByName("Shoot");
 
         ammo -= ammoUnit; //Debug.Log("Ammo is " + ammo);
         int reloadAmount = 0;

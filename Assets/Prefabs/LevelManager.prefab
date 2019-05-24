@@ -74,7 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ab295f41598f847abadcf2ad2faaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generateLevel: 1
   modules:
   - {fileID: 710035029220955112, guid: f8a6dd1a5b9fe0e488cd072172d4cff7, type: 3}
   - {fileID: 3190069528573781421, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f, type: 3}
@@ -82,6 +81,5 @@ MonoBehaviour:
   - {fileID: 3190069528573781421, guid: 77eb74286adb749c9abd158dba962d4a, type: 3}
   - {fileID: 3190069528573781421, guid: 08d236a070cf14622be97c1cc49c6692, type: 3}
   startingModule: {fileID: 0}
-  endModule: {fileID: 0}
   mostRecentModule: {fileID: 0}
   minDistanceBetweenCameraAndNewestEntryPoint: 20

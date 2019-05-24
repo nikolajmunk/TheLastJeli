@@ -46,7 +46,7 @@ public class GunRotation : MonoBehaviour
             aimInput = actions.Aim.Value;
         }
         
-        if (actions.Aim || actions.Device == null)
+        if (actions.Aim)
         {
             Quaternion lookRotation = Quaternion.LookRotation(aimInput, transform.root.forward);
 

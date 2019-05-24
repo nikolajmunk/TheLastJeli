@@ -1109,6 +1109,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5718879128444781954, guid: 664c5b0468cb34ed3a8464ac077299f3,
         type: 3}
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: buttonScript
+      value: 
+      objectReference: {fileID: 1814172297}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2782,6 +2792,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1814172297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5294007583616567568, guid: b1a86b0125ac5d94785b06d5ca195963,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991054840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb0359e6d9a4f8468fe8c5ccfd14780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1922748532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2937,6 +2959,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5294007583184085778, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007583236217184, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5294007583616567571, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3046,6 +3078,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007583616567575, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007584620756401, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a86b0125ac5d94785b06d5ca195963, type: 3}

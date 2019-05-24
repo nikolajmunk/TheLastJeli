@@ -9,18 +9,22 @@ public class UIbuttons : MonoBehaviour
     public GameObject endB;
     public GameObject startB;
 
-    Scene currentScene;
+    string currentScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        restartB = GameObject.Find("Restart button");
-        endB = GameObject.Find("Quit button");
-        startB = GameObject.Find("Start button");
+        //restartB = GameObject.Find("Restart button");
+        //endB = GameObject.Find("Quit button");
+        //startB = GameObject.Find("Start button");
 
-        currentScene = SceneManager.GetActiveScene();
+        restartB = transform.GetChild(0).gameObject;
+        endB = transform.GetChild(1).gameObject;
+        startB = transform.GetChild(2).gameObject;
 
-        if (currentScene.name == "ActualScene")
+        currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "ActualScene")
         {
             restartB.SetActive(false);
             endB.SetActive(false);
@@ -30,21 +34,38 @@ public class UIbuttons : MonoBehaviour
         
     }
 
-
-    public void Restart()
+    private void Update()
     {
-        SceneManager.LoadScene("ActualScene");
-    }
+        // Pause
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            restartB.SetActive(!restartB.activeInHierarchy);
+            endB.SetActive(!endB.activeInHierarchy);
+            startB.SetActive(!startB.activeInHierarchy);
+        }
 
-    public void EndGame()
-    {
-        Application.Quit();
+        // Lobby controls
 
-        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("MasterScene");
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("Main_Menu");
+
+        //Application.Quit();
+
+        //UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+
 }

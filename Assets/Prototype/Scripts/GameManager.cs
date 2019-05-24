@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
     public PlayerManager playerManager;
     public LevelGenerator levelGenerator;
     public GameObject spaceShipModule;
-    private UIbuttons buttonScript;
+
     public Vector3 killBoxPosition;
+
+    public UIbuttons buttonScript;
 
     public bool hasRaceStarted = false;
     private bool isEndGame = false;

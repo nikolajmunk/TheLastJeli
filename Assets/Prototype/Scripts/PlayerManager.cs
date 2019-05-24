@@ -11,12 +11,7 @@ public class PlayerManager : MonoBehaviour
     public bool debug;
     [Tooltip("Should players be able to join?")]
     public bool acceptNewPlayers;
-    List<Vector3> playerPositions = new List<Vector3>() {
-            new Vector3( -3, 0.5f, 0 ),
-            new Vector3( -1, 0.5f, 0 ),
-            new Vector3( 1, 0.5f, 0 ),
-            new Vector3( 3, 0.5f, 0 ),
-        };
+    List<Transform> playerPositions;
 
     public GameObject[] playerPrefabs;
     public delegate void PlayerListHandler(Player player);
@@ -46,6 +41,8 @@ public class PlayerManager : MonoBehaviour
         bindings = GetComponent<PlayerBindings>();
         keyboardListener = PlayerActions.CreateWithKeyboardBindings(bindings);
         joystickListener = PlayerActions.CreateWithJoystickBindings(bindings);
+
+        playerPositions = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
     }
 
 
@@ -142,8 +139,9 @@ public class PlayerManager : MonoBehaviour
             var playerPosition = playerPositions[0]; // Pop off a player spawn position in the lobby. To fix later.
             playerPositions.RemoveAt(0);
 
-            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition, Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
+            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition.position, Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
             var player = gameObject.GetComponent<Player>();
+            player.spawnedAt = playerPosition;
 
             if (inputDevice == null)
             {
@@ -180,7 +178,7 @@ public class PlayerManager : MonoBehaviour
 
     public void RemovePlayer(Player player)
     {
-        playerPositions.Insert(0, player.transform.position);
+        playerPositions.Insert(0, player.spawnedAt);
         players.Remove(player);
         player.Actions = null;
         if (OnPlayerRemoved != null)

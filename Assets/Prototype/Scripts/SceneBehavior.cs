@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SceneBehavior : MonoBehaviour
 {
-    public GameObject StartingModule;
-    public List<Transform> spawnPoints;
+    List<Transform> spawnPoints;
     private List<int> SpawnInts = new List<int> { 0, 1, 2, 3 };
 
 
@@ -13,18 +12,7 @@ public class SceneBehavior : MonoBehaviour
     void Start()
     {
         GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
-        StartingModule = GetComponent<LevelGenerator>().startingModule;
-
-        if (StartingModule != null)
-        {
-            foreach (Transform child in StartingModule.transform)
-            {
-                if (child.gameObject.tag == "SpawnPoint")
-                {
-                    spawnPoints.Add(child);
-                }
-            }
-        }
+        spawnPoints = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
 
         foreach (Player player in PlayerManager.instance.players)
         {

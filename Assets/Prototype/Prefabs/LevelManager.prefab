@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &575321171615892304
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8733998976553226992}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: SpawnPoint
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8733998976553226992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575321171615892304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6109180797027437512}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6109180797027437514
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8733998976553226992}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75,11 +44,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modules:
-  - {fileID: 710035029220955112, guid: f8a6dd1a5b9fe0e488cd072172d4cff7, type: 3}
+  - {fileID: 8287948845536283106, guid: 4d9e0d2cdf9c147789e88654dc4bab55, type: 3}
+  - {fileID: 561522964804578092, guid: 657d72d22510f49edad472295e55c8a2, type: 3}
+  - {fileID: 5282555484415083848, guid: 8727bd212cf2b4ceaacdaabe49cbff97, type: 3}
   - {fileID: 3190069528573781421, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f, type: 3}
   - {fileID: 3190069528573781421, guid: f56e1b84be7ab402494b3b4f47d66209, type: 3}
+  - {fileID: 1760629733697839198, guid: 621c46125f82a424b8153dc7b0ee1c94, type: 3}
+  - {fileID: 3190069528573781421, guid: 56834b29cf3124cac889be8749f36164, type: 3}
+  - {fileID: 4266280443376059208, guid: f0139fb5785a94521ad49d7fdfb73bf9, type: 3}
+  - {fileID: 5810306577998561914, guid: 8bdfed57f2306449cb3c9f3585d09eb8, type: 3}
   - {fileID: 3190069528573781421, guid: 77eb74286adb749c9abd158dba962d4a, type: 3}
   - {fileID: 3190069528573781421, guid: 08d236a070cf14622be97c1cc49c6692, type: 3}
   startingModule: {fileID: 0}
+  endingModule: {fileID: 0}
   mostRecentModule: {fileID: 0}
   minDistanceBetweenCameraAndNewestEntryPoint: 20

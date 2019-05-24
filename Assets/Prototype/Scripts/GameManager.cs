@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI winText;
     public bool debug;
     public PlayerManager playerManager;
-    private LevelGenerator levelGenerator;
+    public LevelGenerator levelGenerator;
     public GameObject spaceShipModule;
     private UIbuttons buttonScript;
+    public Vector3 killBoxPosition;
 
+    public bool hasRaceStarted = false;
     private bool isEndGame = false;
     private bool isEveryoneDead = false;
     private bool isGameOver = false;
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
         {
             playerManager = GetComponent<PlayerManager>();
         }
+
+        killBoxPosition = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -60,7 +64,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Only one player left
-        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby")
+        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby_master")
         {
             EndGame();
         }
@@ -93,7 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        levelGenerator = GameObject.Find("LevelManager").GetComponent<LevelGenerator>();
         levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
         isEndGame = true;
     }

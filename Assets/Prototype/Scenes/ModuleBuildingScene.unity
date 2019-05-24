@@ -539,7 +539,11 @@ PrefabInstance:
     - target: {fileID: 1393482402597133068, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 2
+=======
+      value: 3
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
       objectReference: {fileID: 0}
     - target: {fileID: 1393482402597133068, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f,
         type: 3}
@@ -558,6 +562,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d0e0bf43e0d2c4f8ec1b39d2ad4a2f, type: 3}
+<<<<<<< HEAD
+=======
+--- !u!1001 &1891159856
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 710035029220955112, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_Name
+      value: BaseModule
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.030843573
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.030843576
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70643383
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7064338
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710035029220855752, guid: f8a6dd1a5b9fe0e488cd072172d4cff7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8a6dd1a5b9fe0e488cd072172d4cff7, type: 3}
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 --- !u!1001 &1960592761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,7 +792,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
   m_LocalEulerAnglesHint: {x: 50, y: -143.08, z: 0}
 --- !u!1001 &76499004749542449
 PrefabInstance:
@@ -726,6 +806,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1760629733697839198, guid: 621c46125f82a424b8153dc7b0ee1c94,
+<<<<<<< HEAD
+=======
         type: 3}
       propertyPath: m_Name
       value: ShootThrough
@@ -773,7 +855,7 @@ PrefabInstance:
     - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
         type: 3}
@@ -790,6 +872,135 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3986622095127440905, guid: 621c46125f82a424b8153dc7b0ee1c94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 402343458510092594, guid: 621c46125f82a424b8153dc7b0ee1c94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 621c46125f82a424b8153dc7b0ee1c94, type: 3}
+--- !u!1001 &602810188578281580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4266280443376059208, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_Name
+      value: ShootThrough
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760629733697839198, guid: 621c46125f82a424b8153dc7b0ee1c94,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -120.48364
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.821789
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.205368
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 5836474234026150397, guid: 621c46125f82a424b8153dc7b0ee1c94,
+=======
+    - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 402343458510092594, guid: 621c46125f82a424b8153dc7b0ee1c94,
         type: 3}
       propertyPath: m_Layer
@@ -801,8 +1012,82 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 621c46125f82a424b8153dc7b0ee1c94, type: 3}
 --- !u!1001 &175729779753616931
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: f0139fb5785a94521ad49d7fdfb73bf9, type: 3}
+--- !u!1001 &1147367146186802809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1599812920619694985, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_Name
+      value: aerial_platform_Rotating
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -207.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f52dd545b8184cc886746d7a94b34e1, type: 3}
+--- !u!1001 &1821295783558688538
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -814,7 +1099,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartModule
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 175729779652455462, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
+=======
+    - target: {fileID: 5282555484415083848, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -224.07
@@ -852,7 +1146,11 @@ PrefabInstance:
     - target: {fileID: 175729779652455462, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 15
+=======
+      value: 12
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
       objectReference: {fileID: 0}
     - target: {fileID: 175729779652455462, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
         type: 3}
@@ -869,70 +1167,291 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3491287904711077669, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705692931157453048, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706748899888626487, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491194415793667440, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637233326410845417, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438020049633947368, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830272232656480779, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361237361235908358, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116546396720509583, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259200046105958669, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091051222596153676, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342653621093327324, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139140449637350930, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2853574361018747334, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140412583305707166, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569189268230763028, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946705553202500123, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488915167826007861, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 942303143011629191, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425884768155801608, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019200276575366349, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226958495896646533, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873438810684652620, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316394351218852452, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176164669513470122, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313037936126649991, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277575456655937418, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289430759037555219, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774943160568186019, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342, type: 3}
 --- !u!1001 &602810188578281580
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 8727bd212cf2b4ceaacdaabe49cbff97, type: 3}
+--- !u!1 &1864465194055781594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8211153841101514634, guid: 467a218e1969c4fad890fab5505adeeb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7506385531315874640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1864465194055781595
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864465194055781594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: ed2f983be81ca4389b3b5f5f54a23309, type: 3}
+--- !u!1001 &5810306577066811803
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 4266280443376059208, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561914, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_Name
       value: Slide
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561914, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -85.44
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -10.06
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.44205
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.7071068
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 968140523774062939, guid: f0139fb5785a94521ad49d7fdfb73bf9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1003,19 +1522,43 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1599812920619460521, guid: 8f52dd545b8184cc886746d7a94b34e1,
+=======
+    - target: {fileID: 5810306577998561913, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3820027294107045282, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127426015476879423, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434646654828108846, guid: 8bdfed57f2306449cb3c9f3585d09eb8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 8f52dd545b8184cc886746d7a94b34e1, type: 3}
 --- !u!1001 &1413262247623597978
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 8bdfed57f2306449cb3c9f3585d09eb8, type: 3}
+--- !u!1001 &6352678864494296305
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 5718879128444781954, guid: 664c5b0468cb34ed3a8464ac077299f3,
         type: 3}
       propertyPath: m_Name
@@ -1032,59 +1575,116 @@ PrefabInstance:
       value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224659996, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+        type: 3}
+      propertyPath: m_Name
+      value: aerial_platform_rotatingInSteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -193.53743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.612736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
         type: 3}
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3086146654026355354, guid: 664c5b0468cb34ed3a8464ac077299f3,
+=======
+    - target: {fileID: 4753222799224831036, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 664c5b0468cb34ed3a8464ac077299f3, type: 3}
 --- !u!1001 &1821295783558688538
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 54fa99d9f71af4b8cbfb21fcf5f07e9b, type: 3}
+--- !u!1001 &7506385531315874640
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 5282555484415083848, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
         type: 3}
       propertyPath: m_Name
@@ -1111,30 +1711,70 @@ PrefabInstance:
       value: -2.0060778
       objectReference: {fileID: 0}
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+=======
+    - target: {fileID: 8211153841101514634, guid: 467a218e1969c4fad890fab5505adeeb,
+        type: 3}
+      propertyPath: m_Name
+      value: aerial_platform_Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -184.42155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 2828147373682763818, guid: 8727bd212cf2b4ceaacdaabe49cbff97,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1666,19 +2306,34 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8287948845536283107, guid: 4d9e0d2cdf9c147789e88654dc4bab55,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90.00001
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8287948845536283107, guid: 4d9e0d2cdf9c147789e88654dc4bab55,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8287948845536283107, guid: 4d9e0d2cdf9c147789e88654dc4bab55,
+=======
+    - target: {fileID: 8211153841101945770, guid: 467a218e1969c4fad890fab5505adeeb,
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 4d9e0d2cdf9c147789e88654dc4bab55, type: 3}
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 467a218e1969c4fad890fab5505adeeb, type: 3}
+>>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli

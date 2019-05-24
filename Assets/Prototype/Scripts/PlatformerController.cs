@@ -47,7 +47,7 @@ public class PlatformerController : MonoBehaviour
 	bool grounded = false;
 	Rigidbody rb2d = null;
 	SpriteRenderer sr = null;
-	Animator anim = null;
+	public Animator anim = null;
 
 	float lostGroundingTime = float.NegativeInfinity;
 	float lastJumpTime = float.NegativeInfinity;

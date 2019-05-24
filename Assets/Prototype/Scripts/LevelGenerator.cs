@@ -6,6 +6,7 @@ public class LevelGenerator : MonoBehaviour
 {
     public List<GameObject> modules;
     public GameObject startingModule;
+    public GameObject endingModule;
     public GameObject mostRecentModule;
     public float minDistanceBetweenCameraAndNewestEntryPoint;
 
@@ -23,7 +24,6 @@ public class LevelGenerator : MonoBehaviour
 
     public void SpawnChunk(GameObject module, Vector3 spawnPosition) // Spawns a specified module at the end of the previous module.
     {
-
         GameObject chunk = Instantiate(module, spawnPosition, module.transform.rotation);
         Transform entryPoint = chunk.transform.Find("EntryPoint");
         chunk.transform.position -= (entryPoint.position - spawnPosition);
@@ -41,6 +41,8 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {
         mostRecentModule = startingModule;
+        GameManager.instance.levelGenerator = this;
+        GameManager.instance.spaceShipModule = endingModule;
     }
 
     // Update is called once per frame

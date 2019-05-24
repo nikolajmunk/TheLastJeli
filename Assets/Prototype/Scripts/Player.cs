@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 	PlayerStatus status;
 	Coroutine hurtRoutine;
 
-    [HideInInspector]
+
     public Transform spawnedAt;
 
 	void Awake ()

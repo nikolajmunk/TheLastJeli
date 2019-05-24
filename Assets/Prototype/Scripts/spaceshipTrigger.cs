@@ -34,6 +34,8 @@ public class spaceshipTrigger : MonoBehaviour
             other.gameObject.transform.localPosition = new Vector3(0, -1.3f, 0);
             other.gameObject.transform.localEulerAngles = new Vector3(-5f, -153, 0);
             anim.SetTrigger("engageCollider");
+
+            // make the environment destroy under the ship when you fly away
         }
     }
 }

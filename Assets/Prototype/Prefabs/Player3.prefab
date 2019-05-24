@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3068070613354843442, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Player3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: playerName
+      value: Player 3
+      objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: beamColor.r
@@ -56,22 +66,6 @@ PrefabInstance:
         type: 3}
       propertyPath: particlesGradient.key0.g
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841695883781416617, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7a283fd55f4d63d43b035b2889ad2f17, type: 2}
-    - target: {fileID: 2973658930358593828, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 7413550799312888493, guid: 488f930a5fb74ce43af0849e46c8dff2,
-        type: 3}
-    - target: {fileID: 3068070613354843442, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: m_Name
-      value: Player3
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -128,16 +122,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
+    - target: {fileID: 1841695883781416617, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
-      propertyPath: playerName
-      value: Player 3
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7a283fd55f4d63d43b035b2889ad2f17, type: 2}
+    - target: {fileID: 2973658930358593828, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7413550799312888493, guid: 488f930a5fb74ce43af0849e46c8dff2,
+        type: 3}
     - target: {fileID: 4930959128563598540, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 7413550799312888493, guid: 488f930a5fb74ce43af0849e46c8dff2,
         type: 3}
+    - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: spriteColor.r
+      value: 0.9471822
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: spriteColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: spriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b223b251a9f13c14fba2513b990261bf, type: 3}

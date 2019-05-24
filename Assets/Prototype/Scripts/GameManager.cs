@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator KillTime(GameObject dyingPlayer)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         dyingPlayer.SetActive(false);
     }
     public IEnumerator Restart(float delay)

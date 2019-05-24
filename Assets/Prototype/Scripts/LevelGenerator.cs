@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public bool generateLevel = true;
+
     public List<GameObject> modules;
     public GameObject startingModule;
+    public GameObject endModule;
     public GameObject mostRecentModule;
     public float minDistanceBetweenCameraAndNewestEntryPoint;
 
-    Transform GetPoint(GameObject module, string name) // Returns the child of the module GameObject that has the specified name.
+    public Transform GetPoint(GameObject module, string name) // Returns the child of the module GameObject that has the specified name.
     {
         return module.transform.Find(name);
     }
@@ -21,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
         SpawnChunk(module, spawnPoint);
     }
 
-    void SpawnChunk(GameObject module, Vector3 spawnPosition) // Spawns a specified module at the end of the previous module.
+    public void SpawnChunk(GameObject module, Vector3 spawnPosition) // Spawns a specified module at the end of the previous module.
     {
 
         GameObject chunk = Instantiate(module, spawnPosition, module.transform.rotation);
@@ -48,7 +51,7 @@ public class LevelGenerator : MonoBehaviour
     {
         // If the camera gets too close to the end of the level, spawn a new module.
         float distanceBetweenCameraAndNewestEntryPoint = GetPoint(mostRecentModule, "EntryPoint").position.x - Camera.main.transform.position.x;
-        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint)
+        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint && generateLevel)
         {
             SpawnRandomModule(modules);
         }

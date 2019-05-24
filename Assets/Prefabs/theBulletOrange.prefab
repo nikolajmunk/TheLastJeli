@@ -12,6 +12,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: theBulletOrange
       objectReference: {fileID: 0}
+    - target: {fileID: 974392328201790994, guid: 2b1b1b5c84de957429f0ba8297422697,
+        type: 3}
+      propertyPath: ricochetEffect
+      value: 
+      objectReference: {fileID: 5918316313405411957, guid: 2f9fe85931c546840a5b0f355859e8ea,
+        type: 3}
     - target: {fileID: 1055159017398423072, guid: 2b1b1b5c84de957429f0ba8297422697,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,11 +73,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4266171924123022632, guid: 2b1b1b5c84de957429f0ba8297422697,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7451529022183771033, guid: 2b1b1b5c84de957429f0ba8297422697,
         type: 3}
       propertyPath: InitialModule.startColor.maxGradient.atime0
@@ -91,6 +92,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxGradient.key0.b
       value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266171924123022632, guid: 2b1b1b5c84de957429f0ba8297422697,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3482645594400277198, guid: 2b1b1b5c84de957429f0ba8297422697,
         type: 3}

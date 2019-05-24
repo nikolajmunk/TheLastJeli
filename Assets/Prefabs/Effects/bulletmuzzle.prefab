@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6151555983259272713}
   - component: {fileID: 3779874033864750864}
   - component: {fileID: 8054354732913130904}
-  - component: {fileID: 104774428104662428}
   m_Layer: 0
   m_Name: bulletmuzzle
   m_TagString: Untagged
@@ -4811,14 +4810,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!210 &104774428104662428
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345281079581672736}
-  m_Enabled: 1
-  m_SortingLayerID: -1275561127
-  m_SortingLayer: 2
-  m_SortingOrder: 0

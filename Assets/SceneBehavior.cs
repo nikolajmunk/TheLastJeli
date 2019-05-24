@@ -12,17 +12,8 @@ public class SceneBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
         GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
         StartingModule = GetComponent<LevelGenerator>().startingModule;
-=======
-<<<<<<< HEAD
-        GameManager.instance.activePlayers = PlayerManager.instance.players;
-=======
-        GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
-        StartingModule = GetComponent<LevelGenerator>().startingModule;
->>>>>>> 1301bd727bb7bb346367bb18e2bc4f319146e3b2
->>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 
         if (StartingModule != null)
         {

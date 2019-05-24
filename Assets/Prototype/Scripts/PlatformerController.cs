@@ -82,13 +82,6 @@ public class PlatformerController : MonoBehaviour
 		Vector2 vel = rb2d.velocity;
 
 		if (canMove) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-			vel.x = actions.Move.Value.x * speed;
-=======
->>>>>>> 1301bd727bb7bb346367bb18e2bc4f319146e3b2
->>>>>>> parent of 1887384... Merge branch 'master' of https://github.com/nikolajmunk/TheLastJeli
 
             //if (actions.Dash)
             //{

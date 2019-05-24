@@ -440,6 +440,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   players: []
   maxMovementDelta: 2
+  maxYOffsetToUpmost: 0
 --- !u!81 &185929302
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2093,6 +2094,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   players: []
   maxMovementDelta: 2
+  maxYOffsetToUpmost: 0
 --- !u!81 &2146433821
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2174,17 +2176,17 @@ PrefabInstance:
     - target: {fileID: 1047594816551636946, guid: 881989accff3c4a5fa90d9b2d51e1b57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1047594816551636946, guid: 881989accff3c4a5fa90d9b2d51e1b57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1047594816551636946, guid: 881989accff3c4a5fa90d9b2d51e1b57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1047594816551636946, guid: 881989accff3c4a5fa90d9b2d51e1b57,
         type: 3}

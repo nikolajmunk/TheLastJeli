@@ -210,6 +210,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2026837552}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &129704026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2084567092792311486, guid: 95764602b8fbfa84b899a5e38cf40df6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2026837552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &146263092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,6 +5047,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &295351535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1807376717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &295351538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295351535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bd801e6d521164787461451f0ff34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomizePositions: 0
+  spawnPoints: []
 --- !u!4 &508555515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7547364934569461187, guid: 91b40058f663bd24d87a1279cd193d6e,
@@ -5248,7 +5274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd1c375999922c4f9c4e28a181a00fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 16, y: 4, z: 0}
+  offsetY: 0
 --- !u!65 &668039514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5559,6 +5585,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56aa5f750e6d26d4c9bb648d7e36db16, type: 3}
+--- !u!1 &932206226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932206227}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &932206227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932206226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 129704026}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1073163183
 GameObject:
   m_ObjectHideFlags: 0
@@ -10682,6 +10738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cb0568d01de4c3884587300266c857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitSeconds: 0
+  speed: 0
+  move: 0
 --- !u!65 &1379890843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10998,6 +11057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 6109180797027437512, guid: e750394d5fc1c83458894099c1b27c5f,
         type: 3}

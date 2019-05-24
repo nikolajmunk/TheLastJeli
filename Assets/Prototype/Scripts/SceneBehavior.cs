@@ -18,6 +18,8 @@ public class SceneBehavior : MonoBehaviour
         {
             int temp = SpawnInts[Random.Range(0, SpawnInts.Count)];
             player.transform.position = spawnPoints[temp].position;
+            ShootBehavior shootBehavior = player.GetComponent<ShootBehavior>();
+            shootBehavior.ammo = shootBehavior.maxAmmo;
             SpawnInts.Remove(temp);
         }
 

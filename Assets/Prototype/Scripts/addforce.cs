@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Addforce : MonoBehaviour
+public class addforce : MonoBehaviour
 {
     public float thrust;
     public Rigidbody rb;

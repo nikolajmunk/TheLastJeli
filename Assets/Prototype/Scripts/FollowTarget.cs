@@ -9,7 +9,7 @@ public class FollowTarget : MonoBehaviour
     public List<GameObject> players;
     int numberOfPlayers;
     public float maxMovementDelta;
-    public float maxYOffsetToUpmost;
+    public float maxYOffsetToUpmost = 10;
 
     Vector3 newPositions;
 

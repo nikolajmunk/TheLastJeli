@@ -36,12 +36,16 @@ public class UIbuttons : MonoBehaviour
 
     private void Update()
     {
+        // Pause
         if (Input.GetKeyDown(KeyCode.P))
         {
             restartB.SetActive(!restartB.activeInHierarchy);
             endB.SetActive(!endB.activeInHierarchy);
             startB.SetActive(!startB.activeInHierarchy);
         }
+
+        // Lobby controls
+
     }
 
     public void StartGame()
@@ -56,9 +60,11 @@ public class UIbuttons : MonoBehaviour
 
     public void EndGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main_Menu");
 
-        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit();
+
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 
 

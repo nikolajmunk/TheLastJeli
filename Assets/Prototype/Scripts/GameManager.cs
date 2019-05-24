@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public PlayerManager playerManager;
     public LevelGenerator levelGenerator;
     public GameObject spaceShipModule;
+    GameObject destructionZone;
 
     public Vector3 killBoxPosition;
 
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         }
 
         killBoxPosition = Vector3.zero;
+        destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
     }
 
     // Update is called once per frame
@@ -107,6 +109,7 @@ public class GameManager : MonoBehaviour
     {
         if (!debug)
         {
+            destructionZone.GetComponent<DestructionZone>().move = false;
             buttonScript.restartB.SetActive(true);
             buttonScript.endB.SetActive(true);
             winUI.SetActive(true);

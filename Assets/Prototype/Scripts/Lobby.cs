@@ -18,7 +18,7 @@ public class Lobby : MonoBehaviour
     {
         if (commandButtonWasPressed())
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_master");
             foreach (Player player in PlayerManager.instance.players)
             {
                 //player.gameObject.SetActive(false);

@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
   //          buttonScript.restartB.SetActive(true);
   //          buttonScript.endB.SetActive(true);
             winUI.SetActive(true);
-            winText.text = activePlayers[0].name + " wins! \n \n No cows were hurt in the destruction of this planet";
+            winText.text = activePlayers[0].playerName + " wins! \n \n No cows were hurt in the destruction of this planet";
             StartCoroutine(Restart(delay));
             isGameOver = true;
         }

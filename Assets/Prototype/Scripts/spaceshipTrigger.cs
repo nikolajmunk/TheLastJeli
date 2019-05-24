@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spaceshipTrigger : MonoBehaviour
+public class SpaceshipTrigger : MonoBehaviour
 {
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,12 @@ public class spaceshipTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().playerInSpaceship = true;
+
+            // Player child to UFO
+            // Lock player to speciffic position with no collider, disable character controller
+            
+            //trigger anim.SetTrigger("engageCollider");
+            
         }
     }
 }

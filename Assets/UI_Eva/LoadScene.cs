@@ -8,7 +8,7 @@ public class LoadScene : MonoBehaviour
     // Start is called before the first frame update
     public void ToLobby()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Lobby_master");
         
     }
     public void Quit()

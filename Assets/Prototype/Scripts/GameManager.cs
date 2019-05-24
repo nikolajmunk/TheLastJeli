@@ -16,6 +16,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI winText;
     public bool debug;
     public PlayerManager playerManager;
+    private LevelGenerator levelGenerator;
+    public GameObject spaceShipModule;
+    private UIbuttons buttonScript;
+
+    private bool isEndGame = false;
+    private bool isEveryoneDead = false;
+    private bool isGameOver = false;
+
+    public bool playerInSpaceship = false;
 
     private void OnEnable()
     {
@@ -50,9 +59,25 @@ public class GameManager : MonoBehaviour
             frontPlayer = playerPositions[0].gameObject;
         }
 
-        if (numberOfActivePlayers == 1)
+        // Only one player left
+        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby")
+        {
+            EndGame();
+        }
+
+        // If one player reaches the spaceship, she wins
+        if (playerInSpaceship == true && isGameOver == false)
         {
             GameOver(5);
+        }
+
+        // If all players die
+        if (numberOfActivePlayers == 0 && isEndGame == true && isEveryoneDead == false)
+        {
+            // Do stuff here for when everyone is out of the game
+
+
+            isEveryoneDead = true;
         }
     }
 
@@ -66,13 +91,22 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public void EndGame()
+    {
+        levelGenerator = GameObject.Find("LevelManager").GetComponent<LevelGenerator>();
+        levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        isEndGame = true;
+    }
+
     public void GameOver(float delay)
     {
         if (!debug)
         {
+            buttonScript.restartB.SetActive(true);
             winUI.SetActive(true);
             winText.text = activePlayers[0].name + " wins!";
             StartCoroutine(Restart(delay));
+            isGameOver = true;
         }
     }
 
@@ -94,8 +128,20 @@ public class GameManager : MonoBehaviour
     {
         OnPlayerRemoved(player);
         //playerManager.RemovePlayer(player); // Don't do this; we only want to remove the player from the list of active players, not the master list. The master list is for remembering players between scenes. Go fuck yourself.
-        player.gameObject.SetActive(false);
+
+        //Play death sound
+        player.GetComponent<AudioHandler>().PlayOneShotByName("Death");
+
+        //Make player invisible & wait to disable entire gameobject
+        player.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        KillTime(player.gameObject);
     }
+    public IEnumerator KillTime(GameObject dyingPlayer)
+    {
+        yield return new WaitForSeconds(1);
+        dyingPlayer.SetActive(false);
+    }
+
     public IEnumerator Restart(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -122,6 +168,7 @@ public class GameManager : MonoBehaviour
         Teleportation teleportation = effect.GetComponent<Teleportation>();
         teleportation.actor1 = actor1.transform;
         teleportation.actor2 = actor2.transform;
+        teleportation.Initialize();
         StartCoroutine(teleportation.Teleport());
         Debug.Log("Did it");
     }

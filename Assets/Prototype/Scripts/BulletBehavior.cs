@@ -19,7 +19,7 @@ public class BulletBehavior : MonoBehaviour
     [Tooltip("Layers to bounce off.")]
     [SerializeField] LayerMask bounceLayers = 0;
 
-    AudioSource audios;
+    AudioHandler audioHandler;
 
     public void Move()
     {
@@ -29,7 +29,7 @@ public class BulletBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audios = GetComponent<AudioSource>();
+        audioHandler = GetComponent<AudioHandler>();
 
         rb = GetComponent<Rigidbody>();
         //RaycastHit hit;
@@ -75,7 +75,7 @@ public class BulletBehavior : MonoBehaviour
                 GameObject effect = Instantiate(ricochetEffect, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
                 Destroy(effect, 1);
             }
-            audios.Play();
+            audioHandler.PlayOneShotWithRandomPitch("Ricochet", .8f, 1.2f, true);
         }
 
         if (collision.gameObject.GetComponent<BulletBehavior>())

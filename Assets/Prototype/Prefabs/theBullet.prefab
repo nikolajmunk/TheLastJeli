@@ -4726,8 +4726,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1275561127
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4768,6 +4768,8 @@ GameObject:
   - component: {fileID: 6743415454395924487}
   - component: {fileID: 1556497043340770517}
   - component: {fileID: -3975230974284880627}
+  - component: {fileID: 5353844219441167418}
+  - component: {fileID: 2550239036806178595}
   m_Layer: 0
   m_Name: theBullet
   m_TagString: Untagged
@@ -4865,7 +4867,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   moving: 0
   origin: {fileID: 0}
-  ricochetEffect: {fileID: 0}
+  ricochetEffect: {fileID: 8386524112310092468, guid: 79b46c3e782b2364ca86d3d87d7361ea,
+    type: 3}
   destroyEffect: {fileID: 0}
   maxBounces: 999
   lifetime: 5
@@ -5011,7 +5014,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63925795b2803744eb424acebb159717, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5097,6 +5100,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!210 &5353844219441167418
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055159017398423076}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &2550239036806178595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055159017398423076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd6dce10ffd2c4c98d3d04331f5e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioMapping:
+  - name: Ricochet
+    audioClip: {fileID: 8300000, guid: 63925795b2803744eb424acebb159717, type: 3}
 --- !u!1 &4266171924123022632
 GameObject:
   m_ObjectHideFlags: 0

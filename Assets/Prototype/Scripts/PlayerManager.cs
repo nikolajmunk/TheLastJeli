@@ -161,12 +161,16 @@ public class PlayerManager : MonoBehaviour
                 player.Actions = actions; // The player will listen for changes to its Actions, so this is what we're setting here.
             }
 
-            players.Add(player); // The list of players in the game. We'll have to make sure that list list of players is the one on the GameManager.
-            DontDestroyOnLoad(player.gameObject);
-            if (OnPlayerAdded != null)
+            if (!players.Contains(player))
             {
-                OnPlayerAdded(player);
+                players.Add(player); // The list of players in the game. We'll have to make sure that list list of players is the one on the GameManager.
+                if (OnPlayerAdded != null)
+                {
+                    OnPlayerAdded(player);
+                }
             }
+            DontDestroyOnLoad(player.gameObject);
+            
             return player;
         }
 

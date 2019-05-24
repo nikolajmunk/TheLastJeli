@@ -1323,6 +1323,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 1025
+  anim: {fileID: 0}
 --- !u!114 &4632622503768299545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   hitPoints: 8
   hurtTimer: 0.1
   deadPrefab: {fileID: 0}
+  spawnedAt: {fileID: 0}
 --- !u!82 &3325668314686747492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1505,11 +1507,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2951283231176869656}
     m_Modifications:
-    - target: {fileID: 3429138694855709864, guid: a775efc3cfaab264a8f23459e8f3fcec,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
     - target: {fileID: 962991003602008718, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1614,6 +1611,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429138694855709864, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: spriteColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a775efc3cfaab264a8f23459e8f3fcec, type: 3}

@@ -1103,11 +1103,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3410766468448273078, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
-      propertyPath: m_Name
-      value: GameManager
+      propertyPath: spaceShipModule
+      value: 
+      objectReference: {fileID: 5718879128444781954, guid: 664c5b0468cb34ed3a8464ac077299f3,
+        type: 3}
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: buttonScript
+      value: 
+      objectReference: {fileID: 1814172297}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1168,6 +1179,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: acceptNewPlayers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimLeft
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimRight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimDown
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: keyboardBindings.aimUp
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273078, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273079, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: modules.Array.data[0]
@@ -1203,42 +1249,6 @@ PrefabInstance:
       propertyPath: mostRecentModule
       value: 
       objectReference: {fileID: 129704022}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: acceptNewPlayers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: debug
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273072, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: spaceShipModule
-      value: 
-      objectReference: {fileID: 5718879128444781954, guid: 664c5b0468cb34ed3a8464ac077299f3,
-        type: 3}
-    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: keyboardBindings.aimLeft
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: keyboardBindings.aimRight
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: keyboardBindings.aimDown
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273075, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: keyboardBindings.aimUp
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff, type: 3}
 --- !u!1001 &947896651
@@ -1248,11 +1258,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 175729779652455463, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
-        type: 3}
-      propertyPath: m_Name
-      value: StartModule
-      objectReference: {fileID: 0}
     - target: {fileID: 175729779652455462, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1308,6 +1313,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 175729779652455463, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342,
+        type: 3}
+      propertyPath: m_Name
+      value: StartModule
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bfad14fc8dd45cb9c7b75fc6ca7342, type: 3}
 --- !u!1001 &960849059
@@ -1317,15 +1327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
+    - target: {fileID: 575321171615892304, guid: e750394d5fc1c83458894099c1b27c5f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6109180797027437512, guid: e750394d5fc1c83458894099c1b27c5f,
         type: 3}
@@ -1381,6 +1386,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109180797027437514, guid: e750394d5fc1c83458894099c1b27c5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6109180797027437515, guid: e750394d5fc1c83458894099c1b27c5f,
         type: 3}
@@ -2002,11 +2017,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 575321171615892304, guid: e750394d5fc1c83458894099c1b27c5f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e750394d5fc1c83458894099c1b27c5f, type: 3}
 --- !u!1 &960849060 stripped
@@ -2293,16 +2303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03,
-        type: 3}
-      propertyPath: m_Name
-      value: Player1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 394262069109196595, guid: bc1f60a9aab194716beb3647eba51e03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2356,6 +2356,16 @@ PrefabInstance:
     - target: {fileID: 394262069109196595, guid: bc1f60a9aab194716beb3647eba51e03,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03,
+        type: 3}
+      propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1661619966285594362, guid: bc1f60a9aab194716beb3647eba51e03,
@@ -2782,6 +2792,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1814172297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5294007583616567568, guid: b1a86b0125ac5d94785b06d5ca195963,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991054840}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb0359e6d9a4f8468fe8c5ccfd14780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1922748532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2937,15 +2959,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5294007583616567575, guid: b1a86b0125ac5d94785b06d5ca195963,
-        type: 3}
-      propertyPath: m_Name
-      value: Button Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5294007583616567575, guid: b1a86b0125ac5d94785b06d5ca195963,
+    - target: {fileID: 5294007583184085778, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007583236217184, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5294007583616567571, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
@@ -3052,15 +3074,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5294007583184085778, guid: b1a86b0125ac5d94785b06d5ca195963,
+    - target: {fileID: 5294007583616567575, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Name
+      value: Button Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5294007583236217184, guid: b1a86b0125ac5d94785b06d5ca195963,
+    - target: {fileID: 5294007583616567575, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5294007584620756401, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}

@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public PlayerManager playerManager;
     private LevelGenerator levelGenerator;
     public GameObject spaceShipModule;
-    private UIbuttons buttonScript;
+    public UIbuttons buttonScript;
 
     private bool isEndGame = false;
     private bool isEveryoneDead = false;

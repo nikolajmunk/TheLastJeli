@@ -12,6 +12,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player4
       objectReference: {fileID: 0}
+    - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: playerName
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor.r
+      value: 0.18956926
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor.g
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor.b
+      value: 0.19664446
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor0.r
+      value: 0.2990013
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor0.g
+      value: 0.46226418
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor0.b
+      value: 0.24203454
+      objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,51 +102,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+    - target: {fileID: 1841695883781416617, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
-      propertyPath: beamColor.r
-      value: 0.18956926
-      objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: beamColor.g
-      value: 0.5660378
-      objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: beamColor.b
-      value: 0.19664446
-      objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: beamColor0.r
-      value: 0.2990013
-      objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: beamColor0.g
-      value: 0.46226418
-      objectReference: {fileID: 0}
-    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: beamColor0.b
-      value: 0.24203454
-      objectReference: {fileID: 0}
-    - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
-        type: 3}
-      propertyPath: playerName
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 32861766e3280724eaf3d34722dce32e, type: 2}
     - target: {fileID: 2973658930358593828, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 6927859706390035999, guid: bcd840aae92604a46a8eec555769e98e,
         type: 3}
-    - target: {fileID: 1841695883781416617, guid: b223b251a9f13c14fba2513b990261bf,
+    - target: {fileID: 4930959128563598540, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 2100000, guid: 32861766e3280724eaf3d34722dce32e, type: 2}
+      objectReference: {fileID: 6927859706390035999, guid: bcd840aae92604a46a8eec555769e98e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b223b251a9f13c14fba2513b990261bf, type: 3}

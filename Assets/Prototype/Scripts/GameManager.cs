@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool debug;
     public PlayerManager playerManager;
     public LevelGenerator levelGenerator;
+    [HideInInspector]
     public GameObject spaceShipModule;
     GameObject destructionZone;
 
@@ -110,10 +111,10 @@ public class GameManager : MonoBehaviour
         if (!debug)
         {
             destructionZone.GetComponent<DestructionZone>().move = false;
-            buttonScript.restartB.SetActive(true);
-            buttonScript.endB.SetActive(true);
+  //          buttonScript.restartB.SetActive(true);
+  //          buttonScript.endB.SetActive(true);
             winUI.SetActive(true);
-            winText.text = activePlayers[0].name + " wins! @\n No cows were hurt in the destruction of this planet";
+            winText.text = activePlayers[0].name + " wins! \n \n No cows were hurt in the destruction of this planet";
             StartCoroutine(Restart(delay));
             isGameOver = true;
         }

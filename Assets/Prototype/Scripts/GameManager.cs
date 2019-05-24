@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI winText;
     public bool debug;
     public PlayerManager playerManager;
+    public UI buttonScript;
 
     private void OnEnable()
     {
@@ -70,6 +71,9 @@ public class GameManager : MonoBehaviour
     {
         if (!debug)
         {
+            buttonScript.restartB.SetActive(true);
+            buttonScript.endB.SetActive(true);
+
             winUI.SetActive(true);
             winText.text = activePlayers[0].name + " wins!";
             StartCoroutine(Restart(delay));
@@ -94,7 +98,15 @@ public class GameManager : MonoBehaviour
     {
         OnPlayerRemoved(player);
         //playerManager.RemovePlayer(player); // Don't do this; we only want to remove the player from the list of active players, not the master list. The master list is for remembering players between scenes. Go fuck yourself.
-        player.gameObject.SetActive(false);
+
+        //Player sound
+        player.GetComponent<AudioHandler>().PlayOneShotByName("Death");
+        KillTime(player.gameObject);
+    }
+    public IEnumerator KillTime(GameObject dyingPlayer)
+    {
+        yield return new WaitForSeconds(1);
+        dyingPlayer.SetActive(false);
     }
     public IEnumerator Restart(float delay)
     {

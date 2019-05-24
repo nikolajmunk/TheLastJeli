@@ -34,6 +34,16 @@ public class UIbuttons : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            restartB.SetActive(!restartB.activeInHierarchy);
+            endB.SetActive(!endB.activeInHierarchy);
+            startB.SetActive(!startB.activeInHierarchy);
+        }
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("MasterScene");

@@ -34,7 +34,6 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
         }
 
         InputManager.OnDeviceDetached += OnDeviceDetached;

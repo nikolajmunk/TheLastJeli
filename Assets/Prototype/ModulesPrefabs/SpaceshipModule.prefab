@@ -73,6 +73,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2218442009068341346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787499016492708050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f93074025eb8457bbade282a06f24d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7208079601245709628
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8917785326864198801
 Transform:
   m_ObjectHideFlags: 0
@@ -804,6 +816,11 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0.5754717
       objectReference: {fileID: 0}
+    - target: {fileID: 8296172668067899998, guid: 881989accff3c4a5fa90d9b2d51e1b57,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8296172668067899999, guid: 881989accff3c4a5fa90d9b2d51e1b57,
         type: 3}
       propertyPath: m_IsKinematic
@@ -814,6 +831,12 @@ PrefabInstance:
 --- !u!4 &4047016065229964180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1047594816551636946, guid: 881989accff3c4a5fa90d9b2d51e1b57,
+    type: 3}
+  m_PrefabInstance: {fileID: 3936196944808709190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5787499016492708050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7417848552790260884, guid: 881989accff3c4a5fa90d9b2d51e1b57,
     type: 3}
   m_PrefabInstance: {fileID: 3936196944808709190}
   m_PrefabAsset: {fileID: 0}

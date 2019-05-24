@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6109180797027437512}
   - component: {fileID: 6109180797027437515}
+  - component: {fileID: 6563200957447989154}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -59,3 +60,17 @@ MonoBehaviour:
   endingModule: {fileID: 0}
   mostRecentModule: {fileID: 0}
   minDistanceBetweenCameraAndNewestEntryPoint: 20
+--- !u!114 &6563200957447989154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109180797027437514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bd801e6d521164787461451f0ff34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomizePositions: 0
+  spawnPoints: []

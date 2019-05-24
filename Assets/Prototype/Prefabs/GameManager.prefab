@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3410766468448273078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3410766468448273073}
+  - component: {fileID: 3410766468448273072}
+  - component: {fileID: 3410766468448273075}
+  - component: {fileID: 3410766468448273074}
+  - component: {fileID: 3410766468448273036}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3410766468448273073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410766468448273078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3410766468448273072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410766468448273078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a69bf956af9254b8782a7da92964cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportEffect: {fileID: 5851145849396893945, guid: f372c10d05f14c54c8bfdace709ad09c,
+    type: 3}
+  frontPlayer: {fileID: 0}
+  activePlayers: []
+  numberOfActivePlayers: 0
+  playerPositions: []
+  winUI: {fileID: 0}
+  winText: {fileID: 0}
+  debug: 1
+  playerManager: {fileID: 3410766468448273074}
+--- !u!114 &3410766468448273075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410766468448273078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9ed700f0d4bbd45b4207ce0af571f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystickBindings:
+    moveLeft: 3
+    moveRight: 4
+    moveDown: 2
+    moveUp: 1
+    dash: 17
+    jump: 18
+    aimLeft: 8
+    aimRight: 9
+    aimDown: 7
+    aimUp: 6
+    shoot: 16
+    submit: 19
+    command: 300
+  keyboardBindings:
+    moveLeft: 36
+    moveRight: 39
+    moveDown: 54
+    moveUp: 58
+    dash: 5
+    jump: 76
+    shoot: 1
+    submit: 40
+    command: 72
+--- !u!114 &3410766468448273074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410766468448273078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db72802eb20683a4f898a48a945a303d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  acceptNewPlayers: 0
+  playerPrefabs:
+  - {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03, type: 3}
+  - {fileID: 1120740143082971673, guid: 52aa96c8597881f45a4594efe0a4c285, type: 3}
+  - {fileID: 7175872390834929087, guid: 8ba4bb1ae624f0e4ba22dfb1d40c12e7, type: 3}
+  - {fileID: 499477457818749885, guid: fcaeba6c9372bae479159e3bd6a8d52d, type: 3}
+  players: []
+--- !u!114 &3410766468448273036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410766468448273078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 1
+  invertYAxis: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 1
+  suspendInBackground: 0
+  enableICade: 0
+  enableXInput: 0
+  xInputOverrideUpdateRate: 0
+  xInputUpdateRate: 0
+  xInputOverrideBufferSize: 0
+  xInputBufferSize: 0
+  enableNativeInput: 1
+  nativeInputEnableXInput: 1
+  nativeInputPreventSleep: 0
+  nativeInputOverrideUpdateRate: 0
+  nativeInputUpdateRate: 0
+  customProfiles: []

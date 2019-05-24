@@ -9,6 +9,7 @@ public class FollowTarget : MonoBehaviour
     public List<GameObject> players;
     int numberOfPlayers;
     public float maxMovementDelta;
+    public float maxYOffsetToUpmost;
 
     Vector3 newPositions;
 
@@ -41,11 +42,21 @@ public class FollowTarget : MonoBehaviour
     private Vector3 GetCentroid()
     {
         Vector3 centroid = Vector3.zero;
+        float maxY = float.NegativeInfinity;
         foreach (Transform player in GameManager.instance.playerPositions)
         {
+            if(player.position.y > maxY)
+            {
+                maxY = player.position.y;
+            }
             centroid += player.position;
         }
         centroid /= GameManager.instance.numberOfActivePlayers;
+        if(maxY - centroid.y > maxYOffsetToUpmost)
+        {
+            centroid.y = maxY - maxYOffsetToUpmost;
+        }
+
         return centroid;
     }
 }

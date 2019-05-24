@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox Cubemap Extended
   m_Shader: {fileID: 4800000, guid: 923b9cf3e9954edd82dcc80b12aeb17a, type: 3}
-  m_ShaderKeywords: _ENABLEFOG_ON _ENABLEROTATION_ON
-  m_LightmapFlags: 2
+  m_ShaderKeywords: _ENABLEROTATION_ON
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,12 +24,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 855d98b2a4c554252bab2a61187f05da, type: 3}
+        m_Texture: {fileID: 8900000, guid: c1dcdd3332dbe4ea8bef5aeda67e5b89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - <noninit>: 1
-    - _EnableFog: 1
+    - _EnableFog: 0
     - _EnableRotation: 1
     - _Exposure: 1.07
     - _FogFill: 0
@@ -40,4 +40,4 @@ Material:
     - __dirty: 0
     m_Colors:
     - <noninit>: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.8301887, g: 0.6390776, b: 0.58348167, a: 1}
+    - _TintColor: {r: 0.8113208, g: 0.5999862, b: 0.53960484, a: 1}

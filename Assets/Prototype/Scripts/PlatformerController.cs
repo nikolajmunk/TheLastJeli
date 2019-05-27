@@ -109,6 +109,7 @@ public class PlatformerController : MonoBehaviour
             if (CheckJumpInput () && PermissionToJump ()) {
                 vel = ApplyJump(vel);
             }
+
 		}
 
         vel.y += -gravity * Time.deltaTime;

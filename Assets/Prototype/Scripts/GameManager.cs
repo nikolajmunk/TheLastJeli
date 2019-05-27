@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
     public LevelGenerator levelGenerator;
     [HideInInspector]
     public GameObject spaceShipModule;
-    GameObject destructionZone;
+    public GameObject destructionZone;
 
     public Vector3 killBoxPosition;
 
     public UIbuttons buttonScript;
 
     public bool hasRaceStarted = false;
-    private bool isEndGame = false;
+    public bool isEndGame = false;
     private bool isEveryoneDead = false;
     private bool isGameOver = false;
 
@@ -34,28 +34,43 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
         playerManager.OnPlayerAdded += OnPlayerAdded;
         playerManager.OnPlayerRemoved += OnPlayerRemoved;
     }
 
     void Awake()
     {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+            playerManager = GetComponent<PlayerManager>();
+            playerManager.enabled = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         if (playerManager == null)
         {
-            playerManager = GetComponent<PlayerManager>();
+            if (PlayerManager.instance != null)
+            {
+                playerManager = PlayerManager.instance;
+            }
+            else
+            {
+                playerManager = GetComponent<PlayerManager>();
+                playerManager.enabled = true;
+            }
         }
 
         killBoxPosition = Vector3.zero;
-        destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
+    }
+
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -69,7 +84,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Only one player left
-        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name != "Lobby_master")
+        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name == "Scene_master")
         {
             EndGame();
         }
@@ -103,6 +118,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        levelGenerator.generateLevels = false;
         isEndGame = true;
     }
 

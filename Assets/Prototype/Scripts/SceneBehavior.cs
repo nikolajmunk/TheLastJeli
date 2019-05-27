@@ -12,6 +12,15 @@ public class SceneBehavior : MonoBehaviour
     void Start()
     {
         GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
+        GameManager.instance.numberOfActivePlayers = GameManager.instance.activePlayers.Count;
+        if (GameManager.instance.playerPositions.Count == 0)
+        {
+            foreach (Player player in GameManager.instance.activePlayers)
+            {
+                GameManager.instance.playerPositions.Add(player.gameObject.transform);
+            }
+        }
+
         spawnPoints = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
 
         foreach (Player player in PlayerManager.instance.players)
@@ -27,6 +36,9 @@ public class SceneBehavior : MonoBehaviour
         {
             PlayerManager.instance.acceptNewPlayers = false;
         }
+
+        GameManager.instance.isEndGame = false;
+        GameManager.instance.destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
     }
 
     // Update is called once per frame

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InControl;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -29,27 +30,38 @@ public class PlayerManager : MonoBehaviour
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             instance = this;
+
+            InputManager.OnDeviceDetached += OnDeviceDetached;
+            bindings = GetComponent<PlayerBindings>();
+            keyboardListener = PlayerActions.CreateWithKeyboardBindings(bindings);
+            joystickListener = PlayerActions.CreateWithJoystickBindings(bindings);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
         }
         else
         {
+            Destroy(gameObject);
         }
-
-        InputManager.OnDeviceDetached += OnDeviceDetached;
-        bindings = GetComponent<PlayerBindings>();
-        keyboardListener = PlayerActions.CreateWithKeyboardBindings(bindings);
-        joystickListener = PlayerActions.CreateWithJoystickBindings(bindings);
-
-        playerPositions = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
     }
 
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex != 0)
+        {
+            playerPositions = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
+        }
+    }
 
     void OnDisable()
     {
-        InputManager.OnDeviceDetached -= OnDeviceDetached;
-        joystickListener.Destroy();
-        keyboardListener.Destroy();
+        if (instance == this)
+        {
+            InputManager.OnDeviceDetached -= OnDeviceDetached;
+            joystickListener.Destroy();
+            keyboardListener.Destroy();
+        }
     }
 
     void Update()
@@ -138,7 +150,7 @@ public class PlayerManager : MonoBehaviour
             var playerPosition = playerPositions[0]; // Pop off a player spawn position in the lobby. To fix later.
             playerPositions.RemoveAt(0);
 
-            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition.position, Quaternion.identity); // Change this, asshole. Spawning a player in the middle of  the camera is a terrible idea. Go jump into a volcano.
+            var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition.position, Quaternion.identity);
             var player = gameObject.GetComponent<Player>();
             player.spawnedAt = playerPosition;
 

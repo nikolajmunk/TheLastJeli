@@ -9,8 +9,10 @@ public class Lobby : MonoBehaviour
     PlayerActions joystickActions;
     void Start()
     {
+        playerManager = GameManager.instance.playerManager; 
         keyboardActions = playerManager.joystickListener;
         joystickActions = playerManager.keyboardListener;
+        PlayerManager.instance.players = new List<Player>();
     }
 
     // Update is called once per frame

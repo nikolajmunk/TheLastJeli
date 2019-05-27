@@ -7,7 +7,7 @@ public class FollowTarget : MonoBehaviour
     //public Transform target;
     public Vector3 offset;
     public List<GameObject> players;
-    int numberOfPlayers;
+    //int numberOfPlayers;
     public float maxMovementDelta;
     public float maxYOffsetToUpmost = 10;
 
@@ -16,6 +16,7 @@ public class FollowTarget : MonoBehaviour
     private void Start()
     {
         //offset = transform.position - GameManager.instance.frontPlayer.transform.position;
+        newPositions = Vector3.zero;
         offset = transform.position - Vector3.zero;
     }
 

@@ -9,6 +9,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject endingModule;
     public GameObject mostRecentModule;
     public float minDistanceBetweenCameraAndNewestEntryPoint;
+    public bool generateLevels = true;
 
     public Transform GetPoint(GameObject module, string name) // Returns the child of the module GameObject that has the specified name.
     {
@@ -50,7 +51,7 @@ public class LevelGenerator : MonoBehaviour
     {
         // If the camera gets too close to the end of the level, spawn a new module.
         float distanceBetweenCameraAndNewestEntryPoint = GetPoint(mostRecentModule, "EntryPoint").position.x - Camera.main.transform.position.x;
-        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint)
+        if (distanceBetweenCameraAndNewestEntryPoint <= minDistanceBetweenCameraAndNewestEntryPoint && generateLevels)
         {
             SpawnRandomModule(modules);
         }

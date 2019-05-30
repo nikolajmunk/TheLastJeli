@@ -48,9 +48,11 @@ public class PlayerManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex != 0)
+        GameObject lm = GameObject.FindGameObjectWithTag("LevelManager");
+
+        if (lm != null)
         {
-            playerPositions = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SpawnPositions>().spawnPoints;
+            playerPositions = lm.GetComponent<SpawnPositions>().spawnPoints;
         }
     }
 
@@ -152,7 +154,7 @@ public class PlayerManager : MonoBehaviour
 
             var gameObject = (GameObject)Instantiate(playerPrefabs[players.Count], playerPosition.position, Quaternion.identity);
             var player = gameObject.GetComponent<Player>();
-            player.spawnedAt = playerPosition;
+            //player.spawnedAt = playerPosition;
 
             if (inputDevice == null)
             {
@@ -189,7 +191,7 @@ public class PlayerManager : MonoBehaviour
 
     public void RemovePlayer(Player player)
     {
-        playerPositions.Insert(0, player.spawnedAt);
+        //playerPositions.Insert(0, player.spawnedAt);
         players.Remove(player);
         player.Actions = null;
         if (OnPlayerRemoved != null)
@@ -197,4 +199,19 @@ public class PlayerManager : MonoBehaviour
             OnPlayerRemoved(player);
         }
     }
+
+    public void RemoveAllPlayers()
+    {
+        List<Player> playersToRemove = new List<Player>(players);
+
+        if (playersToRemove.Count != 0)
+        {
+            foreach (Player player in playersToRemove)
+            {
+                RemovePlayer(player);
+                Destroy(player.gameObject);
+            }
+        }
+    }
+
 }

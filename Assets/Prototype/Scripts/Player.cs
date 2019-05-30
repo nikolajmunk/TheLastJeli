@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 	Coroutine hurtRoutine;
 
 
-    public Transform spawnedAt;
+    //public Transform spawnedAt;
 
 	void Awake ()
 	{

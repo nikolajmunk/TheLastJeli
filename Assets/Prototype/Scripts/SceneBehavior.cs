@@ -30,6 +30,10 @@ public class SceneBehavior : MonoBehaviour
             ShootBehavior shootBehavior = player.GetComponentInChildren<ShootBehavior>();
             shootBehavior.ammo = shootBehavior.maxAmmo;
             SpawnInts.Remove(temp);
+            if (!player.gameObject.activeSelf)
+            {
+                player.gameObject.SetActive(true);
+            }
         }
 
         if (GameManager.instance.activePlayers.Count != 0)

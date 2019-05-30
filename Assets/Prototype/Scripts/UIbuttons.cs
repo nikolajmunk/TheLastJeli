@@ -50,7 +50,7 @@ public class UIbuttons : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("MasterScene");
+        SceneManager.LoadScene("Scene_master");
     }
 
     public void Restart()

@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         playerManager.OnPlayerAdded += OnPlayerAdded;
         playerManager.OnPlayerRemoved += OnPlayerRemoved;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     void Awake()
@@ -113,6 +114,11 @@ public class GameManager : MonoBehaviour
             return teleportable.canBeTeleported;
         }
         return false;
+    }       
+
+    void OnSceneUnloaded<Scene>(Scene scene)
+    {
+        
     }
 
     public void EndGame()
@@ -131,7 +137,7 @@ public class GameManager : MonoBehaviour
   //          buttonScript.endB.SetActive(true);
             winUI.SetActive(true);
             winText.text = activePlayers[0].playerName + " wins! \n \n No cows were hurt in the destruction of this planet";
-            StartCoroutine(Restart(delay));
+            //StartCoroutine(Restart(delay)); // Removing this for now; Restarting doesn't work well. NMBJ
             isGameOver = true;
         }
     }

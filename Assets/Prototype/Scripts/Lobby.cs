@@ -12,7 +12,8 @@ public class Lobby : MonoBehaviour
         playerManager = GameManager.instance.playerManager; 
         keyboardActions = playerManager.joystickListener;
         joystickActions = playerManager.keyboardListener;
-        PlayerManager.instance.players = new List<Player>();
+        playerManager.RemoveAllPlayers();
+        playerManager.acceptNewPlayers = true;
     }
 
     // Update is called once per frame

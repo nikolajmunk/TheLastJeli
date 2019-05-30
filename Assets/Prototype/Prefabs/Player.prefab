@@ -1340,7 +1340,6 @@ MonoBehaviour:
   hitPoints: 8
   hurtTimer: 0.1
   deadPrefab: {fileID: 0}
-  spawnedAt: {fileID: 0}
 --- !u!82 &3325668314686747492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1507,6 +1506,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2951283231176869656}
     m_Modifications:
+    - target: {fileID: 3429138694855709864, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 962991003602008718, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1612,16 +1616,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3429138694855709864, guid: a775efc3cfaab264a8f23459e8f3fcec,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: spriteColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1319474187451573453, guid: 3dc9e3ce289d26c48a0f61dc58af65e3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a775efc3cfaab264a8f23459e8f3fcec, type: 3}
 --- !u!224 &6511723071773428683 stripped

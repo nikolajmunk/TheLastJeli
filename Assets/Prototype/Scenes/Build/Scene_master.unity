@@ -150,8 +150,9 @@ GameObject:
   - component: {fileID: 50767411}
   - component: {fileID: 50767410}
   - component: {fileID: 50767409}
+  - component: {fileID: 50767413}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,6 +245,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 7.5, y: -7.5, z: 0}
+--- !u!114 &50767413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50767408}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b845ae003469dc64aa4a0a6abce5630e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 0.3
 --- !u!1 &167160596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,8 +1087,65 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2450617235586758289, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1320747681}
+    - target: {fileID: 5294007583184085776, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bc8883423c64f7741b258e80519dc14d,
+        type: 3}
+    - target: {fileID: 5294007583236217198, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bc8883423c64f7741b258e80519dc14d,
+        type: 3}
+    - target: {fileID: 5294007584620756415, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bc8883423c64f7741b258e80519dc14d,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 4643349668718755163, guid: b1a86b0125ac5d94785b06d5ca195963, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b1a86b0125ac5d94785b06d5ca195963, type: 3}
+--- !u!1 &1320747679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2519526884221734, guid: b1a86b0125ac5d94785b06d5ca195963,
+    type: 3}
+  m_PrefabInstance: {fileID: 1320747678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1320747680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320747679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24994c7bab8d436a8b302ce62dfa856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitButton: 19
+  cancelButton: 20
+  analogMoveThreshold: 0.5
+  moveRepeatFirstDuration: 0.8
+  moveRepeatDelayDuration: 0.1
+  forceModuleActive: 0
+  allowMouseInput: 1
+  focusOnMouseHover: 1
+  allowTouchInput: 1
+--- !u!1 &1320747681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5294007584620756401, guid: b1a86b0125ac5d94785b06d5ca195963,
+    type: 3}
+  m_PrefabInstance: {fileID: 1320747678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1332858421
 PrefabInstance:
   m_ObjectHideFlags: 0

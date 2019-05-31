@@ -9,7 +9,7 @@ public class Lobby : MonoBehaviour
     PlayerActions joystickActions;
     void Start()
     {
-        playerManager = GameManager.instance.playerManager; 
+        playerManager = GameManager.instance.playerManager;
         keyboardActions = playerManager.joystickListener;
         joystickActions = playerManager.keyboardListener;
         playerManager.RemoveAllPlayers();

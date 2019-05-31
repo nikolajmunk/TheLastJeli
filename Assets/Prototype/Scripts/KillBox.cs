@@ -19,7 +19,8 @@ public class KillBox : MonoBehaviour
     {
         //transform.position = new Vector3(Camera.main.transform.position.x - offset.x, Camera.main.transform.position.y - offset.y, 0);
         transform.position = GameManager.instance.killBoxPosition - new Vector3(0, offsetY, 0);
-        foreach (Transform player in GameManager.instance.playerPositions)
+        List<Transform> players = new List<Transform>(GameManager.instance.playerPositions);
+        foreach (Transform player in players)
         {
             if (player.position.y < transform.position.y) {
                 GameManager.instance.KillPlayer(player.GetComponent<Player>());

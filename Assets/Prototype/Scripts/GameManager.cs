@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject teleportEffect;
+    [HideInInspector]
     public GameObject frontPlayer;
-    public List<Player> activePlayers; // Maybe this shouldn't copy the players list from PlayerManager. After all, we want a list of active players, and if we're always just cloning it, what's the point?
-    public int numberOfActivePlayers; // This should be number of active players, not number of registered players. Leave that part to PlayerManager.
+    public List<Player> activePlayers;
+    public int numberOfActivePlayers;
     public List<Transform> playerPositions;
     public GameObject winUI; // This should not be in the game manager. Or at least we should specify that the lobby should not show win text.
     public TextMeshProUGUI winText;
@@ -20,23 +21,26 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public GameObject spaceShipModule;
     public GameObject destructionZone;
+    public GameObject reincarnationPrefab;
 
     public Vector3 killBoxPosition;
 
-    public UIbuttons buttonScript;
-
-    public bool hasRaceStarted = false;
     public bool isEndGame = false;
     private bool isEveryoneDead = false;
     private bool isGameOver = false;
 
     public bool playerInSpaceship = false;
 
+    public delegate void GameStateEvent();
+    public GameStateEvent OnWin;
+    public GameStateEvent OnAllPlayersDead;
+    public GameStateEvent OnEndGame;
+    public GameStateEvent OnReadyToPlay;
+
     private void OnEnable()
     {
         playerManager.OnPlayerAdded += OnPlayerAdded;
         playerManager.OnPlayerRemoved += OnPlayerRemoved;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     void Awake()
@@ -69,12 +73,6 @@ public class GameManager : MonoBehaviour
         killBoxPosition = Vector3.zero;
     }
 
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         playerPositions.Sort(SortByXPosition);
@@ -101,7 +99,7 @@ public class GameManager : MonoBehaviour
         {
             // Do stuff here for when everyone is out of the game
 
-
+            OnAllPlayersDead();
             isEveryoneDead = true;
         }
     }
@@ -116,15 +114,11 @@ public class GameManager : MonoBehaviour
         return false;
     }       
 
-    void OnSceneUnloaded<Scene>(Scene scene)
-    {
-        
-    }
-
     public void EndGame()
     {
         levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
         levelGenerator.generateLevels = false;
+        OnEndGame();
         isEndGame = true;
     }
 
@@ -133,13 +127,19 @@ public class GameManager : MonoBehaviour
         if (!debug)
         {
             destructionZone.GetComponent<DestructionZone>().move = false;
-  //          buttonScript.restartB.SetActive(true);
-  //          buttonScript.endB.SetActive(true);
-            winUI.SetActive(true);
-            winText.text = activePlayers[0].playerName + " wins! \n \n No cows were hurt in the destruction of this planet";
+            //          buttonScript.restartB.SetActive(true);
+            //          buttonScript.endB.SetActive(true);
+            //winUI.SetActive(true);
+            //winText.text = activePlayers[0].playerName + " wins! \n \n No cows were hurt in the destruction of this planet";
             //StartCoroutine(Restart(delay)); // Removing this for now; Restarting doesn't work well. NMBJ
+            OnWin();
             isGameOver = true;
         }
+    }
+
+    public void AllPlayersDead()
+    {
+        OnAllPlayersDead();
     }
 
     void OnPlayerAdded(Player player)
@@ -159,16 +159,23 @@ public class GameManager : MonoBehaviour
     public void KillPlayer(Player player)
     {
         OnPlayerRemoved(player);
-        //playerManager.RemovePlayer(player); // Don't do this; we only want to remove the player from the list of active players, not the master list. The master list is for remembering players between scenes. Go fuck yourself.
 
-        //Player sound
         player.GetComponent<AudioHandler>().PlayOneShotByName("Death");
-        KillTime(player.gameObject);
+        StartCoroutine(KillTime(player.gameObject));
+        Reincarnate(player);
     }
     public IEnumerator KillTime(GameObject dyingPlayer)
     {
         yield return new WaitForSeconds(2);
         dyingPlayer.SetActive(false);
+    }
+
+    public void Reincarnate(Player player)
+    {
+        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y +6.5f, 0), Quaternion.identity, Camera.main.transform);
+        Player rpp = reincarnatedPlayer.GetComponent<Player>();
+        rpp.playerName = player.playerName;
+        rpp.Actions = player.Actions;
     }
 
     public IEnumerator Restart(float delay)
@@ -199,6 +206,5 @@ public class GameManager : MonoBehaviour
         teleportation.actor2 = actor2.transform;
         teleportation.Initialize();
         StartCoroutine(teleportation.Teleport());
-        Debug.Log("Did it");
     }
 }

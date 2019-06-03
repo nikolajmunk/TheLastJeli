@@ -9,7 +9,6 @@ public class ShootBehavior : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject muzzlePrefab;
     AudioHandler audioHandler;
-    [SerializeField]
     Player player;
     PlayerActions actions;
     public int ammo;
@@ -22,10 +21,7 @@ public class ShootBehavior : MonoBehaviour
 
     void Start()
     {
-        if (player == null)
-        {
-            player = transform.root.GetComponent<Player>();
-        }
+        player = transform.root.GetComponent<Player>();
         actions = player.Actions;
         audioHandler = GetComponent<AudioHandler>();
         ammo = maxAmmo;
@@ -55,14 +51,10 @@ public class ShootBehavior : MonoBehaviour
         muzzlePrefab.SetActive(true);
 
         BulletBehavior bb = bullet.GetComponent<BulletBehavior>();
-        if (bb)
-        {
-            bb.direction = shootOrigin.right;
-            bb.moving = true;
-            bb.origin = transform.root.gameObject;
-        }
-        bullet.GetComponent<Rigidbody>().AddForce(bullet.transform.forward * shootSpeed); // note to self: this may not work with bullets that aren't guaranteed to be aligned right.
-
+        bb.direction = shootOrigin.right;
+        bb.moving = true;
+        bb.origin = transform.root.gameObject;
+        bb.GetComponent<Rigidbody>().AddForce(bb.transform.forward * shootSpeed);
         //Debug.DrawRay(shootOrigin.position, shootOrigin.right * 1000f, Color.red);
         audioHandler.PlayOneShotWithRandomPitch("Shoot", .5f, 1.5f);
 

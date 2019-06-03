@@ -7,30 +7,28 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [Header("Declarations")]
     public GameObject teleportEffect;
+    [HideInInspector]
+    public GameObject frontPlayer;
+    public List<Player> activePlayers;
+    public int numberOfActivePlayers;
+    public List<Transform> playerPositions;
+    public GameObject winUI; // This should not be in the game manager. Or at least we should specify that the lobby should not show win text.
+    public TextMeshProUGUI winText;
+    public bool debug;
     public PlayerManager playerManager;
     public LevelGenerator levelGenerator;
     [HideInInspector]
     public GameObject spaceShipModule;
     public GameObject destructionZone;
     public GameObject reincarnationPrefab;
-    [Header("Player information")]
-    [HideInInspector]
-    public GameObject frontPlayer;
-    public List<Player> activePlayers;
-    public List<Transform> playerPositions;
-    public int numberOfActivePlayers;
 
-    public bool debug;
-    [HideInInspector]
     public Vector3 killBoxPosition;
 
-    [HideInInspector]
     public bool isEndGame = false;
     private bool isEveryoneDead = false;
     private bool isGameOver = false;
-    [HideInInspector]
+
     public bool playerInSpaceship = false;
 
     public delegate void GameStateEvent();

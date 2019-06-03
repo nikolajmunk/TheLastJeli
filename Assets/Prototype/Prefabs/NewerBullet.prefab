@@ -20321,16 +20321,16 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0.6291132, a: 1}
-        key1: {r: 0.95615464, g: 0.6257927, b: 0.23541875, a: 0.4509804}
-        key2: {r: 0.9299363, g: 1, b: 0, a: 0}
+        key0: {r: 0.48279697, g: 0, b: 0.7075472, a: 1}
+        key1: {r: 0.95686275, g: 0.30435166, b: 0.23529412, a: 0.4509804}
+        key2: {r: 1, g: 0.63343495, b: 0, a: 0}
         key3: {r: 0.9299363, g: 1, b: 0, a: 0.53333336}
         key4: {r: 0.15063477, g: 1, b: 0.0990566, a: 0}
         key5: {r: 1, g: 0.993813, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 578
-        ctime1: 31226
+        ctime1: 37779
         ctime2: 65535
         ctime3: 65535
         ctime4: 65535
@@ -47692,7 +47692,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d1021fb4b7fbd943a90272d24ea76d9, type: 2}
+  - {fileID: 2100000, guid: d8d038fb6894fdb4fb6f9cb2695f110d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47974,7 +47974,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 34d627ecb4c88af49bbdb4aad2336847, type: 2}
+      objectReference: {fileID: 2100000, guid: 398822689c5e030449aa97e62231e19f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49353dc12e32bbb4588ce4c5c10fbaef, type: 3}
 --- !u!4 &7887591356031405331 stripped

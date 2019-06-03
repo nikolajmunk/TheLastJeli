@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeleportLR-G
-  m_Shader: {fileID: 4800000, guid: 0f1a51be6f73b884483fec88bbc41f03, type: 3}
-  m_ShaderKeywords: 
+  m_Name: BulletHead 3
+  m_Shader: {fileID: 4800000, guid: 6ef27a976d65a9d459c539d1ea48cf29, type: 3}
+  m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -56,12 +56,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 774110435c141a14ca12d17155920a99, type: 3}
+        m_Texture: {fileID: 2800000, guid: e28dc97a9541e3642a48c0e3886688c5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
-        m_Texture: {fileID: 2800000, guid: e28dc97a9541e3642a48c0e3886688c5, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: e35304ad568e1c44aa133b9924a36372, type: 3}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
@@ -70,40 +70,28 @@ Material:
     m_Floats:
     - _Boost: 1
     - _BumpScale: 1
-    - _Cutoff: 0.48
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: 5.93
-    - _Float1: 0.4
+    - _Float1: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Gradientopacity: 1
     - _Metallic: 0
     - _Mode: 0
-    - _Multiplyfactor: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1
+    - _Speed: 2
     - _SrcBlend: 1
-    - _TransAmbient: 0.2
-    - _TransDirect: 1
-    - _TransNormalDistortion: 0.1
-    - _TransScattering: 2
-    - _TransShadow: 0.9
-    - _Translucency: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 1, g: 0.14725655, b: 0, a: 0.105882354}
-    - _Color1: {r: 0.96728504, g: 1, b: 0.8443396, a: 1}
-    - _Color2: {r: 1, g: 0, b: 0.68692493, a: 0}
+    - _Color: {r: 0.83230233, g: 0, b: 0.8962264, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GlowCol: {r: 1, g: 1, b: 1, a: 0}
-    - _MainCol: {r: 0.75, g: 1, b: 0.8711947, a: 1}
     - _MaskTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _TextureTiling: {r: 2, g: 2, b: 0, a: 0}
     - _Tiling: {r: 2, g: 2, b: 0, a: 0}
+    - _Vector0: {r: 2, g: 2, b: 0, a: 0}

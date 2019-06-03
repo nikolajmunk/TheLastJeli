@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class StartSequence : MonoBehaviour
 {
+    public bool debug = false;
+
     private DestructionZone destructionZone;
     private AudioHandler audioHandler;
 
@@ -20,25 +22,30 @@ public class StartSequence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        destructionZone = GameObject.FindGameObjectWithTag("DestructionZone").GetComponent<DestructionZone>();
-        DisableMovement();
-
-        audioHandler = GetComponent<AudioHandler>();
-
-        foreach (Player item in GameManager.instance.activePlayers)
+        if (debug == true)
         {
-            //exclamations.Add(item.transform.Find("Exclamation").gameObject);
-            item.transform.Find("Exclamation").gameObject.SetActive(false);
+            GetComponent<Animator>().enabled = false;
+        }
+        else
+        {
+            destructionZone = GameObject.FindGameObjectWithTag("DestructionZone").GetComponent<DestructionZone>();
+            DisableMovement();
 
-            foreach (Transform child in item.transform)
+            audioHandler = GetComponent<AudioHandler>();
+
+            foreach (Player item in GameManager.instance.activePlayers)
             {
-                if (child.gameObject.name == "Exclamation")
+                //exclamations.Add(item.transform.Find("Exclamation").gameObject);
+                item.transform.Find("Exclamation").gameObject.SetActive(false);
+
+                foreach (Transform child in item.transform)
                 {
-                    exclamations.Add(child.transform.gameObject);
+                    if (child.gameObject.name == "Exclamation")
+                    {
+                        exclamations.Add(child.transform.gameObject);
+                    }
                 }
             }
-
-            //exclamations.Add(item.transform.GetComponentsInChildren<GameObject>(true));
         }
     }
 

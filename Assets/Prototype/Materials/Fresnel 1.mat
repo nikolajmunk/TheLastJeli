@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fresnel
+  m_Name: Fresnel 1
   m_Shader: {fileID: 4800000, guid: 3b3ba3d04600c4d4b8f27183b0296ee3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -67,7 +67,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimBrightness: 2.95
+    - _RimBrightness: 1.41
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -75,5 +75,5 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.21137415, g: 0.44562644, b: 0.4716981, a: 1}
+    - _Color: {r: 0.40503737, g: 0.42497447, b: 0.6981132, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

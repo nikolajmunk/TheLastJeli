@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture:
-        m_Texture: {fileID: 2800000, guid: 0315c07561590af4baa8f95840c1a98b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8c1c326d1252fc1499c742c7e708d173, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 4ed213f774ea5c24d8cd30319ef7bddb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 73177b1c7f51b344e8177bc5c3b4053e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -83,17 +83,17 @@ Material:
     - _DetailNormalMapScale: 1
     - _DistortionScale: 0.009
     - _DstBlend: 10
-    - _ExtrusionAmount: 10
-    - _ExtrusionPoint: 0.25
+    - _ExtrusionAmount: 30
+    - _ExtrusionPoint: 0.2
     - _Float0: 1
     - _Float6: 3
     - _Float7: 0.24
     - _GlossMapScale: 1
     - _Glossiness: 0.714
     - _GlossyReflections: 1
-    - _MaxAlpha: 0.7
+    - _MaxAlpha: 2
     - _Metallic: 0
-    - _MinAlpha: 0.5
+    - _MinAlpha: 0.1
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02

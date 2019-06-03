@@ -1364,37 +1364,37 @@ PrefabInstance:
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.1577625
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.594191
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.1156597
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7286423
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.66993815
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.009325179
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.14204367
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -1404,17 +1404,17 @@ PrefabInstance:
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -192.679
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 10.436996
       objectReference: {fileID: 0}
     - target: {fileID: 4346207266670693037, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -273.644
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -1454,17 +1454,112 @@ PrefabInstance:
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: beamColor1.g
-      value: 1
+      value: 0.6341171
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: beamColor1.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: particlesGradient.key0.g
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.g
+      value: 0.37660575
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.a
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key0.b
+      value: 0.97803736
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key1.r
+      value: 0.45874974
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key1.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key0.g
+      value: 0.51692367
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key1.r
+      value: 0.55464983
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.g
+      value: 0.33460778
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.g
+      value: 0.8002435
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.b
+      value: 0.7122642
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key0.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -1584,17 +1679,17 @@ PrefabInstance:
     - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: spriteColor.r
-      value: 0.9471822
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: spriteColor.g
-      value: 0
+      value: 0.51359504
       objectReference: {fileID: 0}
     - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: spriteColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1841695883781416617, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -1616,7 +1711,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 1319474187451573453, guid: 3dc9e3ce289d26c48a0f61dc58af65e3,
+      objectReference: {fileID: 1239735938551686295, guid: 898713451f8a0414a81a5470d0053c0a,
         type: 3}
     - target: {fileID: 2973658930358593828, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}

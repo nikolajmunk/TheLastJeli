@@ -24,7 +24,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture:
+<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: 8c1c326d1252fc1499c742c7e708d173, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: 879b6d2d94c3c7e45956ce550fc49e20, type: 3}
+>>>>>>> 82fe2b7113612017d5e964f87767a3fc62881dd3
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -91,7 +95,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.714
     - _GlossyReflections: 1
+<<<<<<< HEAD
     - _MaxAlpha: 2
+=======
+    - _MaxAlpha: 0.81
+>>>>>>> 82fe2b7113612017d5e964f87767a3fc62881dd3
     - _Metallic: 0
     - _MinAlpha: 0.1
     - _Mode: 3

@@ -85,12 +85,12 @@ PrefabInstance:
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: particlesGradient.key0.r
-      value: 0.34901962
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: particlesGradient.key1.g
-      value: 0.72156864
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: beamColor1.r
-      value: 1
+      value: 0.5235849
       objectReference: {fileID: 0}
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -120,7 +120,97 @@ PrefabInstance:
     - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: beamColor1.b
+      value: 0.97694767
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.r
+      value: 0.8349056
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.g
+      value: 0.9807202
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: beamColor2.a
+      value: 0.95686275
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key0.g
+      value: 0.4684868
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key0.r
+      value: 0.6179246
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: sparkGradient.key0.b
+      value: 0.99250835
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.r
+      value: 0.5674992
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.g
+      value: 0.514151
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.g
+      value: 0.9793539
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: bobGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9056465369436239549, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: particlesGradient.atime0
+      value: 386
       objectReference: {fileID: 0}
     - target: {fileID: 4632622503768299545, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
@@ -212,7 +302,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 3672056990081781749, guid: 388154d370bff47439ef293b5f7e0187,
+      objectReference: {fileID: 5003884713327298577, guid: 109d3bc4fbda3744fa1525aca25013a1,
         type: 3}
     - target: {fileID: 2973658930358593828, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}

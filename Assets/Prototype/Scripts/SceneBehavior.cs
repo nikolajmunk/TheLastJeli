@@ -42,6 +42,8 @@ public class SceneBehavior : MonoBehaviour
         }
 
         GameManager.instance.isEndGame = false;
+        GameManager.instance.isEveryoneDead = false;
+        GameManager.instance.isGameOver = false;
         GameManager.instance.destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
     }
 

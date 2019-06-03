@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 {
     public string playerName;
     public PlayerActions Actions;
+    public GameObject deathEffect;
  //   public enum PlayerStatus
 	//{
 	//	Hurt,

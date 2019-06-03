@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jeli_Unity 4
+  m_Name: Jeli_plant 3
   m_Shader: {fileID: 4800000, guid: 947c20c73ac6e4eb4ad25ed5910582fa, type: 3}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
@@ -24,11 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture:
-<<<<<<< HEAD
-        m_Texture: {fileID: 2800000, guid: 8c1c326d1252fc1499c742c7e708d173, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: 879b6d2d94c3c7e45956ce550fc49e20, type: 3}
->>>>>>> 82fe2b7113612017d5e964f87767a3fc62881dd3
+        m_Texture: {fileID: 2800000, guid: e79221aef43e00441ad17838edc49fd0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -64,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 73177b1c7f51b344e8177bc5c3b4053e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4ed213f774ea5c24d8cd30319ef7bddb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -80,28 +76,24 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BlendToWhite: 0.046
+    - _BlendToWhite: 0
     - _BumpScale: 1
     - _ColourScale: 3
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DistortionScale: 0.009
     - _DstBlend: 10
-    - _ExtrusionAmount: 30
-    - _ExtrusionPoint: 0.2
+    - _ExtrusionAmount: 10
+    - _ExtrusionPoint: 0.25
     - _Float0: 1
     - _Float6: 3
     - _Float7: 0.24
     - _GlossMapScale: 1
     - _Glossiness: 0.714
     - _GlossyReflections: 1
-<<<<<<< HEAD
-    - _MaxAlpha: 2
-=======
-    - _MaxAlpha: 0.81
->>>>>>> 82fe2b7113612017d5e964f87767a3fc62881dd3
+    - _MaxAlpha: 0.7
     - _Metallic: 0
-    - _MinAlpha: 0.1
+    - _MinAlpha: 0.5
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02

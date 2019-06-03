@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393482402597133068}
   m_Layer: 10
-  m_Name: inclinationDown2
+  m_Name: inclinationDown3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190069528573781421}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.70710677}
+  m_LocalRotation: {x: 0.7071068, y: 0.70710677, z: 0, w: 0}
   m_LocalPosition: {x: -0.25999987, y: -0.96, z: 10.73}
   m_LocalScale: {x: 125, y: 125, z: 125}
   m_Children:
@@ -292,7 +292,7 @@ Transform:
   - {fileID: 8080276146018686390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90.00001}
 --- !u!1 &4327698133278267630
 GameObject:
   m_ObjectHideFlags: 0

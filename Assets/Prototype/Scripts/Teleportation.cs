@@ -143,8 +143,8 @@ public class Teleportation : MonoBehaviour
         actor1Teleportable = actor1.GetComponent<Teleportable>();
         actor2Teleportable = actor2.GetComponent<Teleportable>();
 
-        actor1OriginalScale = actor1.Find("Model").localScale;
-        actor2OriginalScale = actor2.Find("Model").localScale;
+        //actor1OriginalScale = actor1.Find("Model").localScale;
+        //actor2OriginalScale = actor2.Find("Model").localScale;
 
         InstancedMaterial = lr.material;
         InstancedMaterial.SetColor("_MainCol", actor1Teleportable.beamColor1);

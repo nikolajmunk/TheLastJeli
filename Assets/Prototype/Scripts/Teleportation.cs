@@ -78,7 +78,8 @@ public class Teleportation : MonoBehaviour
         actor2Teleportable = actor2.GetComponent<Teleportable>();
 
         InstancedMaterial = lr.material;
-        InstancedMaterial.SetColor("_Color0", actor1Teleportable.beamColor0);
+        InstancedMaterial.SetColor("_MainCol", actor1Teleportable.beamColor1);
+        InstancedMaterial.SetColor("_GlowCol", actor1Teleportable.beamColor2);
         lr.material = InstancedMaterial;
         AssignFollowTarget(particles1, actor1);
         AssignFollowTarget(particles2, actor2);

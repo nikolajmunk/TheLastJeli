@@ -56,6 +56,14 @@ MonoBehaviour:
   winText: {fileID: 0}
   debug: 1
   playerManager: {fileID: 3410766468448273074}
+  levelGenerator: {fileID: 0}
+  spaceShipModule: {fileID: 0}
+  destructionZone: {fileID: 0}
+  killBoxPosition: {x: 0, y: 0, z: 0}
+  buttonScript: {fileID: 0}
+  hasRaceStarted: 0
+  isEndGame: 0
+  playerInSpaceship: 0
 --- !u!114 &3410766468448273075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  acceptNewPlayers: 0
+  acceptNewPlayers: 1
   playerPrefabs:
   - {fileID: 1421904722035359916, guid: bc1f60a9aab194716beb3647eba51e03, type: 3}
   - {fileID: 1120740143082971673, guid: 52aa96c8597881f45a4594efe0a4c285, type: 3}

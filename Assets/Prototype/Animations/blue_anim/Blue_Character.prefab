@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Player 3
+  deathEffect: {fileID: 0}
 --- !u!82 &99706366079347535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,8 +236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeTeleported: 1
-  beamColor0: {r: 0.6908568, g: 0.17021184, b: 0.8018868, a: 0.14117648}
   beamColor1: {r: 1, g: 1, b: 1, a: 1}
+  beamColor2: {r: 0, g: 0, b: 0, a: 0}
   particlesGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 1, a: 1}
@@ -267,6 +268,64 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   isCow: 0
+  sparkGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  bobGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!1 &2056159043204028502
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,11 +384,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: c681f23523eaaad4d88e13b934c13d85,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 262bfe2a25b552544adbb0ef6f758fa4, type: 2}
     - target: {fileID: -4216859302048453862, guid: c681f23523eaaad4d88e13b934c13d85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -400,11 +454,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: c681f23523eaaad4d88e13b934c13d85,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 262bfe2a25b552544adbb0ef6f758fa4, type: 2}
     - target: {fileID: -4147038402140911077, guid: c681f23523eaaad4d88e13b934c13d85,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a283fd55f4d63d43b035b2889ad2f17, type: 2}
+      objectReference: {fileID: 2100000, guid: 4dcdd96bc2c8f024e84c242910a23fbb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c681f23523eaaad4d88e13b934c13d85, type: 3}
 --- !u!4 &4906828645052003718 stripped

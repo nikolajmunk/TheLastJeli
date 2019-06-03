@@ -10,7 +10,9 @@ public class Teleportable : MonoBehaviour
     public Color beamColor2;
     public Gradient particlesGradient;
     public bool isCow = false;
-    
+    public Gradient sparkGradient;
+    public Gradient bobGradient;
+
     // Start is called before the first frame update
     void Start()
     {

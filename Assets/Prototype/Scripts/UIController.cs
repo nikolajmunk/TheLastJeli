@@ -18,6 +18,13 @@ public class UIController : MonoBehaviour
     public GameObject gameOverCanvas;
     public TextMeshProUGUI gameOverText;
 
+    private UIbuttons uiButtonsScript;
+    
+
+    private void Start() {
+        uiButtonsScript = GetComponent<UIbuttons>();
+    }
+
     private void OnEnable()
     {
         GameManager.instance.OnWin += OnWin;
@@ -34,8 +41,10 @@ public class UIController : MonoBehaviour
 
     void OnWin()
     {
+        endgameCanvas.SetActive(false);
         winCanvas.SetActive(true);
         winText.text = "Win Placeholder";
+        uiButtonsScript.ShowRestartUI();
     }
 
     void OnEndGame()
@@ -46,7 +55,9 @@ public class UIController : MonoBehaviour
 
     void OnAllPlayersDead()
     {
+        endgameCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        gameOverText.text = "Game Over Placeholder";
+        gameOverText.text = "All Jeli has failed \n Great Job!";
+        uiButtonsScript.ShowRestartUI();
     }
 }

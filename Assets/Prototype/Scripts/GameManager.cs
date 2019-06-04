@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public bool isEndGame = false;
     public bool isEveryoneDead = false;
     public bool isGameOver = false;
+    public bool onePlayer = false;
     [HideInInspector]
     public bool playerInSpaceship = false;
 
@@ -95,6 +96,11 @@ public class GameManager : MonoBehaviour
             frontPlayer = playerPositions[0].gameObject;
         }
 
+        if (numberOfActivePlayers == 1 && onePlayer == false && hasGameStarted)
+        {
+            OnePlayerLeft();
+        }
+
         // Only two players left
         if (numberOfActivePlayers == 2 && isEndGame == false && SceneManager.GetActiveScene().name == "Scene_master" && hasGameStarted)
         {
@@ -147,6 +153,7 @@ public class GameManager : MonoBehaviour
     {
         levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
         levelGenerator.generateLevels = false;
+        onePlayer = true;
     }
 
     public void Win(float delay)

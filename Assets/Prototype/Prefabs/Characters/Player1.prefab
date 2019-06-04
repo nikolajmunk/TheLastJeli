@@ -282,6 +282,22 @@ PrefabInstance:
       propertyPath: playerName
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5894582191736340351, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102768337108784669, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890621696815895822, guid: b223b251a9f13c14fba2513b990261bf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 696a1d45a0f4a144d9282f2f9a15c953,
+        type: 3}
     - target: {fileID: 2744346459173535384, guid: b223b251a9f13c14fba2513b990261bf,
         type: 3}
       propertyPath: spriteColor.r

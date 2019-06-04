@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda2c49b18a605499dc2ed0a57c6ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplePlayersSpaceshipSpawnTimer: 30
+  twoPlayersSpaceshipSpawnTimer: 240
 --- !u!1 &50767408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1391,21 @@ PrefabInstance:
     - target: {fileID: 5294007584620756401, guid: b1a86b0125ac5d94785b06d5ca195963,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007583184085779, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -79.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007584620756414, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294007583236217185, guid: b1a86b0125ac5d94785b06d5ca195963,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5294007584620756415, guid: b1a86b0125ac5d94785b06d5ca195963,

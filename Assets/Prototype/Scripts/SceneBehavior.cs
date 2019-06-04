@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InControl;
 
 public class SceneBehavior : MonoBehaviour
 {
     List<Transform> spawnPoints;
     private List<int> SpawnInts = new List<int> { 0, 1, 2, 3 };
+
+    public float multiplePlayersSpaceshipSpawnTimer;
+    public float twoPlayersSpaceshipSpawnTimer;
 
 
     // Start is called before the first frame update
@@ -43,11 +47,20 @@ public class SceneBehavior : MonoBehaviour
 
         GameManager.instance.isEndGame = false;
         GameManager.instance.destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
+        if (GameManager.instance.numberOfActivePlayers > 2)
+        {
+            GameManager.instance.twoPlayerSpaceshipSpawnTime = multiplePlayersSpaceshipSpawnTimer;
+        }
+        else
+        {
+            GameManager.instance.twoPlayerSpaceshipSpawnTime = twoPlayersSpaceshipSpawnTimer;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

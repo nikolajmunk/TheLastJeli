@@ -39,6 +39,17 @@ public class GameManager : MonoBehaviour
     public GameStateEvent OnEndGame;
     public GameStateEvent OnReadyToPlay;
 
+    public bool isPaused = false;
+
+    [HideInInspector]
+    public float twoPlayerSpaceshipSpawnTime;
+    [HideInInspector]
+    public bool hasGameStarted = false;
+
+    public delegate void PauseState();
+    public PauseState OnPause;
+    public PauseState OnUnpause;
+
     private void OnEnable()
     {
         playerManager.OnPlayerAdded += OnPlayerAdded;
@@ -77,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
         playerPositions.Sort(SortByXPosition);
         playerPositions.Reverse();
         if (playerPositions.Count != 0)
@@ -84,8 +96,8 @@ public class GameManager : MonoBehaviour
             frontPlayer = playerPositions[0].gameObject;
         }
 
-        // Only one player left
-        if (numberOfActivePlayers == 1 && isEndGame == false && SceneManager.GetActiveScene().name == "Scene_master")
+        // Only two players left
+        if (numberOfActivePlayers == 2 && isEndGame == false && SceneManager.GetActiveScene().name == "Scene_master" && hasGameStarted)
         {
             EndGame();
         }
@@ -93,7 +105,7 @@ public class GameManager : MonoBehaviour
         // If one player reaches the spaceship, she wins
         if (playerInSpaceship == true && isGameOver == false)
         {
-            GameOver(5);
+            Win(5);
         }
 
         // If all players die
@@ -103,6 +115,15 @@ public class GameManager : MonoBehaviour
 
             OnAllPlayersDead();
             isEveryoneDead = true;
+        }
+
+        if((PlayerManager.instance.joystickListener.Command || PlayerManager.instance.keyboardListener.Command) && hasGameStarted) {
+            if (!isPaused) {
+                OnPause();
+            }
+            else {
+                OnUnpause();
+            }
         }
     }
 
@@ -114,17 +135,22 @@ public class GameManager : MonoBehaviour
             return teleportable.canBeTeleported;
         }
         return false;
-    }       
+    }
 
     public void EndGame()
     {
-        levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
-        levelGenerator.generateLevels = false;
+        StartCoroutine(WaitToSpawnShip(twoPlayerSpaceshipSpawnTime));
         OnEndGame();
         isEndGame = true;
     }
 
-    public void GameOver(float delay)
+    public void OnePlayerLeft()
+    {
+        levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+        levelGenerator.generateLevels = false;
+    }
+
+    public void Win(float delay)
     {
         if (!debug)
         {
@@ -141,6 +167,7 @@ public class GameManager : MonoBehaviour
 
     public void AllPlayersDead()
     {
+        
         OnAllPlayersDead();
     }
 
@@ -174,7 +201,7 @@ public class GameManager : MonoBehaviour
 
     public void Reincarnate(Player player)
     {
-        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y +6.5f, 0), Quaternion.identity, Camera.main.transform);
+        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 6.5f, 0), Quaternion.identity, Camera.main.transform);
         Player rpp = reincarnatedPlayer.GetComponent<Player>();
         rpp.playerName = player.playerName;
         rpp.Actions = player.Actions;
@@ -208,5 +235,15 @@ public class GameManager : MonoBehaviour
         teleportation.actor2 = actor2.transform;
         teleportation.Initialize();
         StartCoroutine(teleportation.Teleport());
+    }
+
+    IEnumerator WaitToSpawnShip(float _seconds)
+    {
+        yield return new WaitForSeconds(_seconds);
+        if (numberOfActivePlayers > 1)
+        {
+            levelGenerator.SpawnChunk(spaceShipModule, levelGenerator.GetPoint(levelGenerator.mostRecentModule, "ExitPoint").position);
+            levelGenerator.generateLevels = false;
+        }
     }
 }

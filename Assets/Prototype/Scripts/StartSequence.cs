@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class StartSequence : MonoBehaviour
 {
     public bool debug = false;
 
     private DestructionZone destructionZone;
-    private AudioHandler audioHandler;
+    public AudioHandler audioHandler;
 
     public Sprite[] numberSprites;
 
-    private int currentSprite = 0;
-    public Image countdownImg;
+    private int currentText = 0;
+    public TMP_Text countdownText;
+    public string[] countdown;
 
     public GameObject[] fallingBlocks;
 
@@ -25,6 +26,7 @@ public class StartSequence : MonoBehaviour
         if (debug == true)
         {
             GetComponent<Animator>().enabled = false;
+            GameStarts();
         }
         else
         {
@@ -78,10 +80,10 @@ public class StartSequence : MonoBehaviour
         audioHandler.PlayOneShotByName(sound);
     }
 
-    void ChangeCountdownSprite()
+    void ChangeCountdownText()
     {
-        countdownImg.GetComponent<Image>().sprite = numberSprites[currentSprite];
-        currentSprite++;
+        countdownText.text = countdown[currentText];
+        currentText ++;
     }
 
     void DoTheShake()
@@ -111,5 +113,10 @@ public class StartSequence : MonoBehaviour
         {
             item.SetActive(false);
         }
+    }
+
+    public void GameStarts()
+    {
+        GameManager.instance.hasGameStarted = true;
     }
 }

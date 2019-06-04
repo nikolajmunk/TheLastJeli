@@ -15,6 +15,9 @@ public class SceneBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.instance.GetComponent<AudioSource>().clip = GameManager.instance.GetComponent<AudioHandler>().GetAudioClipByName("GameMusic");
+        GameManager.instance.GetComponent<AudioSource>().Play();
+
         GameManager.instance.activePlayers = new List<Player>(PlayerManager.instance.players);
         GameManager.instance.numberOfActivePlayers = GameManager.instance.activePlayers.Count;
         if (GameManager.instance.playerPositions.Count == 0)

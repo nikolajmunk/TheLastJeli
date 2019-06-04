@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadScene : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     PlayerManager playerManager;
 
@@ -12,6 +12,8 @@ public class LoadScene : MonoBehaviour
         playerManager = PlayerManager.instance;
         playerManager.RemoveAllPlayers();
         playerManager.acceptNewPlayers = false;
+        GameManager.instance.GetComponent<AudioSource>().clip = GameManager.instance.GetComponent<AudioHandler>().GetAudioClipByName("MenuMusic");
+        GameManager.instance.GetComponent<AudioSource>().Play();
     }
 
     // Start is called before the first frame update

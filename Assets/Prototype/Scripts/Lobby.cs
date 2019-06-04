@@ -7,6 +7,7 @@ public class Lobby : MonoBehaviour
     public PlayerManager playerManager;
     PlayerActions keyboardActions;
     PlayerActions joystickActions;
+
     void Start()
     {
         playerManager = GameManager.instance.playerManager;

@@ -43,21 +43,21 @@ public class UIController : MonoBehaviour
     {
         endgameCanvas.SetActive(false);
         winCanvas.SetActive(true);
-        winText.text = "Win Placeholder";
+        winText.text = "You succesfully escaped the planet!";
         uiButtonsScript.ShowRestartUI();
     }
 
     void OnEndGame()
     {
-        endgameCanvas.SetActive(true);
-        endgameText.text = "Endgame Placeholder";
+        //endgameCanvas.SetActive(true);
+        //endgameText.text = "Endgame Placeholder";
     }
 
     void OnAllPlayersDead()
     {
         endgameCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        gameOverText.text = "All Jeli has failed \n Great Job!";
+        gameOverText.text = "All Jeli has failed \n Great Job..";
         uiButtonsScript.ShowRestartUI();
     }
 }

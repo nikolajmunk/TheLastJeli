@@ -420,6 +420,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: acceptNewPlayers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3410766468448273073, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,21 +513,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4406669244350920270, guid: 092501337b79ab64ca3d943b69070a15,
         type: 3}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: acceptNewPlayers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: debug
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff, type: 3}
 --- !u!1 &420768994
@@ -2274,6 +2274,7 @@ GameObject:
   - component: {fileID: 1850829983}
   - component: {fileID: 1850829984}
   - component: {fileID: 1850829985}
+  - component: {fileID: 1850829986}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: LevelManager
@@ -2326,6 +2327,20 @@ MonoBehaviour:
   - {fileID: 559340750}
   - {fileID: 1401315841}
   - {fileID: 766694051}
+--- !u!114 &1850829986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850829982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd6dce10ffd2c4c98d3d04331f5e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioMapping: []
 --- !u!1 &1876068611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2792,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewerBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 9045408464846793462, guid: 224653fe6e085a44792f6257b1dd73e8,
+        type: 3}
+      propertyPath: ricochetEffect
+      value: 
+      objectReference: {fileID: 5918316313405411957, guid: 2f9fe85931c546840a5b0f355859e8ea,
+        type: 3}
     - target: {fileID: 9126173229587694276, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2832,11 +2853,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9045408464846793462, guid: 224653fe6e085a44792f6257b1dd73e8,
-        type: 3}
-      propertyPath: ricochetEffect
-      value: 
-      objectReference: {fileID: 5918316313405411957, guid: 2f9fe85931c546840a5b0f355859e8ea,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224653fe6e085a44792f6257b1dd73e8, type: 3}

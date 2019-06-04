@@ -9626,8 +9626,16 @@ MonoBehaviour:
   - {fileID: 7431189734476245563}
   particles2:
   - {fileID: 6810365758013905002}
+  spark1: {fileID: 1288992742855614906}
+  spark2: {fileID: 4670116424249798968}
+  bob1: {fileID: 4968630938215668606}
+  bob2: {fileID: 2375511979086555717}
+  fresnel1: {fileID: 6601172021700379583}
+  fresnel2: {fileID: 6254227602995048805}
   actor1Teleportable: {fileID: 0}
   actor2Teleportable: {fileID: 0}
+  actor1Scale: 0
+  actor2Scale: 0
   anim: {fileID: 6981417791003677401}
 --- !u!95 &6981417791003677401
 Animator:

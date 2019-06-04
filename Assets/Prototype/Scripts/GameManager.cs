@@ -26,10 +26,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Vector3 killBoxPosition;
 
-    [HideInInspector]
     public bool isEndGame = false;
-    private bool isEveryoneDead = false;
-    private bool isGameOver = false;
+    public bool isEveryoneDead = false;
+    public bool isGameOver = false;
     [HideInInspector]
     public bool playerInSpaceship = false;
 
@@ -187,16 +186,38 @@ public class GameManager : MonoBehaviour
 
     public void KillPlayer(Player player)
     {
+        var effect = Instantiate(player.deathEffect,Camera.main.ViewportToWorldPoint(GetIntersectionWithScreen(player.transform)), Quaternion.identity);
+        Debug.Log(player.transform.position + " " + effect.transform.position);
         OnPlayerRemoved(player);
 
         player.GetComponent<AudioHandler>().PlayOneShotByName("Death");
-        StartCoroutine(KillTime(player.gameObject));
+
+        //StartCoroutine(KillTime(player.gameObject));
+        player.gameObject.SetActive(false);
         Reincarnate(player);
     }
+
+    Vector2 GetIntersectionWithScreen(Transform target)
+    {
+        var screenWidth = Camera.main.rect.width;
+        var screenHeight = Camera.main.rect.height;
+        Vector2 vector =  Camera.main.rect.center - (Vector2)Camera.main.WorldToViewportPoint(target.position);
+        vector.Normalize();
+ 
+        float angle = Mathf.Atan2(vector.y, vector.x);
+
+        float x = Mathf.Clamp(Mathf.Cos(angle) * screenWidth + screenWidth / 2, 0.0f, screenWidth);
+        float y = Mathf.Clamp(Mathf.Sin(angle) * screenHeight + screenHeight / 2, 0.0f, screenHeight);
+
+        return new Vector2(x, y);
+}
+
     public IEnumerator KillTime(GameObject dyingPlayer)
     {
+        Debug.Log("died");
         yield return new WaitForSeconds(2);
         dyingPlayer.SetActive(false);
+        Debug.Break();
     }
 
     public void Reincarnate(Player player)
@@ -205,6 +226,7 @@ public class GameManager : MonoBehaviour
         Player rpp = reincarnatedPlayer.GetComponent<Player>();
         rpp.playerName = player.playerName;
         rpp.Actions = player.Actions;
+        reincarnatedPlayer.GetComponentInChildren<AmmoDisplay>().spriteColor = player.transform.GetComponentInChildren<AmmoDisplay>().spriteColor;
     }
 
     public IEnumerator Restart(float delay)

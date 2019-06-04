@@ -9,7 +9,7 @@ public class MultipleTargetCamera : MonoBehaviour
     public float smoothTime = .5f;
     List<Transform> targets;
 
-    private void Awake()
+    private void Start()
     {
         targets = GameManager.instance.playerPositions;
         offset = transform.position - targets[0].position;
@@ -22,6 +22,10 @@ public class MultipleTargetCamera : MonoBehaviour
 
     Vector3 GetTargetPosition()
     {
+        if (targets.Count == 0)
+        {
+            return transform.position;
+        }
         var frontmostPosition = targets[0].position;
         var pos = new Vector3(frontmostPosition.x, GetCentroid().y, frontmostPosition.z) + offset;
         return pos;

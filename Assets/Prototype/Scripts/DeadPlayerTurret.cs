@@ -9,6 +9,18 @@ public class DeadPlayerTurret : MonoBehaviour
     Player player;
     public GameObject spawnObject;
 
+    private void OnEnable()
+    {
+        GameManager.instance.OnWin += OnGameEnds;
+        GameManager.instance.OnAllPlayersDead += OnGameEnds;
+    }
+
+    void OnDisable()
+    {
+        GameManager.instance.OnWin -= OnGameEnds;
+        GameManager.instance.OnAllPlayersDead -= OnGameEnds;
+    }
+
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -31,4 +43,10 @@ public class DeadPlayerTurret : MonoBehaviour
         //    spawnedObject.GetComponent<Rigidbody>().AddForce(Vector3.down * 3000, ForceMode.Impulse);
         //}
     }
+
+    void OnGameEnds()
+    {
+        Destroy(gameObject);
+    }
+
 }

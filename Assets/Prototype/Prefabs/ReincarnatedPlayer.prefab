@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6401130587156099041
 Transform:
   m_ObjectHideFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
+  deathEffect: {fileID: 0}
 --- !u!114 &1738210478506450395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,21 +272,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+    - target: {fileID: 962991003602008718, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 942569381006219567, guid: 0054444cd5dc6a148a4f92a6198f8b3d,
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962991003602008718, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
-    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 962991003602008718, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1458674438758381713}
-    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
-        type: 3}
-      propertyPath: shootSpeed
-      value: 2000
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
@@ -307,10 +307,31 @@ PrefabInstance:
       propertyPath: spriteColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 942569381006219567, guid: 0054444cd5dc6a148a4f92a6198f8b3d,
+        type: 3}
+    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1458674438758381713}
+    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: shootSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3116562269782288727, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3116562269782288727, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
@@ -341,6 +362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116562269782288727, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.747
       objectReference: {fileID: 0}
     - target: {fileID: 1707592930012672671, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}

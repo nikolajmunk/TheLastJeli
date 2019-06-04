@@ -46,5 +46,15 @@ namespace AmplifyShaderEditor
 		{
 			AmplifyShaderEditorWindow.CreateNewTemplateShader( "e1de45c0d41f68c41b2cc20c8b9c05ef" );
 		}
+		[MenuItem( "Assets/Create/Amplify Shader/ASESampleTemplates/DoublePassUnlit", false, 85 )]
+		public static void ApplyTemplate8()
+		{
+			AmplifyShaderEditorWindow.CreateNewTemplateShader( "003dfa9c16768d048b74f75c088119d8" );
+		}
+		[MenuItem( "Assets/Create/Amplify Shader/Templates/Legacy/Sprites Default", false, 85 )]
+		public static void ApplyTemplate9()
+		{
+			AmplifyShaderEditorWindow.CreateNewTemplateShader( "e1aa2d455d4a5d24a8b88dad53369f6a" );
+		}
 	}
 }

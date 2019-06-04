@@ -31,7 +31,7 @@ public class UIbuttons : MonoBehaviour
             startB.SetActive(false);
         }
 
-        
+
     }
 
     private void Update()
@@ -39,9 +39,7 @@ public class UIbuttons : MonoBehaviour
         // Pause
         if (Input.GetKeyDown(KeyCode.P))
         {
-            restartB.SetActive(!restartB.activeInHierarchy);
-            endB.SetActive(!endB.activeInHierarchy);
-            startB.SetActive(!startB.activeInHierarchy);
+            ShowPauseUI();
         }
 
         // Lobby controls
@@ -67,5 +65,17 @@ public class UIbuttons : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
     }
 
+    public void ShowPauseUI()
+    {
+        restartB.SetActive(!restartB.activeInHierarchy);
+        endB.SetActive(!endB.activeInHierarchy);
+        startB.SetActive(!startB.activeInHierarchy);
+    }
+
+    public void ShowRestartUI()
+    {
+        restartB.SetActive(!restartB.activeInHierarchy);
+        endB.SetActive(!endB.activeInHierarchy);
+    }
 
 }

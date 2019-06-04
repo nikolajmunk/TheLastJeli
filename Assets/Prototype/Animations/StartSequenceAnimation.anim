@@ -965,6 +965,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 2.3333333
+    functionName: PlaySound
+    data: Rumble
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 3
     functionName: PlaySound
     data: Surprise
@@ -993,6 +1000,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 4.85
+    functionName: PlaySound
+    data: Count
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 5.4333334
     functionName: ChangeCountdownText
     data: 
@@ -1000,9 +1014,23 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 5.866667
+    functionName: PlaySound
+    data: Count
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 6.4333334
     functionName: ChangeCountdownText
     data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.883333
+    functionName: PlaySound
+    data: Count
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -1017,6 +1045,13 @@ AnimationClip:
   - time: 7.8333335
     functionName: GameStarts
     data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 7.85
+    functionName: PlaySound
+    data: Go
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

@@ -380,6 +380,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8013641084520766364}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e1cd1ad5ec0167a4faea75a59d878b90,
+        type: 3}
+      propertyPath: m_Name
+      value: cyan_model
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e1cd1ad5ec0167a4faea75a59d878b90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,11 +455,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e1cd1ad5ec0167a4faea75a59d878b90,
-        type: 3}
-      propertyPath: m_Name
-      value: cyan_model
-      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: e1cd1ad5ec0167a4faea75a59d878b90,
         type: 3}
       propertyPath: m_Controller
@@ -504,7 +504,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 5837502570025865142, guid: 0bc92ccb14cf653438876851dda5fb6e,
+      objectReference: {fileID: 5003884713327298577, guid: 109d3bc4fbda3744fa1525aca25013a1,
         type: 3}
     - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}

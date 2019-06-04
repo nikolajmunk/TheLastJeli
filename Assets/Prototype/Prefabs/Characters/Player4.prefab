@@ -485,6 +485,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5674882337597042637}
     m_Modifications:
+    - target: {fileID: 1707592930012672671, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707592930012672671, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: spriteColor.r
@@ -504,18 +514,8 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 2441204611094732366, guid: 128c0f683bc27804c80df1a6a1dace61,
+      objectReference: {fileID: 6834272761049794477, guid: 18a2eec00c29ba14880c586c8f072888,
         type: 3}
-    - target: {fileID: 1707592930012672671, guid: a775efc3cfaab264a8f23459e8f3fcec,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1707592930012672671, guid: a775efc3cfaab264a8f23459e8f3fcec,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.08
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a775efc3cfaab264a8f23459e8f3fcec, type: 3}
 --- !u!224 &1586511626962485951 stripped

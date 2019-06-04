@@ -7,12 +7,13 @@ public class MultipleTargetCamera : MonoBehaviour
     Vector3 offset;
     Vector3 velocity;
     public float smoothTime = .5f;
+    public Transform offsetPoint;
     List<Transform> targets;
 
     private void Start()
     {
         targets = GameManager.instance.playerPositions;
-        offset = transform.position - targets[0].position;
+        offset = transform.position - offsetPoint.position;
     }
 
     void LateUpdate()

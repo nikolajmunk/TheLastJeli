@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 99706366079347532}
   - component: {fileID: 99706366079347533}
   m_Layer: 0
-  m_Name: Blue_Character
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Player 3
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 8654431018659777044, guid: e6fed97ee8731dd4e8146c749d47a48a,
+    type: 3}
 --- !u!82 &99706366079347535
 AudioSource:
   m_ObjectHideFlags: 0

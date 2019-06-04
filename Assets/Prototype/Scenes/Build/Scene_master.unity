@@ -5909,7 +5909,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad267cd836fc0ef4b9526bd369bcd36b, type: 3}
-  m_Color: {r: 0.33490568, g: 0.63050014, b: 1, a: 1}
+  m_Color: {r: 0.3726415, g: 0.38316327, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6749,7 +6749,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad267cd836fc0ef4b9526bd369bcd36b, type: 3}
-  m_Color: {r: 0.33490568, g: 0.63050014, b: 1, a: 1}
+  m_Color: {r: 0.3726415, g: 0.38316327, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7123,7 +7123,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad267cd836fc0ef4b9526bd369bcd36b, type: 3}
-  m_Color: {r: 0.33490568, g: 0.63050014, b: 1, a: 1}
+  m_Color: {r: 0.3726415, g: 0.38316327, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7529,6 +7529,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: playerPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2270487835326063930, guid: 9ac5f10de8b96cf46b8992039288c1f7,
+        type: 3}
+    - target: {fileID: 3410766468448273074, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff,
+        type: 3}
+      propertyPath: playerPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 99706366079347530, guid: 5972a3823404ed5468e5575efe0a7b94,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538155f85e09bdd4dbf5ebdf3ebde0ff, type: 3}
 --- !u!1 &2040365044

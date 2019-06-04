@@ -315,12 +315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeTeleported: 1
-  beamColor1: {r: 1, g: 1, b: 1, a: 1}
-  beamColor2: {r: 0, g: 0, b: 0, a: 0}
+  beamColor1: {r: 0.5235849, g: 1, b: 0.97694767, a: 1}
+  beamColor2: {r: 0.8349056, g: 0.9807202, b: 1, a: 0.95686275}
   particlesGradient:
     serializedVersion: 2
-    key0: {r: 0.34901962, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 0.72156864, b: 1, a: 1}
+    key0: {r: 0, g: 0.4684868, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -335,7 +335,7 @@ MonoBehaviour:
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
+    atime0: 386
     atime1: 65535
     atime2: 0
     atime3: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
   isCow: 0
   sparkGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.6179246, g: 1, b: 0.99250835, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -378,8 +378,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   bobGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.5674992, g: 0.514151, b: 1, a: 1}
+    key1: {r: 0, g: 0.9793539, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -476,7 +476,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 3672056990081781749, guid: 388154d370bff47439ef293b5f7e0187,
+      objectReference: {fileID: 5003884713327298577, guid: 109d3bc4fbda3744fa1525aca25013a1,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a775efc3cfaab264a8f23459e8f3fcec, type: 3}

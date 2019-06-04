@@ -8,6 +8,7 @@ public class DeadPlayerTurret : MonoBehaviour
     public float maxDistanceFromCenter;
     Player player;
     public GameObject spawnObject;
+    public Transform target;
 
     private void OnEnable()
     {
@@ -24,6 +25,7 @@ public class DeadPlayerTurret : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<Player>();
+        target = Camera.main.transform;
     }
 
     private void FixedUpdate()
@@ -47,6 +49,14 @@ public class DeadPlayerTurret : MonoBehaviour
     void OnGameEnds()
     {
         Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        Vector3 newPosition = target.position;
+        newPosition.y += 6.5f;
+        newPosition.z = 0;
+        transform.position = newPosition;
     }
 
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9136666056265163455}
   - component: {fileID: 256973329368537225}
   - component: {fileID: 5813155955928015984}
+  - component: {fileID: 4541510701982499532}
   m_Layer: 0
   m_Name: rock_down_small
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4541510701982499532
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228868860322189484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -476625618919157129, guid: fe70c20d962c6d74f99f98e796b1a4a0, type: 3}

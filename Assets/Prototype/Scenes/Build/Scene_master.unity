@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothTime: 0.3
+  offsetPoint: {fileID: 1104829860}
 --- !u!1 &167160596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6520,6 +6521,12 @@ PrefabInstance:
 --- !u!1 &1104829859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 175729779652455463, guid: dd13bb1c05ac7044f8bd3cb53935ee3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104829858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1104829860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 175729779652455462, guid: dd13bb1c05ac7044f8bd3cb53935ee3c,
     type: 3}
   m_PrefabInstance: {fileID: 1104829858}
   m_PrefabAsset: {fileID: 0}

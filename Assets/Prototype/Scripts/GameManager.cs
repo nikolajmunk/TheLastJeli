@@ -199,6 +199,7 @@ public class GameManager : MonoBehaviour
         Player rpp = reincarnatedPlayer.GetComponent<Player>();
         rpp.playerName = player.playerName;
         rpp.Actions = player.Actions;
+        reincarnatedPlayer.GetComponentInChildren<AmmoDisplay>().spriteColor = player.transform.GetComponentInChildren<AmmoDisplay>().spriteColor;
     }
 
     public IEnumerator Restart(float delay)

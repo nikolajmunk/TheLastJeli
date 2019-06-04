@@ -229,7 +229,7 @@ public class GameManager : MonoBehaviour
 
     public void Reincarnate(Player player)
     {
-        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 6.5f, 0), Quaternion.identity, Camera.main.transform);
+        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 6.5f, 0), Quaternion.identity);
         Player rpp = reincarnatedPlayer.GetComponent<Player>();
         rpp.playerName = player.playerName;
         rpp.Actions = player.Actions;

@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeTeleported: 1
-  beamColor1: {r: 1, g: 1, b: 1, a: 1}
-  beamColor2: {r: 0, g: 0, b: 0, a: 0}
+  beamColor1: {r: 1, g: 0.39759248, b: 0, a: 1}
+  beamColor2: {r: 0.7427429, g: 0, b: 0.8207547, a: 0}
   particlesGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 1, a: 1}
@@ -271,8 +271,8 @@ MonoBehaviour:
   isCow: 0
   sparkGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 1, g: 0.57776695, b: 0.06132078, a: 1}
+    key1: {r: 0.67576694, g: 0, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -300,8 +300,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   bobGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.9864124, g: 1, b: 0.6933962, a: 1}
+    key1: {r: 1, g: 0.5486495, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -483,17 +483,22 @@ PrefabInstance:
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: spriteColor.r
-      value: 0.9471822
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: spriteColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}
       propertyPath: spriteColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148861127371968477, guid: a775efc3cfaab264a8f23459e8f3fcec,
+        type: 3}
+      propertyPath: spriteColor.g
+      value: 0.43646842
       objectReference: {fileID: 0}
     - target: {fileID: 1399840645872203145, guid: a775efc3cfaab264a8f23459e8f3fcec,
         type: 3}

@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         if (!debug)
         {
-            destructionZone.GetComponent<DestructionZone>().move = false;
+            //destructionZone.GetComponent<DestructionZone>().move = false;
             //          buttonScript.restartB.SetActive(true);
             //          buttonScript.endB.SetActive(true);
             //winUI.SetActive(true);
@@ -193,7 +193,10 @@ public class GameManager : MonoBehaviour
 
     public void KillPlayer(Player player)
     {
-        var effect = Instantiate(player.deathEffect,Camera.main.ViewportToWorldPoint(GetIntersectionWithScreen(player.transform)), Quaternion.identity);
+        Vector2 playerPos = Camera.main.WorldToViewportPoint(player.transform.position);
+        playerPos.x = Mathf.Clamp01(playerPos.x);
+        playerPos.y = Mathf.Clamp01(playerPos.y);
+        var effect = Instantiate(player.deathEffect, Camera.main.ViewportToWorldPoint(new Vector3(playerPos.x,playerPos.y, 5)), Quaternion.identity);
         Debug.Log(player.transform.position + " " + effect.transform.position);
         OnPlayerRemoved(player);
 
@@ -203,21 +206,6 @@ public class GameManager : MonoBehaviour
         player.gameObject.SetActive(false);
         Reincarnate(player);
     }
-
-    Vector2 GetIntersectionWithScreen(Transform target)
-    {
-        var screenWidth = Camera.main.rect.width;
-        var screenHeight = Camera.main.rect.height;
-        Vector2 vector =  Camera.main.rect.center - (Vector2)Camera.main.WorldToViewportPoint(target.position);
-        vector.Normalize();
- 
-        float angle = Mathf.Atan2(vector.y, vector.x);
-
-        float x = Mathf.Clamp(Mathf.Cos(angle) * screenWidth + screenWidth / 2, 0.0f, screenWidth);
-        float y = Mathf.Clamp(Mathf.Sin(angle) * screenHeight + screenHeight / 2, 0.0f, screenHeight);
-
-        return new Vector2(x, y);
-}
 
     public IEnumerator KillTime(GameObject dyingPlayer)
     {

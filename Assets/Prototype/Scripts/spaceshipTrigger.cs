@@ -33,6 +33,7 @@ public class spaceshipTrigger : MonoBehaviour
             //playerClone.transform.localEulerAngles = new Vector3(-5f, -153, 0);
 
             GameManager.instance.playerInSpaceship = true;
+            GameManager.instance.winningPlayer = other.gameObject.GetComponent<Player>();
             playerClone.GetComponent<PlatformerController>().canMove = false;
             playerClone.GetComponent<PlatformerController>().enabled = false;
             playerClone.GetComponent<Rigidbody>().velocity = Vector3.zero;

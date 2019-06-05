@@ -43,7 +43,7 @@ public class UIController : MonoBehaviour
     {
         endgameCanvas.SetActive(false);
         winCanvas.SetActive(true);
-        winText.text = "You succesfully escaped the planet!";
+        winText.text = GameManager.instance.winningPlayer.playerName + " successfully escaped the planet!";
         uiButtonsScript.ShowRestartUI();
     }
 
@@ -57,7 +57,7 @@ public class UIController : MonoBehaviour
     {
         endgameCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        gameOverText.text = "All Jeli has failed \n Great Job..";
+        gameOverText.text = "All Jeli have successfully failed \n \n RIP†";
         uiButtonsScript.ShowRestartUI();
     }
 }

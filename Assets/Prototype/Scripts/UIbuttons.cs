@@ -18,9 +18,9 @@ public class UIbuttons : MonoBehaviour
         //endB = GameObject.Find("Quit button");
         //startB = GameObject.Find("Start button");
 
-        restartB = transform.GetChild(0).gameObject;
-        endB = transform.GetChild(1).gameObject;
-        startB = transform.GetChild(2).gameObject;
+        startB = transform.GetChild(0).gameObject;
+        restartB = transform.GetChild(1).gameObject;
+        endB = transform.GetChild(2).gameObject;
 
         currentScene = SceneManager.GetActiveScene().name;
 

@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public bool onePlayer = false;
     [HideInInspector]
     public bool playerInSpaceship = false;
+    [HideInInspector]
+    public Player winningPlayer;
 
     public delegate void GameStateEvent();
     public GameStateEvent OnWin;

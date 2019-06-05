@@ -30,9 +30,9 @@ public class GameManager : MonoBehaviour
     public bool isEveryoneDead = false;
     public bool isGameOver = false;
     public bool onePlayer = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool playerInSpaceship = false;
-    [HideInInspector]
+    //[HideInInspector]
     public Player winningPlayer;
 
     public delegate void GameStateEvent();

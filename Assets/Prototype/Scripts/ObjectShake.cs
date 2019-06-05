@@ -37,7 +37,11 @@ public class ObjectShake : MonoBehaviour
         originRotation = transform.rotation;
         temp_shake_intensity = shake_intensity;
 
-        Rigidbody rb = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+
+        if (gameObject.tag != "MainCamera")
+        {
+            Rigidbody rb = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+        }
     }
 }

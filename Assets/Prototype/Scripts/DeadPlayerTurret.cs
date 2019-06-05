@@ -43,7 +43,7 @@ public class DeadPlayerTurret : MonoBehaviour
 
             transform.localPosition = pos;
             var newPosition = transform.position;
-            newPosition.z = 0;
+            newPosition.z = 0.5f;
             transform.position = newPosition;
         }
 

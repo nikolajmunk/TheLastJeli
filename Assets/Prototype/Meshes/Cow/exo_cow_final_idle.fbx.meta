@@ -1,70 +1,194 @@
 fileFormatVersion: 2
 guid: f2fbf279ee0a245ffa7821719fe89a2c
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Cow
-    100002: CowMesh
-    100004: //RootNode
-    100006: head
-    100008: head.001
-    100010: head.001_end
-    100012: head.002
-    100014: head.002_end
-    100016: head_end
-    100018: hips
-    100020: leg back left
-    100022: leg back left low
-    100024: leg back left low_end
-    100026: leg back left mid
-    100028: leg back right
-    100030: leg back right low
-    100032: leg back right low_end
-    100034: leg back right mid
-    100036: leg left
-    100038: leg lelf low
-    100040: leg lelf low_end
-    100042: leg right
-    100044: leg right low
-    100046: leg right low_end
-    100048: neck
-    100050: tail
-    100052: tail.001
-    100054: tail.001_end
-    400000: Cow
-    400002: CowMesh
-    400004: //RootNode
-    400006: head
-    400008: head.001
-    400010: head.001_end
-    400012: head.002
-    400014: head.002_end
-    400016: head_end
-    400018: hips
-    400020: leg back left
-    400022: leg back left low
-    400024: leg back left low_end
-    400026: leg back left mid
-    400028: leg back right
-    400030: leg back right low
-    400032: leg back right low_end
-    400034: leg back right mid
-    400036: leg left
-    400038: leg lelf low
-    400040: leg lelf low_end
-    400042: leg right
-    400044: leg right low
-    400046: leg right low_end
-    400048: neck
-    400050: tail
-    400052: tail.001
-    400054: tail.001_end
-    2100000: cow_skin
-    4300000: CowMesh
-    7400000: Cow|idle
-    7400002: Cow|none
-    9500000: //RootNode
-    13700000: CowMesh
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cow
+  - first:
+      1: 100002
+    second: CowMesh
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: head
+  - first:
+      1: 100008
+    second: head.001
+  - first:
+      1: 100010
+    second: head.001_end
+  - first:
+      1: 100012
+    second: head.002
+  - first:
+      1: 100014
+    second: head.002_end
+  - first:
+      1: 100016
+    second: head_end
+  - first:
+      1: 100018
+    second: hips
+  - first:
+      1: 100020
+    second: leg back left
+  - first:
+      1: 100022
+    second: leg back left low
+  - first:
+      1: 100024
+    second: leg back left low_end
+  - first:
+      1: 100026
+    second: leg back left mid
+  - first:
+      1: 100028
+    second: leg back right
+  - first:
+      1: 100030
+    second: leg back right low
+  - first:
+      1: 100032
+    second: leg back right low_end
+  - first:
+      1: 100034
+    second: leg back right mid
+  - first:
+      1: 100036
+    second: leg left
+  - first:
+      1: 100038
+    second: leg lelf low
+  - first:
+      1: 100040
+    second: leg lelf low_end
+  - first:
+      1: 100042
+    second: leg right
+  - first:
+      1: 100044
+    second: leg right low
+  - first:
+      1: 100046
+    second: leg right low_end
+  - first:
+      1: 100048
+    second: neck
+  - first:
+      1: 100050
+    second: tail
+  - first:
+      1: 100052
+    second: tail.001
+  - first:
+      1: 100054
+    second: tail.001_end
+  - first:
+      4: 400000
+    second: Cow
+  - first:
+      4: 400002
+    second: CowMesh
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: head
+  - first:
+      4: 400008
+    second: head.001
+  - first:
+      4: 400010
+    second: head.001_end
+  - first:
+      4: 400012
+    second: head.002
+  - first:
+      4: 400014
+    second: head.002_end
+  - first:
+      4: 400016
+    second: head_end
+  - first:
+      4: 400018
+    second: hips
+  - first:
+      4: 400020
+    second: leg back left
+  - first:
+      4: 400022
+    second: leg back left low
+  - first:
+      4: 400024
+    second: leg back left low_end
+  - first:
+      4: 400026
+    second: leg back left mid
+  - first:
+      4: 400028
+    second: leg back right
+  - first:
+      4: 400030
+    second: leg back right low
+  - first:
+      4: 400032
+    second: leg back right low_end
+  - first:
+      4: 400034
+    second: leg back right mid
+  - first:
+      4: 400036
+    second: leg left
+  - first:
+      4: 400038
+    second: leg lelf low
+  - first:
+      4: 400040
+    second: leg lelf low_end
+  - first:
+      4: 400042
+    second: leg right
+  - first:
+      4: 400044
+    second: leg right low
+  - first:
+      4: 400046
+    second: leg right low_end
+  - first:
+      4: 400048
+    second: neck
+  - first:
+      4: 400050
+    second: tail
+  - first:
+      4: 400052
+    second: tail.001
+  - first:
+      4: 400054
+    second: tail.001_end
+  - first:
+      21: 2100000
+    second: cow_skin
+  - first:
+      43: 4300000
+    second: CowMesh
+  - first:
+      74: 7400000
+    second: Cow|idle
+  - first:
+      74: 7400002
+    second: Cow|none
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: CowMesh
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -96,6 +220,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Cow|idle
       takeName: Cow|idle
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 268
       wrapMode: 0
@@ -124,6 +249,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Cow|none
       takeName: Cow|none
+      internalID: 7400002
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -149,7 +275,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -163,18 +289,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -183,10 +310,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -196,6 +324,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

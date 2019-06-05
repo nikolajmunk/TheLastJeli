@@ -384,23 +384,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &384214356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5251290932667662212, guid: 773a9900cef72ad479d7dbefd2c7e3a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1127988996}
-  m_PrefabAsset: {fileID: 0}
---- !u!210 &384214357
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384214356}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
 --- !u!1 &474073322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1450,13 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5840700278448573046, guid: 773a9900cef72ad479d7dbefd2c7e3a2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 384214357, guid: 773a9900cef72ad479d7dbefd2c7e3a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 773a9900cef72ad479d7dbefd2c7e3a2, type: 3}
 --- !u!198 &1127988997 stripped
 ParticleSystem:
@@ -2199,7 +2188,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.9643396, b: 0.8726415, a: 0.4627451}
+  m_Color: {r: 0.9671333, g: 0.8726415, b: 1, a: 0.4627451}
   m_Intensity: 1
   m_Range: 150
   m_SpotAngle: 30

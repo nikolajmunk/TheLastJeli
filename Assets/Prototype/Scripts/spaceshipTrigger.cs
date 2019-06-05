@@ -51,6 +51,7 @@ public class spaceshipTrigger : MonoBehaviour
         destructionZone.GetComponent<DestructionZone>().move = false;
         yield return new WaitForSeconds(_event1);
         cam.GetComponent<ObjectShake>().Shake();
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(_event2);
         destructionZone.GetComponent<DestructionZone>().move = true;
         destructionZone.GetComponent<DestructionZone>().speed *= 8;

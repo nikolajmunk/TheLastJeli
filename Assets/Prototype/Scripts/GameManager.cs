@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour
     public List<Player> activePlayers;
     public List<Transform> playerPositions;
     public int numberOfActivePlayers;
-
+    [Header("Options")]
+    public bool allowReincownation;
     public bool debug;
+
     [HideInInspector]
     public Vector3 killBoxPosition;
 
@@ -30,9 +32,8 @@ public class GameManager : MonoBehaviour
     public bool isEveryoneDead = false;
     public bool isGameOver = false;
     public bool onePlayer = false;
-    //[HideInInspector]
+    [HideInInspector]
     public bool playerInSpaceship = false;
-    //[HideInInspector]
     public Player winningPlayer;
 
     public delegate void GameStateEvent();
@@ -124,11 +125,14 @@ public class GameManager : MonoBehaviour
             isEveryoneDead = true;
         }
 
-        if((PlayerManager.instance.joystickListener.Command || PlayerManager.instance.keyboardListener.Command) && hasGameStarted) {
-            if (!isPaused) {
+        if ((PlayerManager.instance.joystickListener.Command || PlayerManager.instance.keyboardListener.Command) && hasGameStarted)
+        {
+            if (!isPaused)
+            {
                 OnPause();
             }
-            else {
+            else
+            {
                 OnUnpause();
             }
         }
@@ -175,7 +179,7 @@ public class GameManager : MonoBehaviour
 
     public void AllPlayersDead()
     {
-        
+
         OnAllPlayersDead();
     }
 
@@ -198,7 +202,7 @@ public class GameManager : MonoBehaviour
         Vector2 playerPos = Camera.main.WorldToViewportPoint(player.transform.position);
         playerPos.x = Mathf.Clamp01(playerPos.x);
         playerPos.y = Mathf.Clamp01(playerPos.y);
-        var effect = Instantiate(player.deathEffect, Camera.main.ViewportToWorldPoint(new Vector3(playerPos.x,playerPos.y, 5)), Quaternion.identity);
+        var effect = Instantiate(player.deathEffect, Camera.main.ViewportToWorldPoint(new Vector3(playerPos.x, playerPos.y, 7)), Quaternion.identity);
         Debug.Log(player.transform.position + " " + effect.transform.position);
         OnPlayerRemoved(player);
 
@@ -206,7 +210,10 @@ public class GameManager : MonoBehaviour
 
         //StartCoroutine(KillTime(player.gameObject));
         player.gameObject.SetActive(false);
-        Reincarnate(player);
+        if (allowReincownation)
+        {
+            Reincarnate(player);
+        }
     }
 
     public IEnumerator KillTime(GameObject dyingPlayer)
@@ -219,7 +226,8 @@ public class GameManager : MonoBehaviour
 
     public void Reincarnate(Player player)
     {
-        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 6.5f, 0), Quaternion.identity);
+        GameObject reincarnatedPlayer = Instantiate(reincarnationPrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 6.5f, GameManager.instance.levelGenerator.mostRecentModule.transform.position.z), Quaternion.identity);
+        reincarnatedPlayer.transform.parent = Camera.main.transform;
         Player rpp = reincarnatedPlayer.GetComponent<Player>();
         rpp.playerName = player.playerName;
         rpp.Actions = player.Actions;

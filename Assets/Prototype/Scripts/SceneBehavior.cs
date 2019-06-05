@@ -52,6 +52,7 @@ public class SceneBehavior : MonoBehaviour
         GameManager.instance.isEveryoneDead = false;
         GameManager.instance.isGameOver = false;
         GameManager.instance.winningPlayer = null;
+        GameManager.instance.onePlayer = false;
         GameManager.instance.playerInSpaceship = false;
         GameManager.instance.destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
         if (GameManager.instance.numberOfActivePlayers > 2)

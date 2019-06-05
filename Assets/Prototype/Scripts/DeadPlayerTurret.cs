@@ -30,6 +30,11 @@ public class DeadPlayerTurret : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Vector3 newPosition = target.position;
+        //newPosition.y += 6.5f;
+        //newPosition.z = 0;
+        //transform.position = newPosition;
+
         if (player.Actions.Move)
         {
             var pos = transform.localPosition;
@@ -37,6 +42,9 @@ public class DeadPlayerTurret : MonoBehaviour
             pos.x = Mathf.Clamp(pos.x, -maxDistanceFromCenter, maxDistanceFromCenter);
 
             transform.localPosition = pos;
+            var newPosition = transform.position;
+            newPosition.z = 0;
+            transform.position = newPosition;
         }
 
         //if (player.Actions.Shoot && player.Actions.Shoot.LastValue == 0)
@@ -53,10 +61,7 @@ public class DeadPlayerTurret : MonoBehaviour
 
     private void Update()
     {
-        Vector3 newPosition = target.position;
-        newPosition.y += 6.5f;
-        newPosition.z = 0;
-        transform.position = newPosition;
+
     }
 
 }

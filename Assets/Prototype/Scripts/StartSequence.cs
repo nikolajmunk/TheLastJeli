@@ -30,6 +30,7 @@ public class StartSequence : MonoBehaviour
         }
         else
         {
+            fallingBlocks[3] = GameObject.FindGameObjectWithTag("MainCamera");
             destructionZone = GameObject.FindGameObjectWithTag("DestructionZone").GetComponent<DestructionZone>();
             DisableMovement();
 

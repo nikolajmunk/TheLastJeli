@@ -5,10 +5,15 @@ using UnityEngine;
 public class spaceshipTrigger : MonoBehaviour
 {
     Animator anim;
+    GameObject destructionZone;
+    GameObject cam;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = this.transform.parent.GetComponent<Animator>();
+        destructionZone = GameObject.FindGameObjectWithTag("DestructionZone");
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
@@ -21,6 +26,7 @@ public class spaceshipTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            StartCoroutine(SpaceShipEvents(3, 1));
             GameObject playerClone = Instantiate(other.gameObject, this.transform.position - new Vector3(0, .62f, 0), Quaternion.Euler(-5f, -153, 0), this.transform);
             other.gameObject.SetActive(false);
             //playerClone.transform.localPosition = new Vector3(0, -1.3f, 0);
@@ -37,8 +43,16 @@ public class spaceshipTrigger : MonoBehaviour
             playerClone.transform.GetChild(0).gameObject.SetActive(false);
 
             anim.SetTrigger("engageCollider");
-
-            // make the environment destroy under the ship when you fly away
         }
+    }
+
+    IEnumerator SpaceShipEvents(float _event1, float _event2)
+    {
+        destructionZone.GetComponent<DestructionZone>().move = false;
+        yield return new WaitForSeconds(_event1);
+        cam.GetComponent<ObjectShake>().Shake();
+        yield return new WaitForSeconds(_event2);
+        destructionZone.GetComponent<DestructionZone>().move = true;
+        destructionZone.GetComponent<DestructionZone>().speed *= 8;
     }
 }

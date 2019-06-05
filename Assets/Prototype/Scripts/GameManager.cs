@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         if (!debug)
         {
-            destructionZone.GetComponent<DestructionZone>().move = false;
+            //destructionZone.GetComponent<DestructionZone>().move = false;
             //          buttonScript.restartB.SetActive(true);
             //          buttonScript.endB.SetActive(true);
             //winUI.SetActive(true);

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeleportLR
-  m_Shader: {fileID: 4800000, guid: 0f1a51be6f73b884483fec88bbc41f03, type: 3}
+  m_Name: TeleportLR 2
+  m_Shader: {fileID: 4800000, guid: eb6a5689a80abd24996f4e05c746727c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -60,8 +60,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 39809054c169edb4f9f841013ade79ea, type: 3}
-        m_Scale: {x: 0.5, y: 0.5}
+        m_Texture: {fileID: 2800000, guid: 26e26485a040c7f48bcfa7d6300fc2bb, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample1:
         m_Texture: {fileID: 2800000, guid: e35304ad568e1c44aa133b9924a36372, type: 3}
@@ -86,6 +86,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Gradientopacity: 1
+    - _Intensity: 2.4117656
     - _Metallic: 0
     - _Mode: 0
     - _Multiplyfactor: 1
@@ -103,7 +104,7 @@ Material:
     - _Translucency: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.11196155, g: 0.6415094, b: 0.6415094, a: 0.105882354}
@@ -111,5 +112,6 @@ Material:
     - _Color2: {r: 1, g: 0, b: 0.68692493, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowCol: {r: 1, g: 0.42924523, b: 0.42924523, a: 0}
-    - _MainCol: {r: 1, g: 0.7550271, b: 0.004716992, a: 1}
+    - _MainCol: {r: 1, g: 1, b: 1, a: 1}
     - _MaskTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _PannerSpeed: {r: 3, g: 0, b: 0, a: 0}

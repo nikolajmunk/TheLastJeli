@@ -57,7 +57,7 @@ public class UIController : MonoBehaviour
     {
         endgameCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
-        gameOverText.text = "All Jeli have successfully failed \n \n RIP†";
+        gameOverText.text = "All Jeli have successfully failed!";
         uiButtonsScript.ShowRestartUI();
     }
 }

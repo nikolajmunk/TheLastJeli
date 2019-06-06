@@ -8,11 +8,9 @@ public class MultipleTargetCamera : MonoBehaviour
     Vector3 velocity;
     public float smoothTime = .5f;
     public Transform offsetPoint;
-    List<Transform> targets;
 
     private void Start()
     {
-        targets = GameManager.instance.playerPositions;
         offset = transform.position - offsetPoint.position;
     }
 
@@ -23,21 +21,22 @@ public class MultipleTargetCamera : MonoBehaviour
 
     Vector3 GetTargetPosition()
     {
-        if (targets.Count == 0)
+        if (GameManager.instance.playerPositions.Count == 0)
         {
             return transform.position;
         }
-        var frontmostPosition = targets[0].position;
+        var frontmostPosition = GameManager.instance.playerPositions[0].position;
+        Debug.Log(GameManager.instance.playerPositions[0].gameObject.name);
         var pos = new Vector3(frontmostPosition.x, GetCentroid().y, frontmostPosition.z) + offset;
         return pos;
     }
 
     Bounds GetEncapsulatingBounds()
     {
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
-        for (int i = 1; i < targets.Count; i++)
+        var bounds = new Bounds(GameManager.instance.playerPositions[0].position, Vector3.zero);
+        for (int i = 1; i < GameManager.instance.playerPositions.Count; i++)
         {
-            bounds.Encapsulate(targets[i].position);
+            bounds.Encapsulate(GameManager.instance.playerPositions[i].position);
         }
         
 

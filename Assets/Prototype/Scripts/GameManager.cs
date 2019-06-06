@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public int numberOfActivePlayers;
     [Header("Options")]
     public bool allowReincownation;
+    public Vector3 reincownationOffset = new Vector3(0, 0, 7);
     public bool debug;
 
     [HideInInspector]
@@ -188,6 +189,10 @@ public class GameManager : MonoBehaviour
         activePlayers.Add(player);
         numberOfActivePlayers = activePlayers.Count;
         playerPositions.Add(player.transform);
+        if (numberOfActivePlayers >= 2)
+        {
+            OnReadyToPlay();
+        }
     }
 
     void OnPlayerRemoved(Player player)
@@ -202,7 +207,7 @@ public class GameManager : MonoBehaviour
         Vector2 playerPos = Camera.main.WorldToViewportPoint(player.transform.position);
         playerPos.x = Mathf.Clamp01(playerPos.x);
         playerPos.y = Mathf.Clamp01(playerPos.y);
-        var effect = Instantiate(player.deathEffect, Camera.main.ViewportToWorldPoint(new Vector3(playerPos.x, playerPos.y, 7)), Quaternion.identity);
+        var effect = Instantiate(player.deathEffect, Camera.main.ViewportToWorldPoint(new Vector3(playerPos.x, playerPos.y, 0) + reincownationOffset), Quaternion.identity);
         Debug.Log(player.transform.position + " " + effect.transform.position);
         OnPlayerRemoved(player);
 

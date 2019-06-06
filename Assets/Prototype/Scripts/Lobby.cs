@@ -7,6 +7,17 @@ public class Lobby : MonoBehaviour
     public PlayerManager playerManager;
     PlayerActions keyboardActions;
     PlayerActions joystickActions;
+    AudioHandler audioHandler;
+
+    private void OnEnable()
+    {
+        PlayerManager.instance.OnPlayerAdded += OnPlayerJoin;
+    }
+
+    void OnDisable()
+    {
+        PlayerManager.instance.OnPlayerAdded -= OnPlayerJoin;
+    }
 
     void Start()
     {
@@ -15,6 +26,8 @@ public class Lobby : MonoBehaviour
         joystickActions = playerManager.keyboardListener;
         playerManager.RemoveAllPlayers();
         playerManager.acceptNewPlayers = true;
+        audioHandler = GetComponent<AudioHandler>();
+
     }
 
     // Update is called once per frame
@@ -35,4 +48,8 @@ public class Lobby : MonoBehaviour
         return keyboardActions.Command.WasPressed || joystickActions.Command.WasPressed;
     }
 
+    void OnPlayerJoin(Player player)
+    {
+        audioHandler.PlayOneShotWithRandomPitch("Join");
+    }
 }

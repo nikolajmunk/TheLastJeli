@@ -116,17 +116,17 @@ PrefabInstance:
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0
+      value: 0.3180926
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.28840968
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.5849056
+      value: 0.8396226
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
@@ -146,22 +146,22 @@ PrefabInstance:
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.r
-      value: 0.97802067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 0.5794858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
+        type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 54163
+      value: 46067
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime1
-      value: 32960
+      value: 24903
       objectReference: {fileID: 0}
     - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
@@ -172,6 +172,16 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime2
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636126020151971370, guid: 224653fe6e085a44792f6257b1dd73e8,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 0.4009434
       objectReference: {fileID: 0}
     - target: {fileID: 3053524671876876280, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
@@ -276,12 +286,12 @@ PrefabInstance:
     - target: {fileID: 7322191434185370993, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: InitialModule.startColor.minColor.r
-      value: 0
+      value: 0.41156572
       objectReference: {fileID: 0}
     - target: {fileID: 7322191434185370993, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: InitialModule.startColor.minColor.g
-      value: 0.51428366
+      value: 0.15566039
       objectReference: {fileID: 0}
     - target: {fileID: 7322191434185370993, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
@@ -321,12 +331,12 @@ PrefabInstance:
     - target: {fileID: 5563659242864450438, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.24527428
+      value: 0.120120525
       objectReference: {fileID: 0}
     - target: {fileID: 5563659242864450438, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.23113209
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5563659242864450438, guid: 224653fe6e085a44792f6257b1dd73e8,
         type: 3}

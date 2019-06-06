@@ -11,6 +11,18 @@ public class UIbuttons : MonoBehaviour
 
     string currentScene;
 
+    private void OnEnable()
+    {
+        GameManager.instance.OnPause += OnPause;
+        GameManager.instance.OnUnpause += OnUnPause;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.instance.OnPause -= OnPause;
+        GameManager.instance.OnUnpause -= OnUnPause;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +48,7 @@ public class UIbuttons : MonoBehaviour
 
     private void Update()
     {
-        // Pause
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            ShowPauseUI();
-        }
 
-        // Lobby controls
 
     }
 
@@ -63,6 +69,20 @@ public class UIbuttons : MonoBehaviour
         //Application.Quit();
 
         //UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    void OnPause()
+    {
+        ShowPauseUI();
+        GameManager.instance.isPaused = true;
+        //Time.timeScale = 0;
+    }
+
+    void OnUnPause()
+    {
+        ShowPauseUI();
+        GameManager.instance.isPaused = false;
+        //Time.timeScale = 1;
     }
 
     public void ShowPauseUI()

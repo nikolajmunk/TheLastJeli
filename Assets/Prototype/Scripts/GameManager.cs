@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
             isEveryoneDead = true;
         }
 
-        if ((PlayerManager.instance.joystickListener.Command || PlayerManager.instance.keyboardListener.Command) && hasGameStarted)
+        if (((PlayerManager.instance.joystickListener.Command && PlayerManager.instance.joystickListener.Command.LastValue == 0) || (PlayerManager.instance.keyboardListener.Command && PlayerManager.instance.keyboardListener.Command.LastValue == 0)) && hasGameStarted)
         {
             if (!isPaused)
             {
@@ -136,6 +136,12 @@ public class GameManager : MonoBehaviour
             {
                 OnUnpause();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            allowReincownation = !allowReincownation;
+            GetComponent<AudioHandler>().PlayOneShotByName("Moo");
         }
     }
 

@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         }
 
         // If all players die
-        if (numberOfActivePlayers == 0 && isEndGame == true && isEveryoneDead == false)
+        if (numberOfActivePlayers == 0 && onePlayer == true && isEveryoneDead == false)
         {
             // Do stuff here for when everyone is out of the game
 
